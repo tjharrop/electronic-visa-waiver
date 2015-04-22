@@ -1,0 +1,51 @@
+{{<layout}}
+
+{{$pageTitle}}Your journey to the UK{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  <h1 class="heading-large">Your personal details</h1>
+  <p>We may need to contact you about the information you have provided to ensure your electronic visa waiver is valid. </p>
+
+	<form>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="HomeAddress">Home address <span class="form-hint">Give the full address of your main residence </span></label>
+		<input type="text" name="HomeAddress1" /><br />
+		<input type="text" name="HomeAddress2" /><br />
+		<input type="text" name="HomeAddress3" /><br />
+		<input type="text" name="HomeAddress4" /><br />
+		<input type="text" name="HomeAddress5" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="PhoneNumber">Phone number <span class="form-hint">Please provide a number we can call during normal office hours</span></label>
+		<input type="text" name="PhoneNumber" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="Email">Email address <span class="form-hint">We use this address to send details of your electronic visa waiver</span></label>
+		<input type="text" name="Email" />
+	</div>
+
+	
+	<!-- Confirmation pattern: inset statement "We will use this address if we need to email you: [email address]" -->
+
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="Occupation">Your occupation</label>
+		<input type="text" name="Occupation" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="CompanyName">Company name</label>
+		<input type="text" name="CompanyName" />
+	</div>
+
+	</form>
+
+</main>
+{{/content}}
+
+{{/layout}}
+

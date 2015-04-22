@@ -1,0 +1,69 @@
+{{<layout}}
+
+{{$pageTitle}}Your visit to the UK{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  <h1 class="heading-large">Your visit to the UK</h1>
+
+	<form>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="UKaddress">Where will you stay in the UK? <span class="form-hint">Give the full address of the hotel or home where you will be staying</span></label>
+		<input type="text" name="UKaddress1" /><br />
+		<input type="text" name="UKaddress2" /><br />
+		<input type="text" name="UKaddress3" /><br />
+		<input type="text" name="UKaddress4" /><br />
+		<input type="text" name="UKaddress5" />
+	</div>
+
+	<!-- see https://designpatterns.hackpad.com/Addresses-CgrMSGRAhRc for address design pattern being proposed here -->
+
+	<div class="form-group">
+		<fieldset>
+		    <legend class="form-label-bold date-field label">On which date will you be leaving the UK <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+
+		    <div class="form-date" id="departureDate">
+		        <p class="form-hint">For example, 18 09 2015</p>
+
+		        <div class="form-group form-group-day">
+		            <label for="LeavingDateDay"><span class="visuallyhidden">Leaving date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+		            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
+		        </div>
+		        <div class="form-group form-group-month">
+		            <label for="LeavingDateMonth"><span class="visuallyhidden">Leaving date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
+		        </div>
+		        <div class="form-group form-group-year">
+		            <label for="LeavingDateYear"><span class="visuallyhidden">Leaving date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+		            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
+		        </div>
+		    </div>
+
+	    </fieldset>
+    </div>
+
+    <div class="form-group">
+		<label class="form-label-bold label" for="DepartureAirport">Which airport will you leave the UK from?</label>
+		<input type="text" name="DepartureAirport" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="FlightNumber">Flight number <span class="form-hint">For example, BA1234</span></label>
+		<input type="text" name="FlightNumber" />
+	</div>
+
+	<!-- form ends here... -->
+
+
+	<a href="contact-details" class="button">Continue</a>
+
+	<!-- <input type="submit" id="updateContinue" class="button next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}
+

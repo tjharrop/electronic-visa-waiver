@@ -9,13 +9,42 @@
 <form>
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="DepartureCountry">Which country are you travelling from?</label>
-		<input type="text" name="PassportNumber" />
+		<label class="form-label-bold label" for="DepartureCountry">Which country are you travelling to the UK from?</label>
+		<input type="text" name="DepartureCountry" />
+	</div>
+
+
+
+	<div class="form-group">
+
+		<legend class="form-label-bold">How will you be travelling to the UK?</legend>
+		
+		<label class="block-label" for="radio-1">
+	    	<input id="radio-1" name="DepartureMode" value="Air" type="radio">By air
+		</label>
+
+		<label class="block-label" for="radio-2">
+	    	<input id="radio-2" name="DepartureMode" value="Train" type="radio">By train
+	  	</label>
+
+	  	<label class="block-label" for="radio-2">
+	    	<input id="radio-2" name="DepartureMode" value="Sea" type="radio">By sea
+	  	</label>
+
+  	</div>
+
+
+	<!-- Departure details -->
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="DepartureAirport">Which airport are you flying to the UK from?</label>
+		<input type="text" name="DepartureAirport" />
 	</div>
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="DepartureAirport">Which airport are you flying from?</label>
-		<input type="text" name="PlaceOfIssue" />
+		<label class="form-label-bold label" for="FlightNumber">Flight number</label>
+		<p class="form-hint">For example, BA1234</p>
+		<input type="text" name="FlightNumber" />
 	</div>
 
 	<div class="form-group">
@@ -26,16 +55,16 @@
 		        <p class="form-hint">For example, 18 09 2015</p>
 
 		        <div class="form-group form-group-day">
-		            <label for="dobDay"><span class="visuallyhidden">Departure date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-		            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
+		            <label for="depatureDay"><span class="visuallyhidden">Departure date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+		            <input type="text" class="form-control" id="depatureDay" name="depatureDay" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-month">
-		            <label for="dobMonth"><span class="visuallyhidden">Departure date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
+		            <label for="depatureMonth"><span class="visuallyhidden">Departure date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="depatureMonth" name="depatureMonth" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-year">
-		            <label for="dobYear"><span class="visuallyhidden">Departure date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-		            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
+		            <label for="depatureYear"><span class="visuallyhidden">Departure date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+		            <input type="text" class="form-control" id="depatureYear" name="depatureYear" aria-required="true" value="" maxlength="4">
 		        </div>
 		    </div>
 
@@ -50,11 +79,62 @@
 		        <p class="form-hint">For example, 21:45</p>
 
 		        <div class="form-group form-group-day">
-		            <label for="dobDay"><span class="visuallyhidden">Departure time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
+		            <label for="departureHour"><span class="visuallyhidden">Departure time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
+		            <input type="text" class="form-control" id="departureHour" name="departureHour" aria-required="true" value="" maxlength="2">
+		        </div>
+		        <div class="form-group form-group-month">
+		            <label for="departureMins"><span class="visuallyhidden">Departure time </span>Minutes <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="departureMins" name="departureMins" aria-required="true" value="" maxlength="2">
+		        </div>
+		    </div>
+
+	    </fieldset>
+    </div>
+
+    <!-- Arrival details -->
+
+    <div class="form-group">
+		<label class="form-label-bold label" for="ArrivalAirport">Which airport will you arrive at?</label>
+		<input type="text" name="ArrivalAirport" />
+	</div>
+
+	<div class="form-group">
+		<fieldset>
+		    <legend class="form-label-bold date-field label">Arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+
+		    <div class="form-date" id="arrivalDate">
+		        <p class="form-hint">For example, 18 09 2015</p>
+
+		        <div class="form-group form-group-day">
+		            <label for="DateOfArrivalDay"><span class="visuallyhidden">Arrival date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+		            <input type="text" class="form-control" id="DateOfArrivalDay" name="DateOfArrivalDay" aria-required="true" value="" maxlength="2">
+		        </div>
+		        <div class="form-group form-group-month">
+		            <label for="DateOfArrivalMonth"><span class="visuallyhidden">Arrival date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="DateOfArrivalMonth" name="DateOfArrivalMonth" aria-required="true" value="" maxlength="2">
+		        </div>
+		        <div class="form-group form-group-year">
+		            <label for="DateOfArrivalYear"><span class="visuallyhidden">Arrival date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+		            <input type="text" class="form-control" id="DateOfArrivalYear" name="DateOfArrivalYear" aria-required="true" value="" maxlength="4">
+		        </div>
+		    </div>
+
+	    </fieldset>
+    </div>
+
+    	<div class="form-group">
+		<fieldset>
+		    <legend class="form-label-bold date-field label">Arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
+
+		    <div class="form-date" id="departureTime">
+		        <p class="form-hint">For example, 21:45</p>
+
+		        <div class="form-group form-group-day">
+		            <label for="dobDay"><span class="visuallyhidden">Arrival time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
 		            <input type="text" class="form-control" id="deptimeHour" name="deptimeHour" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-month">
-		            <label for="dobMonth"><span class="visuallyhidden">Departure time </span>Minutes <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <label for="dobMonth"><span class="visuallyhidden">Arrival time </span>Minutes <span class="visuallyhidden">expected format MM. Required</span></label>
 		            <input type="text" class="form-control" id="deptimeMins" name="deptimeMins" aria-required="true" value="" maxlength="2">
 		        </div>
 		    </div>
@@ -62,16 +142,30 @@
 	    </fieldset>
     </div>
 
+    <!-- Additional travel information -->
 
-	<div class="form-group">
-		<label class="form-label-bold label" for="FlightNumber">Flight number</label>
-		<p class="form-hint">For example, BA1234</p>
-		<input type="text" name="FlightNumber" />
+     <fieldset class="inline">
+
+	    <legend class="form-label-bold">Are you travelling to the UK with anyone else?</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="radio-inline-1">
+	        <input id="TravelWithOthers" name="TravelWithOthers" value="Yes" type="radio"> Yes
+	      </label>
+
+	      <label class="block-label" for="radio-inline-2">
+	        <input id="TravelWithOthers" name="TravelWithOthers" value="No" type="radio"> No
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+
+	<div class="form-group panel-indent">
+		<label class="form-label-bold label" for="OtherTravellers">Please give the names of others travelling with you</label>
+		<input type="text" name="OtherTravellers" />
 	</div>
-
-
-
-
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="ReasonForVisit">What is the reason for your visit to the UK?</label>
@@ -79,18 +173,27 @@
 	</div>
 
 
-    <div class="form-group">
-    			<label class="form-label-bold label" for="TravelPlans">Do you plan to travel to the UK again within three months of this visit?</label>
-		<select id="Sex" name="TravelPlans" aria-required="true">
-                <option value="" disabled="disabled" selected> </option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>            
-        </select>
+    <fieldset class="inline">
 
+	    <legend class="form-label-bold">Do you plan to travel to the UK again within three months of this visit?</legend>
 
-    </div>
+	    <div class="form-group form-group-compound">
 
-	<input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;">
+	      <label class="block-label" for="radio-inline-1">
+	        <input id="TravelPlans" name="TravelPlans" value="Yes" type="radio"> Yes
+	      </label>
+
+	      <label class="block-label" for="radio-inline-2">
+	        <input id="TravelPlans" name="TravelPlans" value="No" type="radio"> No
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+
+	<a href="your-visit" class="button">Continue</a>
+
+	<!-- <input type="submit" id="updateContinue" class="button next" value="Continue" style="display: inline-block;"> -->
 
 </form>
 

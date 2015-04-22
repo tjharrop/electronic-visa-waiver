@@ -16,27 +16,76 @@
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PlaceOfIssue">Place of issue</label>
-		<input type="text" name="PlaceOfIssue" />
-	</div>
-
-	<div class="form-group">
-		<label class="form-label-bold label" for="NameOnPassport">Name</label>
-		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
-		<input type="text" name="PlaceOfIssue" />
-	</div>
-
-	<div class="form-group">
-		<label class="form-label-bold label" for="Sex">Sex</label>
-		<select id="Sex" name="Sex" aria-required="true">
+		<select class="form-control-select" id="PlaceOfIssue" name="PlaceOfIssue" aria-required="true" onchange="toggle();">
                 <option value="" disabled="disabled" selected> </option>
-                <option value="M">Male</option>
-                <option value="F">Female</option>            
+                <option value="Kuwait">Kuwait</option>
+                <option value="Oman">Oman</option>
+                <option value="Qatar">Qatar</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>            
         </select>
 	</div>
 
+	<div class="form-group" id="KuwaitName" style="display:none;">
+		<label class="form-label-bold label" for="KuwaitNameOnPassport">Name</label>
+		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
+		<input type="text" name="KuwaitNameOnPassport" />
+	</div>
+
+	<div id="OmanName" style="display:none;">
+		<div class="form-group">
+			<label class="form-label-bold label" for="OmanSurname">Surname</label>
+			<p class="form-hint">Enter your Surname exactly as it appears on the passport</p>
+			<input type="text" name="OmanSurname" />
+		</div>
+		<div class="form-group">
+			<label class="form-label-bold label" for="OmanFamilyName">Family name</label>
+			<p class="form-hint">Enter your Family Name exactly as it appears on the passport</p>
+			<input type="text" name="OmanFamilyName" />
+		</div>
+		<div class="form-group">
+			<label class="form-label-bold label" for="OmanGivenNames">Given names</label>
+			<p class="form-hint">Enter your Given Names exactly as it appears on the passport</p>
+			<input type="text" name="OmanGivenNames" />
+		</div>
+	</div>
+
+	<div id="QatarName" style="display:none;">
+		<p>[Qatar fields when we have them]</p>
+	</div>
+
+	<div id="UAEName" style="display:none;">
+		<div class="form-group">
+			<label class="form-label-bold label" for="UAESurnames">Surname</label>
+			<p class="form-hint">Enter your Surname exactly as it appears on the passport</p>
+			<input type="text" name="UAESurnames" />
+		</div>
+		<div class="form-group">
+			<label class="form-label-bold label" for="UAEFirstNames">First names</label>
+			<p class="form-hint">Enter your First Names exactly as it appears on the passport</p>
+			<input type="text" name="UAEFirstNames" />
+		</div>
+	</div>
+
+     <fieldset class="inline">
+
+	    <legend class="form-label-bold">Sex</legend>
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="radio-inline-1">
+	        <input id="Sex" name="Sex" value="Male" type="radio"> Male
+	      </label>
+
+	      <label class="block-label" for="radio-inline-2">
+	        <input id="Sex" name="Sex" value="Female" type="radio"> Female
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+
 	<div class="form-group">
 	<fieldset>
-	    <legend class="form-label-bold date-field label">Date of Birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+	    <legend class="form-label-bold date-field label">Date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
 	    <div class="form-date" id="dateOfBirth">
 	        <p class="form-hint">For example, 02 03 1979</p>
@@ -59,33 +108,34 @@
     </div>
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="PlaceOfBirth">Place of Birth</label>
+		<label class="form-label-bold label" for="PlaceOfBirth">Place of birth</label>
 		<input type="text" name="PlaceOfBirth" />
 	</div>
 
 	<div class="form-group">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">Date of Expiry <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+		    <legend class="form-label-bold date-field label">Date of expiry <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
 		    <div class="form-date" id="dateOfExpiry">
 		        <p class="form-hint">For example, 02 03 2017</p>
 
 		        <div class="form-group form-group-day">
-		            <label for="dobDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-		            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
+		            <label for="doeDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+		            <input type="text" class="form-control" id="doeDay" name="doeDay" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-month">
-		            <label for="dobMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
+		            <label for="doeMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="doeMonth" name="doeMonth" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-year">
-		            <label for="dobYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-		            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
+		            <label for="doeYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+		            <input type="text" class="form-control" id="doeYear" name="doeYear" aria-required="true" value="" maxlength="4">
 		        </div>
 		    </div>
 
 	    </fieldset>
     </div>
+
 
     <div class="form-group">
     	<fieldset>
@@ -95,21 +145,71 @@
 	        <p class="form-hint">For example, 30 09 2010</p>
 
 	        <div class="form-group form-group-day">
-	            <label for="dobDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-	            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
+	            <label for="doiDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+	            <input type="text" class="form-control" id="doiDay" name="doiDay" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-month">
-	            <label for="dobMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-	            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
+	            <label for="doiMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+	            <input type="text" class="form-control" id="doiMonth" name="doiMonth" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-year">
-	            <label for="dobYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-	            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
+	            <label for="doiYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+	            <input type="text" class="form-control" id="doiYear" name="doiYear" aria-required="true" value="" maxlength="4">
 	        </div>
 	    </div>
 
     	</fieldset>
     </div>
+
+	<fieldset class="inline">
+
+	    <legend class="form-label-bold">Do you hold any other nationalities?</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="radio-inline-1">
+	        <input id="OtherNationalities" name="OtherNationalities" value="Yes" type="radio" onChange="toggleOtherNationalities();"> Yes
+	      </label>
+
+	      <label class="block-label" for="radio-inline-2">
+	        <input id="OtherNationalities" name="OtherNationalities" value="No" type="radio" onChange="toggleOtherNationalities();"> No
+	      </label>
+
+	    </div>
+
+	    <div class="panel-indent js-hidden" id="conditionalOtherNationalities">
+	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you hold</label>
+	    	<p class="form-hint">For example, "Canadian, Italian"</p>
+			<input type="text" name="PlaceOfBirth" />
+	    </div>
+
+  	</fieldset>
+
+
+	<fieldset class="inline">
+
+	    <legend class="form-label-bold">Have you previously held a different nationality?</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="radio-inline-1">
+	        <input id="PreviousNationalities" name="PreviousNationalities" value="Yes" type="radio" onChange="togglePrevNationalities();"> Yes
+	      </label>
+
+	      <label class="block-label" for="radio-inline-2">
+	        <input id="PreviousNationalities" name="PreviousNationalities" value="No" type="radio" onChange="togglePrevNationalities();"> No
+	      </label>
+
+	    </div>
+
+	    <div class="panel-indent js-hidden" id="conditionalPreviousNationalities">
+	    	<label class="form-label-bold label" for="EnterPreviousNationalities">Enter the nationality that you previously held</label>
+	    	<p class="form-hint">For example, "British"</p>
+			<input type="text" name="PlaceOfBirth" />
+	    </div>
+
+  	</fieldset>
+
 
     <a href="your-journey" class="button">Continue</a>
 
