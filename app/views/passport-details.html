@@ -14,8 +14,39 @@
 		<input type="text" name="PassportNumber" />
 	</div>
 
+
+	<!-- 
+
 	<div class="form-group">
-		<label class="form-label-bold label" for="PlaceOfIssue">Place of issue</label>
+
+		<legend class="form-label-bold">Country of issue</legend>
+		
+		<label class="block-label" for="radio-1">
+	    	<input id="radio-1" name="CountryOfIssue" value="Kuwait" type="radio">Qatar
+		</label>
+
+		<label class="block-label" for="radio-2">
+	    	<input id="radio-2" name="CountryOfIssue" value="Kuwait" type="radio">State of Kuwait
+		</label>
+
+		<label class="block-label" for="radio-3">
+	    	<input id="radio-3" name="CountryOfIssue" value="Oman" type="radio">Sultanate of Oman
+	  	</label>
+
+	  	<label class="block-label" for="radio-4">
+	    	<input id="radio-4" name="CountryOfIssue" value="United Arab Emirates" type="radio">United Arab Emirates
+	  	</label>
+
+  	</div>
+
+
+	Radio buttons rather than Select? 
+	"Country of issue"
+
+	-->
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="PlaceOfIssue">Country of issue</label>
 		<select class="form-control-select" id="PlaceOfIssue" name="PlaceOfIssue" aria-required="true" onchange="toggle();">
                 <option value="" disabled="disabled" selected> </option>
                 <option value="Kuwait">Kuwait</option>
@@ -71,12 +102,12 @@
 	    <legend class="form-label-bold">Sex</legend>
 	    <div class="form-group form-group-compound">
 
-	      <label class="block-label" for="radio-inline-1">
-	        <input id="Sex" name="Sex" value="Male" type="radio"> Male
+	      <label class="block-label" for="radio-sex-M">
+	        <input id="radio-sex-M" name="Sex" value="Male" type="radio"> Male
 	      </label>
 
-	      <label class="block-label" for="radio-inline-2">
-	        <input id="Sex" name="Sex" value="Female" type="radio"> Female
+	      <label class="block-label" for="radio-sex-F">
+	        <input id="radio-sex-F" name="Sex" value="Female" type="radio"> Female
 	      </label>
 
 	    </div>
@@ -167,12 +198,12 @@
 
 	    <div class="form-group form-group-compound">
 
-	      <label class="block-label" for="radio-inline-1">
-	        <input id="OtherNationalities" name="OtherNationalities" value="Yes" type="radio" onChange="toggleOtherNationalities();"> Yes
+	      <label class="block-label" for="OtherNationalities-1">
+	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" onChange="toggleOtherNationalities();"> Yes
 	      </label>
 
-	      <label class="block-label" for="radio-inline-2">
-	        <input id="OtherNationalities" name="OtherNationalities" value="No" type="radio" onChange="toggleOtherNationalities();"> No
+	      <label class="block-label" for="OtherNationalities-2">
+	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" onChange="toggleOtherNationalities();"> No
 	      </label>
 
 	    </div>
@@ -180,7 +211,7 @@
 	    <div class="panel-indent js-hidden" id="conditionalOtherNationalities">
 	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you hold</label>
 	    	<p class="form-hint">For example, "Canadian, Italian"</p>
-			<input type="text" name="PlaceOfBirth" />
+			<input type="text" name="EnterOtherNationalities" />
 	    </div>
 
   	</fieldset>
@@ -192,12 +223,12 @@
 
 	    <div class="form-group form-group-compound">
 
-	      <label class="block-label" for="radio-inline-1">
-	        <input id="PreviousNationalities" name="PreviousNationalities" value="Yes" type="radio" onChange="togglePrevNationalities();"> Yes
+	      <label class="block-label" for="PreviousNationalities-1">
+	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" onChange="togglePrevNationalities();"> Yes
 	      </label>
 
-	      <label class="block-label" for="radio-inline-2">
-	        <input id="PreviousNationalities" name="PreviousNationalities" value="No" type="radio" onChange="togglePrevNationalities();"> No
+	      <label class="block-label" for="PreviousNationalities-2">
+	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" onChange="togglePrevNationalities();"> No
 	      </label>
 
 	    </div>
@@ -205,7 +236,7 @@
 	    <div class="panel-indent js-hidden" id="conditionalPreviousNationalities">
 	    	<label class="form-label-bold label" for="EnterPreviousNationalities">Enter the nationality that you previously held</label>
 	    	<p class="form-hint">For example, "British"</p>
-			<input type="text" name="PlaceOfBirth" />
+			<input type="text" name="EnterPreviousNationalities" />
 	    </div>
 
   	</fieldset>
