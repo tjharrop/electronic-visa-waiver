@@ -15,36 +15,29 @@
 	</div>
 
 
-	<!-- 
-
 	<div class="form-group">
 
 		<legend class="form-label-bold">Country of issue</legend>
 		
-		<label class="block-label" for="radio-1">
-	    	<input id="radio-1" name="CountryOfIssue" value="Kuwait" type="radio">Qatar
+		<label class="block-label" for="country-1">
+	    	<input id="country-1" name="CountryOfIssue" value="Kuwait" type="radio" onChange="toggleCountry();">Qatar
 		</label>
 
-		<label class="block-label" for="radio-2">
-	    	<input id="radio-2" name="CountryOfIssue" value="Kuwait" type="radio">State of Kuwait
+		<label class="block-label" for="country-2">
+	    	<input id="country-2" name="CountryOfIssue" value="Kuwait" type="radio" onChange="toggleCountry();">State of Kuwait
 		</label>
 
-		<label class="block-label" for="radio-3">
-	    	<input id="radio-3" name="CountryOfIssue" value="Oman" type="radio">Sultanate of Oman
+		<label class="block-label" for="country-3">
+	    	<input id="country-3" name="CountryOfIssue" value="Oman" type="radio" onChange="toggleCountry();">Sultanate of Oman
 	  	</label>
 
-	  	<label class="block-label" for="radio-4">
-	    	<input id="radio-4" name="CountryOfIssue" value="United Arab Emirates" type="radio">United Arab Emirates
+	  	<label class="block-label" for="country-4">
+	    	<input id="country-4" name="CountryOfIssue" value="United Arab Emirates" type="radio" onChange="toggleCountry();">United Arab Emirates
 	  	</label>
 
   	</div>
 
-
-	Radio buttons rather than Select? 
-	"Country of issue"
-
-	-->
-
+<!-- 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PlaceOfIssue">Country of issue</label>
 		<select class="form-control-select" id="PlaceOfIssue" name="PlaceOfIssue" aria-required="true" onchange="toggle();">
@@ -55,14 +48,21 @@
                 <option value="United Arab Emirates">United Arab Emirates</option>            
         </select>
 	</div>
+ -->
 
-	<div class="form-group" id="KuwaitName" style="display:none;">
+	<div id="QatarName" class="form-group js-hidden">
+		<label class="form-label-bold label" for="QatarNameOnPassport">Name</label>
+		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
+		<input type="text" name="QatarNameOnPassport" />
+	</div>
+
+	<div id="KuwaitName" class="form-group js-hidden">
 		<label class="form-label-bold label" for="KuwaitNameOnPassport">Name</label>
 		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
 		<input type="text" name="KuwaitNameOnPassport" />
 	</div>
 
-	<div id="OmanName" style="display:none;">
+	<div id="OmanName" class="js-hidden">
 		<div class="form-group">
 			<label class="form-label-bold label" for="OmanSurname">Surname</label>
 			<p class="form-hint">Enter your Surname exactly as it appears on the passport</p>
@@ -80,11 +80,9 @@
 		</div>
 	</div>
 
-	<div id="QatarName" style="display:none;">
-		<p>[Qatar fields when we have them]</p>
-	</div>
 
-	<div id="UAEName" style="display:none;">
+
+	<div id="UAEName" class="js-hidden">
 		<div class="form-group">
 			<label class="form-label-bold label" for="UAESurnames">Surname</label>
 			<p class="form-hint">Enter your Surname exactly as it appears on the passport</p>

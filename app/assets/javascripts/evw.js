@@ -1,67 +1,59 @@
-// document.getElementById("PlaceOfIssue").value;
+function toggleCountry() {
 
-// showing
-// document.getElementById('element').style.display = '';
+	if ( document.getElementById("country-1").checked ) {
 
-// hiding
-// document.getElementById('element').style.display = 'none';
-
-function toggle(obj) {
-
-
-	if ( document.getElementById("PlaceOfIssue").value == "Kuwait" ) {
-
-		document.getElementById("KuwaitName").style.display = '';
-		document.getElementById("QatarName").style.display = 'none';
-		document.getElementById("UAEName").style.display = 'none';
-		document.getElementById("OmanName").style.display = 'none';
+		document.getElementById("QatarName").className = document.getElementById("QatarName").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
+		document.getElementById("KuwaitName").className += " js-hidden";
+		document.getElementById("OmanName").className += " js-hidden";
+		document.getElementById("UAEName").className += " js-hidden";
 
 	}
 
-	if ( document.getElementById("PlaceOfIssue").value == "Oman" ) {
+	if ( document.getElementById("country-2").checked ) {
 
-		document.getElementById("KuwaitName").style.display = 'none';
-		document.getElementById("QatarName").style.display = 'none';
-		document.getElementById("UAEName").style.display = 'none';
-		document.getElementById("OmanName").style.display = '';
+		document.getElementById("KuwaitName").className = document.getElementById("KuwaitName").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
+		document.getElementById("QatarName").className += " js-hidden";
+		document.getElementById("OmanName").className += " js-hidden";
+		document.getElementById("UAEName").className += " js-hidden";
+
 
 	}
 
-	if ( document.getElementById("PlaceOfIssue").value == "Qatar" ) {
+	if ( document.getElementById("country-3").checked ) {
 
-		document.getElementById("KuwaitName").style.display = 'none';
-		document.getElementById("OmanName").style.display = 'none';
-		document.getElementById("UAEName").style.display = 'none';
-		document.getElementById("QatarName").style.display = '';
+		document.getElementById("OmanName").className = document.getElementById("OmanName").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
+		document.getElementById("KuwaitName").className += " js-hidden";
+		document.getElementById("QatarName").className += " js-hidden";
+		document.getElementById("UAEName").className += " js-hidden";
+
 
 	}
 
+	if ( document.getElementById("country-4").checked ) {
 
-	if ( document.getElementById("PlaceOfIssue").value == "United Arab Emirates" ) {
+		document.getElementById("UAEName").className = document.getElementById("UAEName").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
+		document.getElementById("KuwaitName").className += " js-hidden";
+		document.getElementById("OmanName").className += " js-hidden";
+		document.getElementById("QatarName").className += " js-hidden";
 
-		// el.style.display = '';
-		document.getElementById("KuwaitName").style.display = 'none';
-		document.getElementById("OmanName").style.display = 'none';
-		document.getElementById("QatarName").style.display = 'none';
-		document.getElementById("UAEName").style.display = '';
 
-	}
-
-	else {
-
-	}
+	}	
 
 }
 
 function toggleOtherNationalities(){
-	if ( document.getElementById("OtherNationalities").value == "Yes" ) {
+
+	if ( document.getElementById("OtherNationalities-1").checked ) {
 
 		document.getElementById("conditionalOtherNationalities").className = document.getElementById("conditionalOtherNationalities").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
 
 	}
 
-	else {
-		// document.getElementById("conditionalOtherNationalities").className += " js-hidden";
+
+
+	if ( document.getElementById("OtherNationalities-2").checked ) {
+		
+		document.getElementById("conditionalOtherNationalities").className += " js-hidden";
 		
 	}
 
@@ -69,13 +61,33 @@ function toggleOtherNationalities(){
 }
 
 function togglePrevNationalities(){
-	if ( document.getElementById("PreviousNationalities").value == "Yes" ) {
+
+	if ( document.getElementById("PreviousNationalities-1").checked ) {
 
 		document.getElementById("conditionalPreviousNationalities").className = document.getElementById("conditionalPreviousNationalities").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
 
 	}
 
-	else {
-		document.getElementById("conditionalOtherNationalities").className += " js-hidden";
+	if ( document.getElementById("PreviousNationalities-2").checked ) {
+
+		document.getElementById("conditionalPreviousNationalities").className += " js-hidden";
+
 	}
 }
+
+function toggleTravelWithOthers(){
+
+	if ( document.getElementById("TravelWithOthers-1").checked ) {
+
+		document.getElementById("TravellingWithOthers").className = document.getElementById("TravellingWithOthers").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
+
+	}
+
+	if ( document.getElementById("TravelWithOthers-2").checked ) {
+
+		document.getElementById("TravellingWithOthers").className += " js-hidden";
+
+	}
+}
+
+

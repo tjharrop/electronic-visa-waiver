@@ -151,18 +151,18 @@
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="TravelWithOthers-1">
-	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio"> Yes
+	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();"> Yes
 	      </label>
 
 	      <label class="block-label" for="TravelWithOthers-2">
-	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio"> No
+	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();"> No
 	      </label>
 
 	    </div>
 
   	</fieldset>
 
-	<div class="form-group panel-indent">
+	<div id="TravellingWithOthers" class="form-group panel-indent js-hidden">
 		<label class="form-label-bold label" for="OtherTravellers">Please give the names of others travelling with you</label>
 		<input type="text" name="OtherTravellers" />
 	</div>
