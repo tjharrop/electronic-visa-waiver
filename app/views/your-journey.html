@@ -8,16 +8,22 @@
 
 <form>
 
+	<!-- We may be able to drop this question if we can infer it from the port of departure Q 
+
 	<div class="form-group">
-		<label class="form-label-bold label" for="DepartureCountry">Which country are you travelling to the UK from?</label>
+		<label class="form-label-bold label" for="DepartureCountry">Which country will you be travelling to the UK from?</label>
+		<p class="form-hint">This is the country you will leave to travel to the UK</p>
 		<input type="text" name="DepartureCountry" />
 	</div>
+
+	-->
 
 
 
 	<div class="form-group">
 
 		<legend class="form-label-bold">How will you be travelling to the UK?</legend>
+		<p class="form-hint">This is the journey you will make to arrive in the UK</p>
 		
 		<label class="block-label" for="DepartureMode-1">
 	    	<input id="DepartureMode-1" name="DepartureMode" value="Air" type="radio">By air
@@ -34,12 +40,16 @@
   	</div>
 
 
-	<!-- Departure details -->
+	<!-- Departure details 
+		For flights, port of departure can be inferred from flight no
+	
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="DepartureAirport">Which airport are you flying to the UK from?</label>
 		<input type="text" name="DepartureAirport" />
 	</div>
+
+	-->
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="FlightNumber">Flight number</label>
@@ -71,6 +81,7 @@
 	    </fieldset>
     </div>
 
+    <!-- Inferred from flight no and departure date 
     	<div class="form-group">
 		<fieldset>
 		    <legend class="form-label-bold date-field label">Departure time <span class="visuallyhidden">expected format is HH/MM</span></legend>
@@ -91,7 +102,9 @@
 	    </fieldset>
     </div>
 
-    <!-- Arrival details -->
+   	-->
+
+    <!-- Arrival details - inferred from flight no and departure date
 
     <div class="form-group">
 		<label class="form-label-bold label" for="ArrivalAirport">Which airport will you arrive at?</label>
@@ -142,6 +155,8 @@
 	    </fieldset>
     </div>
 
+    -->
+
     <!-- Additional travel information -->
 
      <fieldset class="inline">
@@ -167,11 +182,15 @@
 		<input type="text" name="OtherTravellers" />
 	</div>
 
+
+	<!-- To change: turn into radio bttns, use the options from the start page, hint text on 6m stay -->
+
 	<div class="form-group">
 		<label class="form-label-bold label" for="ReasonForVisit">What is the reason for your visit to the UK?</label>
 		<input type="text" name="ReasonForVisit" />
 	</div>
 
+	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK 
 
     <fieldset class="inline">
 
@@ -190,6 +209,7 @@
 	    </div>
 
   	</fieldset>
+  	-->
 
 	<a href="your-visit" class="button">Continue</a>
 

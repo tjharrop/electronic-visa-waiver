@@ -9,7 +9,7 @@
 	<form>
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="UKaddress">Where will you stay in the UK? <span class="form-hint">Give the full address of the hotel or home where you will be staying</span></label>
+		<label class="form-label-bold label" for="UKaddress">Where will you stay in the UK? <span class="form-hint">Give the full address of where you will be staying when you arrive in the UK</span></label>
 		<input type="text" name="UKaddress1" /><br />
 		<input type="text" name="UKaddress2" /><br />
 		<input type="text" name="UKaddress3" /><br />
@@ -21,7 +21,7 @@
 
 	<div class="form-group">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">On which date will you be leaving the UK <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+		    <legend class="form-label-bold date-field label">When will you be leaving the UK?<span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
 		    <div class="form-date" id="departureDate">
 		        <p class="form-hint">For example, 18 09 2015</p>
@@ -43,6 +43,8 @@
 	    </fieldset>
     </div>
 
+    <!-- Add air/sea/train option in here -->
+
     <div class="form-group">
 		<label class="form-label-bold label" for="DepartureAirport">Which airport will you leave the UK from?</label>
 		<input type="text" name="DepartureAirport" />
@@ -52,8 +54,6 @@
 		<label class="form-label-bold label" for="FlightNumber">Flight number <span class="form-hint">For example, BA1234</span></label>
 		<input type="text" name="FlightNumber" />
 	</div>
-
-	<!-- form ends here... -->
 
 
 	<a href="contact-details" class="button">Continue</a>
