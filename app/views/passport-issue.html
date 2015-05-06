@@ -1,0 +1,25 @@
+{{<layout}}
+
+{{$pageTitle}}Passport details{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <h1 class="heading-large">Your passport details</h1>
+  <h2>You will need to copy these details from your passport.</h2>
+  <p>&nbsp;</p>
+
+<form name="passport-details">
+
+  {{>includes/partials/country-of-issue}}
+
+  <a href="passport-details" class="button">Continue</a>
+
+	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}

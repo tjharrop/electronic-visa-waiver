@@ -37,7 +37,7 @@ function toggleCountry() {
 		document.getElementById("QatarName").className += " js-hidden";
 
 
-	}	
+	}
 
 }
 
@@ -52,42 +52,10 @@ function toggleOtherNationalities(){
 
 
 	if ( document.getElementById("OtherNationalities-2").checked ) {
-		
+
 		document.getElementById("conditionalOtherNationalities").className += " js-hidden";
-		
+
 	}
 
 
 }
-
-function togglePrevNationalities(){
-
-	if ( document.getElementById("PreviousNationalities-1").checked ) {
-
-		document.getElementById("conditionalPreviousNationalities").className = document.getElementById("conditionalPreviousNationalities").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
-
-	}
-
-	if ( document.getElementById("PreviousNationalities-2").checked ) {
-
-		document.getElementById("conditionalPreviousNationalities").className += " js-hidden";
-
-	}
-}
-
-function toggleTravelWithOthers(){
-
-	if ( document.getElementById("TravelWithOthers-1").checked ) {
-
-		document.getElementById("TravellingWithOthers").className = document.getElementById("TravellingWithOthers").className.replace( /(?:^|\s)js-hidden(?!\S)/g , '' );
-
-	}
-
-	if ( document.getElementById("TravelWithOthers-2").checked ) {
-
-		document.getElementById("TravellingWithOthers").className += " js-hidden";
-
-	}
-}
-
-

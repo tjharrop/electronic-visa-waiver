@@ -4,17 +4,18 @@
 
 {{$content}}
 <main id="content" role="main">
+  {{>includes/banner}}
   <h1 class="heading-large">Your visit to the UK</h1>
 
-	<form>
+	<form name="visit">
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="UKaddress">Where will you stay in the UK? <span class="form-hint">Give the full address of where you will be staying when you arrive in the UK</span></label>
-		<input type="text" name="UKaddress1" /><br />
-		<input type="text" name="UKaddress2" /><br />
-		<input type="text" name="UKaddress3" /><br />
-		<input type="text" name="UKaddress4" /><br />
-		<input type="text" name="UKaddress5" />
+		<input type="text" name="UKaddress1" class="form-control"><br />
+		<input type="text" name="UKaddress2" class="form-control"><br />
+		<input type="text" name="UKaddress3" class="form-control"><br />
+		<input type="text" name="UKaddress4" class="form-control"><br />
+		<input type="text" name="UKaddress5" class="form-control">
 	</div>
 
 	<!-- see https://designpatterns.hackpad.com/Addresses-CgrMSGRAhRc for address design pattern being proposed here -->
@@ -47,12 +48,12 @@
 
     <div class="form-group">
 		<label class="form-label-bold label" for="DepartureAirport">Which airport will you leave the UK from?</label>
-		<input type="text" name="DepartureAirport" />
+		<input type="text" name="DepartureAirport" class="form-control">
 	</div>
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="FlightNumber">Flight number <span class="form-hint">For example, BA1234</span></label>
-		<input type="text" name="FlightNumber" />
+		<input type="text" name="FlightNumber" class="form-control">
 	</div>
 
 
@@ -66,4 +67,3 @@
 {{/content}}
 
 {{/layout}}
-

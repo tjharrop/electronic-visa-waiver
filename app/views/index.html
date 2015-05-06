@@ -6,34 +6,52 @@
 
 {{$content}}
 
+
 <main id="content" role="main">
+	{{>includes/banner}}
 
 
-	<h1 class="heading-xlarge">Electronic visa waiver</h1>
+	<h1 class="heading-xlarge">Electronic visa waiver prototype</h1>
 
-	<p>If you have a passport from Qatar, Kuwait, the United Arab Emirates or Oman you can travel to the UK using an electronic visa waiver.</p>
-	<p>An electronic visa waiver:</p>
- 
-	<ul class="list-bullet">
-		<li>can be used for a single visit to the UK of up to 6 months</li>
-		<li>can be used for tourism, business or study purposes</li>
-		<li>is free</li>
-		<li>can be completed online</li>
-	</ul>
-	<p>You must complete the online form at least 48 hours before you travel to the UK. You can complete it 3 months before you travel.</p>
-	<p>If you are travelling as a family or group, you need to fill in a separate form for each person.</p>
-
-	<h2 class="heading-medium">Before you start</h2>
-	<p>You'll need:</p>
-	<ul class="list-bullet">
-		<li>your passport and those of any family members travelling with you</li>
-		<li>travel details to and from the UK</li> 
-		<li>details of where you will be staying <!-- on arrival -->in the UK</li>
-	</ul>
-
-	<p><a href="passport-details" class="button button-get-started" role="button">Start now</a></p>
-
-
+	<table>
+		<thead>
+			<tr>
+				<th>Prototype name</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Dynamic name fields</td>
+				<td><a href="start">En</a></td>
+				<td>Ar</td>
+				<td>En/Ar</td>
+			</tr>
+			<tr>
+				<td>Non-dynamic name fields</td>
+				<td><a href="eng-no-dynamic">En</a></td>
+				<td>Ar</td>
+				<td>En/Ar</td>
+			</tr>
+			<tr>
+				<td>Travel details first, Dynamic name fields</td>
+				<td><a href="eng-dynamic-travel-first">En</a></td>
+				<td>Ar</td>
+				<td>En/Ar</td>
+			</tr>
+			<tr>
+				<td>Travel details first, Non-dynamic name fields</td>
+				<td><a href="eng-no-dynamic-travel-first">En</a></td>
+				<td>Ar</td>
+				<td>En/Ar</td>
+			</tr>
+		</tbody>
+	</table>
+<p>
+<button class="button clearStorage">Clear Data</button>
+</p>
 </main>
 
 {{/content}}

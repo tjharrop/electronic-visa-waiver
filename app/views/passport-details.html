@@ -4,42 +4,24 @@
 
 {{$content}}
 <main id="content" role="main">
+  {{>includes/banner}}
   <h1 class="heading-large">Your passport details</h1>
   <h2>You will need to copy these details from your passport.</h2>
   <p>&nbsp;</p>
 
-<form>
+<form name="passport-details">
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PassportNumber">Passport number</label>
 		<p class="form-hint">Give the passport number you will use when travelling to the UK</p>
-		<input type="text" name="PassportNumber" />
+		<input type="text" name="PassportNumber" class="form-control">
 	</div>
 
+<div class="hide-by-default show-if-dynamic">
+  {{>includes/partials/country-of-issue}}
+</div>
 
-	<div class="form-group">
-
-		<legend class="form-label-bold">Country of issue</legend>
-		
-		<label class="block-label" for="country-1">
-	    	<input id="country-1" name="CountryOfIssue" value="Kuwait" type="radio" onChange="toggleCountry();">Qatar
-		</label>
-
-		<label class="block-label" for="country-2">
-	    	<input id="country-2" name="CountryOfIssue" value="Kuwait" type="radio" onChange="toggleCountry();">State of Kuwait
-		</label>
-
-		<label class="block-label" for="country-3">
-	    	<input id="country-3" name="CountryOfIssue" value="Oman" type="radio" onChange="toggleCountry();">Sultanate of Oman
-	  	</label>
-
-	  	<label class="block-label" for="country-4">
-	    	<input id="country-4" name="CountryOfIssue" value="United Arab Emirates" type="radio" onChange="toggleCountry();">United Arab Emirates
-	  	</label>
-
-  	</div>
-
-<!-- 
+<!--
 	<div class="form-group">
 		<label class="form-label-bold label" for="PlaceOfIssue">Country of issue</label>
 		<select class="form-control-select" id="PlaceOfIssue" name="PlaceOfIssue" aria-required="true" onchange="toggle();">
@@ -47,53 +29,53 @@
                 <option value="Kuwait">Kuwait</option>
                 <option value="Oman">Oman</option>
                 <option value="Qatar">Qatar</option>
-                <option value="United Arab Emirates">United Arab Emirates</option>            
+                <option value="United Arab Emirates">United Arab Emirates</option>
         </select>
 	</div>
  -->
 
-	<div id="QatarName" class="form-group js-hidden">
+	<div id="QatarName" class="form-group hide-by-default optional-section-CountryOfIssue show-if-qatar" data-toggle-value="Qatar">
 		<label class="form-label-bold label" for="QatarNameOnPassport">Name</label>
 		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
-		<input type="text" name="QatarNameOnPassport" />
+		<input type="text" name="QatarNameOnPassport" class="form-control">
 	</div>
 
-	<div id="KuwaitName" class="form-group js-hidden">
+	<div id="KuwaitName" class="form-group hide-by-default optional-section-CountryOfIssue show-if-kuwait" data-toggle-value="Kuwait">
 		<label class="form-label-bold label" for="KuwaitNameOnPassport">Name</label>
 		<p class="form-hint">Enter your name exactly as it appears on the passport</p>
-		<input type="text" name="KuwaitNameOnPassport" />
+		<input type="text" name="KuwaitNameOnPassport" class="form-control">
 	</div>
 
-	<div id="OmanName" class="js-hidden">
+	<div id="OmanName" class="hide-by-default optional-section-CountryOfIssue show-if-oman" data-toggle-value="Oman">
 		<div class="form-group">
 			<label class="form-label-bold label" for="OmanSurname">Surname</label>
 			<p class="form-hint">Enter your surname exactly as it appears on the passport</p>
-			<input type="text" name="OmanSurname" />
+			<input type="text" name="OmanSurname" class="form-control">
 		</div>
 		<div class="form-group">
 			<label class="form-label-bold label" for="OmanFamilyName">Family name</label>
 			<p class="form-hint">Enter your family name exactly as it appears on the passport</p>
-			<input type="text" name="OmanFamilyName" />
+			<input type="text" name="OmanFamilyName" class="form-control">
 		</div>
 		<div class="form-group">
 			<label class="form-label-bold label" for="OmanGivenNames">Given names</label>
 			<p class="form-hint">Enter your given names exactly as it appears on the passport</p>
-			<input type="text" name="OmanGivenNames" />
+			<input type="text" name="OmanGivenNames" class="form-control">
 		</div>
 	</div>
 
 
 
-	<div id="UAEName" class="js-hidden">
+	<div id="UAEName" class="hide-by-default optional-section-CountryOfIssue show-if-uar" data-toggle-value="United Arab Emirates">
 		<div class="form-group">
 			<label class="form-label-bold label" for="UAESurnames">Surname</label>
 			<p class="form-hint">Enter your surname exactly as it appears on the passport</p>
-			<input type="text" name="UAESurnames" />
+			<input type="text" name="UAESurnames" class="form-control">
 		</div>
 		<div class="form-group">
 			<label class="form-label-bold label" for="UAEFirstNames">First names</label>
 			<p class="form-hint">Enter your first names exactly as it appears on the passport</p>
-			<input type="text" name="UAEFirstNames" />
+			<input type="text" name="UAEFirstNames" class="form-control">
 		</div>
 	</div>
 
@@ -103,11 +85,11 @@
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="radio-sex-M">
-	        <input id="radio-sex-M" name="Sex" value="Male" type="radio"> Male
+	        <input id="radio-sex-M" name="Sex" value="Male" type="radio" data-storage="male"> Male
 	      </label>
 
 	      <label class="block-label" for="radio-sex-F">
-	        <input id="radio-sex-F" name="Sex" value="Female" type="radio"> Female
+	        <input id="radio-sex-F" name="Sex" value="Female" type="radio" data-storage="female"> Female
 	      </label>
 
 	    </div>
@@ -141,7 +123,7 @@
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PlaceOfBirth">Place of birth</label>
-		<input type="text" name="PlaceOfBirth" />
+		<input type="text" name="PlaceOfBirth" class="form-control">
 	</div>
 
 
@@ -200,16 +182,16 @@
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="OtherNationalities-1">
-	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" onChange="toggleOtherNationalities();"> Yes
+	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" data-storage="yes"> Yes
 	      </label>
 
 	      <label class="block-label" for="OtherNationalities-2">
-	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" onChange="toggleOtherNationalities();"> No
+	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" data-storage="no"> No
 	      </label>
 
 	    </div>
 
-	    <div class="panel-indent js-hidden" id="conditionalOtherNationalities">
+	    <div class="panel-indent hide-by-default show-if-OtherNationalities optional-section-OtherNationalities" data-toggle-value="Yes" id="conditionalOtherNationalities">
 	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you hold</label>
 	    	<p class="form-hint">For example, "Canadian, Italian"</p>
 			<input type="text" name="EnterOtherNationalities" />
@@ -225,16 +207,16 @@
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="PreviousNationalities-1">
-	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" onChange="togglePrevNationalities();"> Yes
+	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" data-storage="yes"> Yes
 	      </label>
 
 	      <label class="block-label" for="PreviousNationalities-2">
-	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" onChange="togglePrevNationalities();"> No
+	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" data-storage="no"> No
 	      </label>
 
 	    </div>
 
-	    <div class="panel-indent js-hidden" id="conditionalPreviousNationalities">
+	    <div class="panel-indent js-hidden hide-by-default show-if-PreviousNationalities optional-section-PreviousNationalities" data-toggle-value="Yes" id="conditionalPreviousNationalities">
 	    	<label class="form-label-bold label" for="EnterPreviousNationalities">Enter the nationality that you previously held</label>
 	    	<p class="form-hint">For example, "British"</p>
 			<input type="text" name="EnterPreviousNationalities" />
@@ -243,7 +225,8 @@
   	</fieldset>
 
 
-    <a href="your-journey" class="button">Continue</a>
+    <a href="your-journey" class="button hide-if-travel">Continue</a>
+    <a href="your-visit" class="button hide-by-default show-if-travel">Continue</a>
 
 	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
 
@@ -253,4 +236,3 @@
 {{/content}}
 
 {{/layout}}
-

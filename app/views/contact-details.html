@@ -4,44 +4,45 @@
 
 {{$content}}
 <main id="content" role="main">
+  {{>includes/banner}}
   <h1 class="heading-large">Your personal details</h1>
   <p>We may need to contact you about the information you have provided.</p>
 
-	<form>
+	<form name="contact-details">
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="HomeAddress">Home address <span class="form-hint">Give the full address of your main residence </span></label>
-		<input type="text" name="HomeAddress1" /><br />
-		<input type="text" name="HomeAddress2" /><br />
-		<input type="text" name="HomeAddress3" /><br />
-		<input type="text" name="HomeAddress4" /><br />
-		<input type="text" name="HomeAddress5" />
+		<input type="text" name="HomeAddress1" class="form-control"><br />
+		<input type="text" name="HomeAddress2" class="form-control"><br />
+		<input type="text" name="HomeAddress3" class="form-control"><br />
+		<input type="text" name="HomeAddress4" class="form-control"><br />
+		<input type="text" name="HomeAddress5" class="form-control">
 	</div>
 
 	<!-- check GDS guidance on international phone numbers, add help text -->
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PhoneNumber">Phone number</label>
-		<input type="text" name="PhoneNumber" />
+		<input type="text" name="PhoneNumber" class="form-control">
 	</div>
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="Email">Email address <span class="form-hint">We will send your electronic visa waiver to this address.</span></label>
-		<input type="text" name="Email" />
+		<input type="text" name="Email" class="form-control">
 	</div>
 
-	
+
 	<!-- Confirmation pattern: inset statement "We will use this address if we need to email you: [email address]" -->
 
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="Occupation">Your occupation</label>
-		<input type="text" name="Occupation" />
+		<input type="text" name="Occupation" class="form-control">
 	</div>
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="CompanyName">Company name</label>
-		<input type="text" name="CompanyName" />
+		<input type="text" name="CompanyName" class="form-control">
 	</div>
 
 	</form>
@@ -52,4 +53,3 @@
 {{/content}}
 
 {{/layout}}
-

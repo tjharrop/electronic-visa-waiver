@@ -4,12 +4,13 @@
 
 {{$content}}
 <main id="content" role="main">
+  {{>includes/banner}}
   <h1 class="heading-large">Check your answers</h1>
   <p>Please check that your responses, including your name, exactly matches the details on your passport. If your details do not match those on the passport, you may not be able to travel.</p>
 
 <!-- Add in name! -->
 
-  <table>
+  <table class="playback-container" name="passport-details">
     <thead>
       <tr>
         <th scope="col" width="60%">Your passport details</th>
@@ -19,39 +20,39 @@
     <tbody>
       <tr>
         <td>Passport number</td>
-        <td>09715372</td>
+        <td><span class="playback-cell" data-playback="PassportNumber"></span></td>
       </tr>
       <tr>
         <td>Country of issue</td>
-        <td>State of Kuwait</td>
+        <td><span class="playback-cell" data-playback="CountryOfIssue"></span></td>
       </tr>
       <tr>
        <td>Sex</td>
-       <td>Male</td>
+       <td><span class="playback-cell" data-playback="Sex"></span></td>
       </tr>
       <tr>
        <td>Date of birth</td>
-       <td>13 03 1985</td>
+       <td><span class="playback-cell" data-playback="dobDay"></span>/<span class="playback-cell" data-playback="dobMonth"></span>/<span class="playback-cell" data-playback="dobYear"></span></td>
       </tr>
       <tr>
        <td>Place of birth</td>
-       <td>Kuwait City</td>
+       <td><span class="playback-cell" data-playback="PlaceOfBirth"></span></td>
       </tr>
       <tr>
        <td>Date of expiry</td>
-       <td>24 01 2019</td>
+       <td><span class="playback-cell" data-playback="doeDay"></span>/<span class="playback-cell" data-playback="doeMonth"></span>/<span class="playback-cell" data-playback="doeYear"></span></td>
       </tr>
       <tr>
        <td>Date of issue</td>
-       <td>24 01 2009</td>
+       <td><span class="playback-cell" data-playback="doiDay"></span>/<span class="playback-cell" data-playback="doiMonth"></span>/<span class="playback-cell" data-playback="doiYear"></span></td>
       </tr>
       <tr>
        <td>Other nationalities</td>
-       <td>No</td>
+       <td>XXXXXXX</td>
       </tr>
       <tr>
        <td>Previous nationalities</td>
-       <td>None</td>
+       <td>XXXXXXX</td>
       </tr>
 
     </tbody>
@@ -59,7 +60,7 @@
 
   <p>&nbsp;</p>
 
-  <table>
+  <table class="playback-container" name="journey-details">
     <thead>
       <tr>
         <th scope="col" width="60%">Your journey to the UK</th>
@@ -69,23 +70,23 @@
     <tbody>
     	<tr>
        <td>Which country are you travelling to the UK from?</td>
-       <td>Kuwait</td>
+       <td><span class="playback-cell" data-playback="">XXXX</span></td>
       </tr>
       <tr>
        <td>How will you be travelling to the UK?</td>
-       <td>By air</td>
+       <td><span class="playback-cell" data-playback="DepartureMode"></span></td>
       </tr>
       <tr>
        <td>Which airport are you flying to the UK from?</td>
-       <td>Kuwait International Airport</td>
+       <td>XXXX</td>
       </tr>
       <tr>
        <td>Flight number</td>
-       <td>BA8316</td>
+       <td><span class="playback-cell" data-playback="FlightNumber"></span></td>
       </tr>
       <tr>
        <td>Departure date</td>
-       <td>14 05 2015</td>
+       <td><span class="playback-cell" data-playback="departureDay"></span>/<span class="playback-cell" data-playback="departureMonth"></span>/<span class="playback-cell" data-playback="departureYear"></span></td>
       </tr>
       <tr>
        <td>Departure time</td>
@@ -94,27 +95,27 @@
       <tr>
        <td>Which airport will you arrive at?</td>
        <td>London Heathrow</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Arrival date</td>
        <td>14 05 2015</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Arrival time</td>
        <td>19:15</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Are you travelling to the UK with anyone else?</td>
        <td>No</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Please give the names of others travelling with you</td>
        <td></td>
-      </tr> 
+      </tr>
       <tr>
        <td>What is the reason for your visit to the UK?</td>
        <td>Business</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Do you plan to travel to the UK again within three months of this visit?</td>
        <td>No</td>
@@ -135,7 +136,7 @@
       <tr>
        <td>Where will you stay in the UK?</td>
        <td>The Dorchester<br />
-       	Park Lane<br /> 
+       	Park Lane<br />
        	London <br />
 		W1K 1QA</td>
       </tr>
@@ -146,7 +147,7 @@
       <tr>
        <td>Which airport will you leave the UK from?</td>
        <td>London Gatwick</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Flight number</td>
        <td>AA6419</td>
@@ -168,7 +169,7 @@
       <tr>
        <td>Home address</td>
        <td>Arabian Gulf Street<br />
-       	Dasman<br /> 
+       	Dasman<br />
 		Kuwait City<br />
 		Kuwait</td>
       </tr>
@@ -179,7 +180,7 @@
       <tr>
        <td>Email address</td>
        <td>name@domain.com</td>
-      </tr> 
+      </tr>
       <tr>
        <td>Your occupation</td>
        <td>Financial advisor</td>
@@ -202,4 +203,3 @@
 {{/content}}
 
 {{/layout}}
-

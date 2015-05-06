@@ -1,1 +1,114 @@
 <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/form.storage.js"></script>
+<script>
+$(document).ready(function(){
+  $(".hide-by-default").hide();
+  //write to local storage
+  $('form').storeForm();
+  //play back from local storage
+  $('.playback-container').getForm();
+  $('body').on('change', 'input', function(){
+
+    var $this = $(this);
+
+    // toggle optional sections
+
+    if ($this.is(':checkbox')){
+
+      var $toggleTarget = $('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      if ($toggleTarget.length){
+
+        $toggleTarget.toggle($this.is(':checked') && $this.val() == $toggleTarget.attr('data-toggle-value'));
+
+      }
+
+    } else if ($this.is(':radio')){
+
+      var $toggleTarget = $('.optional-section-'+$this.attr('name'));
+
+      console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      $toggleTarget.each(function(){
+
+        $(this).toggle($this.val() == $(this).attr('data-toggle-value'));
+
+      });
+    }
+
+  });
+
+//hide and show stuff
+
+if (localStorage['passport-details']) {
+  var leadApplicant = JSON.parse(localStorage['passport-details']);
+  var leadNationality = leadApplicant['CountryOfIssue'];
+  if (leadNationality == 'Qatar'){
+    $(".show-if-qatar").show();
+    console.log('Showing qatar')
+  }
+  if (leadNationality == 'Sultanate of Oman'){
+    $(".show-if-oman").show();
+    console.log('Showing Oman')
+  }
+  if (leadNationality == 'United Arab Emirates'){
+    $(".show-if-uae").show();
+    console.log('Showing UAE')
+  }
+  if (leadNationality == 'Kuwait'){
+    $(".show-if-kuwait").show();
+    console.log('Showing Kuwait')
+  }
+
+}
+
+//show if the user has other nationalities
+if (localStorage['passport-details']) {
+  var leadApplicant = JSON.parse(localStorage['passport-details']);
+  var hasOther = leadApplicant['OtherNationalities'];
+  if (hasOther == 'yes'){
+    $(".show-if-OtherNationalities").show();
+    console.log('User has other nationalities')
+  }
+}
+
+//show this stuff if the user has previous nationalities
+if (localStorage['passport-details']) {
+  var leadApplicant = JSON.parse(localStorage['passport-details']);
+  var hasPrev = leadApplicant['PreviousNationalities'];
+  if (hasPrev == 'yes'){
+    $(".show-if-PreviousNationalities").show();
+    console.log('User has previous nationalities')
+  }
+}
+
+if (localStorage.getItem('dynamic') == "hide") {
+  $('.hide-if-dynamic').show();
+  $('.show-if-dynamic').hide();
+  console.log('Hiding dynamic content')
+} else {
+  $('.show-if-dynamic').show();
+  $('.hide-if-dynamic').hide();
+  console.log('Showing dynamic content')
+}
+
+if (localStorage.getItem('travel') == "first") {
+  $('.hide-if-travel').hide();
+  $('.show-if-travel').show();
+  console.log('Showing travel first')
+} else {
+  $('.show-if-travel').hide();
+  $('.hide-if-travel').show();
+  console.log('Showing travel mid-service')
+}
+
+  $('.clearStorage').click(function(){
+    localStorage.clear();
+    $(this).html('&#10003; Data cleared');
+  });
+
+});
+</script>

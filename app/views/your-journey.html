@@ -4,11 +4,12 @@
 
 {{$content}}
 <main id="content" role="main">
+  {{>includes/banner}}
   <h1 class="heading-large">Your journey to the UK</h1>
 
-<form>
+<form name="journey-details">
 
-	<!-- We may be able to drop this question if we can infer it from the port of departure Q 
+	<!-- We may be able to drop this question if we can infer it from the port of departure Q
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="DepartureCountry">Which country will you be travelling to the UK from?</label>
@@ -24,25 +25,25 @@
 
 		<legend class="form-label-bold">How will you be travelling to the UK?</legend>
 		<p class="form-hint">This is the journey you will make to arrive in the UK</p>
-		
+
 		<label class="block-label" for="DepartureMode-1">
-	    	<input id="DepartureMode-1" name="DepartureMode" value="Air" type="radio">By air
+	    	<input id="DepartureMode-1" name="DepartureMode" value="Air" type="radio" data-storage="Air">By air
 		</label>
 
 		<label class="block-label" for="DepartureMode-2">
-	    	<input id="DepartureMode-2" name="DepartureMode" value="Train" type="radio">By train
+	    	<input id="DepartureMode-2" name="DepartureMode" value="Train" type="radio" data-storage="Train">By train
 	  	</label>
 
 	  	<label class="block-label" for="DepartureMode-3">
-	    	<input id="DepartureMode-3" name="DepartureMode" value="Sea" type="radio">By sea
+	    	<input id="DepartureMode-3" name="DepartureMode" value="Sea" type="radio" data-storage="Sea">By sea
 	  	</label>
 
   	</div>
 
 
-	<!-- Departure details 
+	<!-- Departure details
 		For flights, port of departure can be inferred from flight no
-	
+
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="DepartureAirport">Which airport are you flying to the UK from?</label>
@@ -51,11 +52,23 @@
 
 	-->
 
-	<div class="form-group">
-		<label class="form-label-bold label" for="FlightNumber">Flight number</label>
-		<p class="form-hint">For example, BA1234</p>
-		<input type="text" name="FlightNumber" />
-	</div>
+  	<div class="form-group">
+  		<label class="form-label-bold label" for="FlightNumber">Flight number</label>
+  		<p class="form-hint">For example, BA1234</p>
+  		<input type="text" name="FlightNumber" />
+  	</div>
+
+
+    	<div class="form-group">
+    		<label class="form-label-bold label" for="FlightNumber">Departing from</label>
+    		<input type="text" name="DepartureLocation" class="form-control">
+    	</div>
+
+
+      	<div class="form-group">
+      		<label class="form-label-bold label" for="FlightNumber">Arrival airport</label>
+      		<input type="text" name="ArrivalLocation" class="form-control">
+      	</div>
 
 	<div class="form-group">
 		<fieldset>
@@ -65,23 +78,23 @@
 		        <p class="form-hint">For example, 18 09 2015</p>
 
 		        <div class="form-group form-group-day">
-		            <label for="depatureDay"><span class="visuallyhidden">Departure date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-		            <input type="text" class="form-control" id="depatureDay" name="depatureDay" aria-required="true" value="" maxlength="2">
+		            <label for="departureDay"><span class="visuallyhidden">Departure date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+		            <input type="text" class="form-control" id="departureDay" name="departureDay" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-month">
-		            <label for="depatureMonth"><span class="visuallyhidden">Departure date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="depatureMonth" name="depatureMonth" aria-required="true" value="" maxlength="2">
+		            <label for="departureMonth"><span class="visuallyhidden">Departure date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+		            <input type="text" class="form-control" id="departureMonth" name="departureMonth" aria-required="true" value="" maxlength="2">
 		        </div>
 		        <div class="form-group form-group-year">
-		            <label for="depatureYear"><span class="visuallyhidden">Departure date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-		            <input type="text" class="form-control" id="depatureYear" name="depatureYear" aria-required="true" value="" maxlength="4">
+		            <label for="departureYear"><span class="visuallyhidden">Departure date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+		            <input type="text" class="form-control" id="departureYear" name="departureYear" aria-required="true" value="" maxlength="4">
 		        </div>
 		    </div>
 
 	    </fieldset>
     </div>
 
-    <!-- Inferred from flight no and departure date 
+    <!-- Inferred from flight no and departure date
     	<div class="form-group">
 		<fieldset>
 		    <legend class="form-label-bold date-field label">Departure time <span class="visuallyhidden">expected format is HH/MM</span></legend>
@@ -179,7 +192,7 @@
 
 	<div id="TravellingWithOthers" class="form-group panel-indent js-hidden">
 		<label class="form-label-bold label" for="OtherTravellers">Please give the names of others travelling with you</label>
-		<input type="text" name="OtherTravellers" />
+		<input type="text" name="OtherTravellers" class="form-control">
 	</div>
 
 
@@ -187,10 +200,10 @@
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="ReasonForVisit">What is the reason for your visit to the UK?</label>
-		<input type="text" name="ReasonForVisit" />
+		<input type="text" name="ReasonForVisit" class="form-control">
 	</div>
 
-	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK 
+	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK
 
     <fieldset class="inline">
 
@@ -211,7 +224,12 @@
   	</fieldset>
   	-->
 
-	<a href="your-visit" class="button">Continue</a>
+    	<div class=" hide-by-default show-if-travel">
+    		<p class="hide-by-default show-if-dynamic"><a href="passport-details" class="button " role="button">Continue</a></p>
+    		<p class="hide-if-dynamic"><a href="passport-issue" class="button " role="button">Continue</a></p>
+    	</div>
+
+	<a href="your-visit" class="button hide-if-travel">Continue</a>
 
 	<!-- <input type="submit" id="updateContinue" class="button next" value="Continue" style="display: inline-block;"> -->
 
@@ -221,4 +239,3 @@
 {{/content}}
 
 {{/layout}}
-
