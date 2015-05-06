@@ -65,6 +65,17 @@ if (localStorage['passport-details']) {
 
 }
 
+
+if (localStorage['journey-details']) {
+  var journey = JSON.parse(localStorage['journey-details']);
+  var journeyDetail = journey['TravelWithOthers'];
+  if (journeyDetail == 'Yes'){
+    $(".show-if-others").show();
+    console.log('Travelling with others')
+  }
+
+}
+
 //show if the user has other nationalities
 if (localStorage['passport-details']) {
   var leadApplicant = JSON.parse(localStorage['passport-details']);

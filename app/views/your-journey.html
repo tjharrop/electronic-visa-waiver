@@ -179,18 +179,17 @@
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="TravelWithOthers-1">
-	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();"> Yes
+	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();" data-storage="Yes"> Yes
 	      </label>
-
 	      <label class="block-label" for="TravelWithOthers-2">
-	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();"> No
+	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();" data-storage="No"> No
 	      </label>
 
 	    </div>
 
   	</fieldset>
 
-	<div id="TravellingWithOthers" class="form-group panel-indent js-hidden">
+	<div id="TravellingWithOthers" class="form-group panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="Yes">
 		<label class="form-label-bold label" for="OtherTravellers">Please give the names of others travelling with you</label>
 		<input type="text" name="OtherTravellers" class="form-control">
 	</div>

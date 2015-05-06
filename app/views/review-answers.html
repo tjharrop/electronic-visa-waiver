@@ -22,6 +22,34 @@
         <td>Passport number</td>
         <td><span class="playback-cell" data-playback="PassportNumber"></span></td>
       </tr>
+      <tr class="hide-by-default show-if-uae">
+        <td>First Names</td>
+        <td><span class="playback-cell" data-playback="UAEFirstNames"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-uae">
+        <td>Surname</td>
+        <td><span class="playback-cell" data-playback="UAESurnames"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-oman">
+        <td>Surname</td>
+        <td><span class="playback-cell" data-playback="OmanSurname"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-oman">
+        <td>Family Name</td>
+        <td><span class="playback-cell" data-playback="OmanFamilyName"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-oman">
+        <td>Given Name</td>
+        <td><span class="playback-cell" data-playback="OmanGivenNames"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-qatar">
+        <td>Name</td>
+        <td><span class="playback-cell" data-playback="QatarNameOnPassport"></span></td>
+      </tr>
+      <tr class="hide-by-default show-if-kuwait">
+        <td>Name</td>
+        <td><span class="playback-cell" data-playback="KuwaitNameOnPassport"></span></td>
+      </tr>
       <tr>
         <td>Country of issue</td>
         <td><span class="playback-cell" data-playback="CountryOfIssue"></span></td>
@@ -48,13 +76,12 @@
       </tr>
       <tr>
        <td>Other nationalities</td>
-       <td>XXXXXXX</td>
+       <td><span class="playback-cell" data-playback="EnterOtherNationalities">None</span></td>
       </tr>
       <tr>
        <td>Previous nationalities</td>
-       <td>XXXXXXX</td>
+       <td><span class="playback-cell" data-playback="EnterPreviousNationalities">None</span></td>
       </tr>
-
     </tbody>
   </table>
 
@@ -68,17 +95,13 @@
       </tr>
     </thead>
     <tbody>
-    	<tr>
-       <td>Which country are you travelling to the UK from?</td>
-       <td><span class="playback-cell" data-playback="">XXXX</span></td>
-      </tr>
       <tr>
        <td>How will you be travelling to the UK?</td>
        <td><span class="playback-cell" data-playback="DepartureMode"></span></td>
       </tr>
       <tr>
        <td>Which airport are you flying to the UK from?</td>
-       <td>XXXX</td>
+       <td><span class="playback-cell" data-playback="DepartureLocation"></span></td>
       </tr>
       <tr>
        <td>Flight number</td>
@@ -89,43 +112,27 @@
        <td><span class="playback-cell" data-playback="departureDay"></span>/<span class="playback-cell" data-playback="departureMonth"></span>/<span class="playback-cell" data-playback="departureYear"></span></td>
       </tr>
       <tr>
-       <td>Departure time</td>
-       <td>11:30</td>
-      </tr>
-      <tr>
        <td>Which airport will you arrive at?</td>
-       <td>London Heathrow</td>
-      </tr>
-      <tr>
-       <td>Arrival date</td>
-       <td>14 05 2015</td>
-      </tr>
-      <tr>
-       <td>Arrival time</td>
-       <td>19:15</td>
+       <td><span class="playback-cell" data-playback="ArrivalLocation"></span></td>
       </tr>
       <tr>
        <td>Are you travelling to the UK with anyone else?</td>
-       <td>No</td>
+       <td><span class="playback-cell" data-playback="TravelWithOthers"></span></td>
       </tr>
-      <tr>
+      <tr class="hide-by-default show-if-others">
        <td>Please give the names of others travelling with you</td>
-       <td></td>
+       <td><span class="playback-cell" data-playback="OtherTravellers"></span></td>
       </tr>
       <tr>
        <td>What is the reason for your visit to the UK?</td>
-       <td>Business</td>
-      </tr>
-      <tr>
-       <td>Do you plan to travel to the UK again within three months of this visit?</td>
-       <td>No</td>
+       <td><span class="playback-cell" data-playback="ReasonForVisit"></span></td>
       </tr>
     </tbody>
   </table>
 
   <p>&nbsp;</p>
 
-  <table>
+  <table class="playback-container" name="visit">
     <thead>
       <tr>
         <th scope="col" width="60%">Your visit to the UK</th>
@@ -135,22 +142,25 @@
     <tbody>
       <tr>
        <td>Where will you stay in the UK?</td>
-       <td>The Dorchester<br />
-       	Park Lane<br />
-       	London <br />
-		W1K 1QA</td>
+       <td>
+         <span class="playback-cell" data-playback="UKaddress1"></span><br>
+         <span class="playback-cell" data-playback="UKaddress2"></span><br>
+         <span class="playback-cell" data-playback="UKaddress3"></span><br>
+         <span class="playback-cell" data-playback="UKaddress4"></span><br>
+         <span class="playback-cell" data-playback="UKaddress5"></span>
+        </td>
       </tr>
       <tr>
        <td>On which date will you be leaving the UK</td>
-       <td>21 05 2015</td>
+       <td><span class="playback-cell" data-playback="LeavingDateDay"></span> <span class="playback-cell" data-playback="LeavingDateMonth"></span> <span class="playback-cell" data-playback="LeavingDateYear"></span> </td>
       </tr>
       <tr>
        <td>Which airport will you leave the UK from?</td>
-       <td>London Gatwick</td>
+       <td><span class="playback-cell" data-playback="DepartureAirport"></span></td>
       </tr>
       <tr>
        <td>Flight number</td>
-       <td>AA6419</td>
+       <td><span class="playback-cell" data-playback="FlightNumber"></span></td>
       </tr>
 
     </tbody>
@@ -158,7 +168,7 @@
 
   <p>&nbsp;</p>
 
-  <table>
+  <table class="playback-container" name="contact-details">
     <thead>
       <tr>
         <th scope="col" width="60%">Your personal details</th>
@@ -168,26 +178,29 @@
     <tbody>
       <tr>
        <td>Home address</td>
-       <td>Arabian Gulf Street<br />
-       	Dasman<br />
-		Kuwait City<br />
-		Kuwait</td>
+       <td>
+         <span class="playback-cell" data-playback="HomeAddress1"></span><br>
+         <span class="playback-cell" data-playback="HomeAddress2"></span><br>
+         <span class="playback-cell" data-playback="HomeAddress3"></span><br>
+         <span class="playback-cell" data-playback="HomeAddress4"></span><br>
+         <span class="playback-cell" data-playback="HomeAddress5"></span>
+       </td>
       </tr>
       <tr>
        <td>Phone number</td>
-       <td>+965 2259 4320</td>
+       <td><span class="playback-cell" data-playback="PhoneNumber"></span></td>
       </tr>
       <tr>
        <td>Email address</td>
-       <td>name@domain.com</td>
+       <td><span class="playback-cell" data-playback="Email"></span></td>
       </tr>
       <tr>
        <td>Your occupation</td>
-       <td>Financial advisor</td>
+       <td><span class="playback-cell" data-playback="Occupation"></span></td>
       </tr>
       <tr>
        <td>Company name</td>
-       <td>Industrial Bank of Kuwait</td>
+       <td><span class="playback-cell" data-playback="CompanyName"></span></td>
       </tr>
     </tbody>
   	</table>
