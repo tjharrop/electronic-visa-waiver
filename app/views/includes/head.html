@@ -9,36 +9,21 @@ $(document).ready(function(){
   //play back from local storage
   $('.playback-container').getForm();
   $('body').on('change', 'input', function(){
-
     var $this = $(this);
-
     // toggle optional sections
-
     if ($this.is(':checkbox')){
-
       var $toggleTarget = $('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
-
       console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
-
       if ($toggleTarget.length){
-
         $toggleTarget.toggle($this.is(':checked') && $this.val() == $toggleTarget.attr('data-toggle-value'));
-
       }
-
     } else if ($this.is(':radio')){
-
       var $toggleTarget = $('.optional-section-'+$this.attr('name'));
-
       console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
-
       $toggleTarget.each(function(){
-
         $(this).toggle($this.val() == $(this).attr('data-toggle-value'));
-
       });
     }
-
   });
 
 //hide and show stuff
@@ -106,20 +91,31 @@ if (localStorage.getItem('dynamic') == "hide") {
   console.log('Showing dynamic content')
 }
 
+if (localStorage.getItem('minimal') == "true") {
+  $('.hide-if-minimal').hide();
+  $('.show-if-minimal').show();
+  console.log('Showing minimal data version')
+}
+
 if (localStorage.getItem('travel') == "first") {
-  $('.hide-if-travel').hide();
-  $('.show-if-travel').show();
-  console.log('Showing travel first')
+    $('.hide-if-travel').hide();
+    $('.show-if-travel').show();
+    console.log('Showing travel first')
 } else {
   $('.show-if-travel').hide();
   $('.hide-if-travel').show();
   console.log('Showing travel mid-service')
 }
 
-  $('.clearStorage').click(function(){
-    localStorage.clear();
-    $(this).html('&#10003; Data cleared');
-  });
+$('.clearStorage').click(function(){
+  localStorage.clear();
+  $(this).html('&#10003; Data cleared');
+});
+
+$('.minimalData').click(function(){
+  localStorage.clear();
+  $(this).html('&#10003; Switched to minimal data');
+});
 
 });
 </script>

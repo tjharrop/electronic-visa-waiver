@@ -20,7 +20,7 @@
 
 	<!-- see https://designpatterns.hackpad.com/Addresses-CgrMSGRAhRc for address design pattern being proposed here -->
 
-	<div class="form-group">
+	<div class="form-group hide-if-minimal">
 		<fieldset>
 		    <legend class="form-label-bold date-field label">When will you be leaving the UK?<span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
@@ -46,12 +46,12 @@
 
     <!-- Add air/sea/train option in here -->
 
-    <div class="form-group">
+    <div class="form-group hide-if-minimal">
 		<label class="form-label-bold label" for="DepartureAirport">Which airport will you leave the UK from?</label>
 		<input type="text" name="DepartureAirport" class="form-control">
 	</div>
 
-	<div class="form-group">
+	<div class="form-group hide-if-minimal">
 		<label class="form-label-bold label" for="FlightNumber">Flight number <span class="form-hint">For example, BA1234</span></label>
 		<input type="text" name="FlightNumber" class="form-control">
 	</div>
