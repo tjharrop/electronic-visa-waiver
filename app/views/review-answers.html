@@ -5,81 +5,133 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large">Check your answers</h1>
-  <p>Please check that your responses, including your name, exactly matches the details on your passport. If your details do not match those on the passport, you may not be able to travel.</p>
-
+  <h1 class="heading-large" data-lang="eng">Check your answers</h1>
+  <h1 class="heading-large" data-lang="arabic">راجع إجاباتك</h1>
+  <p data-lang="eng">Please check that your responses, including your name, exactly matches the details on your passport. If your details do not match those on the passport, you may not be able to travel.</p>
+  <p data-lang="arabic">يرجى التحقق من ردودكم، بما في ذلك اسمك، يتطابق تماما مع تفاصيل  جواز السفر. إذا كانت التفاصيل الخاصة بك لا تتطابق مع تلك الموجودة على جواز السفر، قد لا .تكون قادر على السفر</p>
 <!-- Add in name! -->
 
   <table class="playback-container" name="passport-details">
     <thead>
       <tr>
-        <th scope="col" width="60%">Your passport details</th>
+        <th scope="col" width="60%">
+          <span data-lang="eng">Your passport details</span>
+          <span data-lang="arabic">تفاصيل جواز سفرك</span>
+        </th>
         <th scope="col" width="40%" class="numeric"><a href="passport-details">Edit</a></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Passport number</td>
+        <td>
+          <span data-lang="eng">Passport number</span>
+          <span data-lang="arabic">رقم جواز السفر	</span>
+        </td>
         <td><span class="playback-cell" data-playback="PassportNumber"></span></td>
       </tr>
       <tr class="hide-by-default show-if-uae">
-        <td>First Names</td>
+        <td>
+          <span data-lang="eng">First Names</span>
+          <span data-lang="arabic">الأسماء الأولى</span>
+        </td>
         <td><span class="playback-cell" data-playback="UAEFirstNames"></span></td>
       </tr>
       <tr class="hide-by-default show-if-uae">
-        <td>Surname</td>
+        <td>
+          <span data-lang="eng">Surname</span>
+          <span data-lang="arabic">لقب</span>
+        </td>
         <td><span class="playback-cell" data-playback="UAESurnames"></span></td>
       </tr>
       <tr class="hide-by-default show-if-oman">
-        <td>Surname</td>
+        <td>
+          <span data-lang="eng">Surname</span>
+          <span data-lang="arabic">لقب</span>
+        </td>
         <td><span class="playback-cell" data-playback="OmanSurname"></span></td>
       </tr>
       <tr class="hide-by-default show-if-oman">
-        <td>Family Name</td>
+        <td>
+          <span data-lang="eng">Family Name</span>
+          <span data-lang="arabic">Family Name</span>
+        </td>
         <td><span class="playback-cell" data-playback="OmanFamilyName"></span></td>
       </tr>
       <tr class="hide-by-default show-if-oman">
-        <td>Given Name</td>
+        <td>
+          <span data-lang="eng">Given Name</span>
+          <span data-lang="arabic">Given Name</span>
+        </td>
         <td><span class="playback-cell" data-playback="OmanGivenNames"></span></td>
       </tr>
       <tr class="hide-by-default show-if-qatar">
-        <td>Name</td>
+        <td>
+          <span data-lang="eng">Name</span>
+          <span data-lang="arabic">Name</span>
+        </td>
         <td><span class="playback-cell" data-playback="QatarNameOnPassport"></span></td>
       </tr>
       <tr class="hide-by-default show-if-kuwait">
-        <td>Name</td>
+        <td>
+          <span data-lang="eng">Name</span>
+          <span data-lang="arabic">Name</span>
+        </td>
         <td><span class="playback-cell" data-playback="KuwaitNameOnPassport"></span></td>
       </tr>
       <tr>
-        <td>Country of issue</td>
+        <td>
+          <span data-lang="eng">Country of issue</span>
+          <span data-lang="arabic">بلد الإصدار</span>
+        </td>
         <td><span class="playback-cell" data-playback="CountryOfIssue"></span></td>
       </tr>
       <tr>
-       <td>Sex</td>
+       <td>
+         <span data-lang="eng">Sex</span>
+         <span data-lang="arabic">جنس</span>
+        </td>
        <td><span class="playback-cell" data-playback="Sex"></span></td>
       </tr>
       <tr>
-       <td>Date of birth</td>
+       <td>
+         <span data-lang="eng">Date of birth</span>
+         <span data-lang="arabic">تاريخ الميلاد</span>
+        </td>
        <td><span class="playback-cell" data-playback="dobDay"></span>/<span class="playback-cell" data-playback="dobMonth"></span>/<span class="playback-cell" data-playback="dobYear"></span></td>
       </tr>
       <tr>
-       <td>Place of birth</td>
+       <td>
+         <span data-lang="eng">Place of birth</span>
+         <span data-lang="arabic">محل الميلاد</span>
+        </td>
        <td><span class="playback-cell" data-playback="PlaceOfBirth"></span></td>
       </tr>
       <tr>
-       <td>Date of expiry</td>
+       <td>
+         <span data-lang="eng">Date of expiry</span>
+         <span data-lang="arabic">تاريخ الانتهاء</span>
+        </td>
        <td><span class="playback-cell" data-playback="doeDay"></span>/<span class="playback-cell" data-playback="doeMonth"></span>/<span class="playback-cell" data-playback="doeYear"></span></td>
       </tr>
       <tr>
-       <td>Date of issue</td>
+       <td>
+         <span data-lang="eng">Date of issue</span>
+         <span data-lang="arabic">تاريخ الإصدار</span>
+        </td>
        <td><span class="playback-cell" data-playback="doiDay"></span>/<span class="playback-cell" data-playback="doiMonth"></span>/<span class="playback-cell" data-playback="doiYear"></span></td>
       </tr>
       <tr>
-       <td>Other nationalities</td>
+       <td>
+         <span data-lang="eng">Other nationalities</span>
+         <span data-lang="arabic">هل لديك أي جنسيات أخرى؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="EnterOtherNationalities">None</span></td>
       </tr>
       <tr>
-       <td>Previous nationalities</td>
+       <td>
+         <span data-lang="eng">Previous nationalities</span>
+         <span data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="EnterPreviousNationalities">None</span></td>
       </tr>
     </tbody>
@@ -90,41 +142,68 @@
   <table class="playback-container" name="journey-details">
     <thead>
       <tr>
-        <th scope="col" width="60%">Your journey to the UK</th>
+        <th scope="col" width="60%">
+          <span data-lang="eng">Your journey to the UK</span>
+          <span data-lang="arabic">رحلتك إلى المملكة المتحدة</span>
+        </th>
         <th scope="col" width="40%" class="numeric"><a href="your-journey">Edit</a></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-       <td>How will you be travelling to the UK?</td>
+       <td>
+         <span data-lang="eng">How will you be travelling to the UK?</span>
+         <span data-lang="arabic">كيف ستقوم بلسفر إلى المملكة المتحدة؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="DepartureMode"></span></td>
       </tr>
       <tr>
-       <td>Which airport are you flying to the UK from?</td>
+       <td>
+         <span data-lang="eng">Which airport are you flying to the UK from?</span>
+         <span data-lang="arabic">Which airport are you flying to the UK from?</span>
+        </td>
        <td><span class="playback-cell" data-playback="DepartureLocation"></span></td>
       </tr>
       <tr>
-       <td>Flight number</td>
+       <td>
+         <span data-lang="eng">Flight number</span>
+         <span data-lang="arabic">رقم الرحلة </span>
+        </td>
        <td><span class="playback-cell" data-playback="FlightNumber"></span></td>
       </tr>
       <tr>
-       <td>Departure date</td>
+       <td>
+         <span data-lang="eng">Departure date</span>
+         <span data-lang="arabic">تاريخ المغادرة </span>
+        </td>
        <td><span class="playback-cell" data-playback="departureDay"></span>/<span class="playback-cell" data-playback="departureMonth"></span>/<span class="playback-cell" data-playback="departureYear"></span></td>
       </tr>
       <tr>
-       <td>Which airport will you arrive at?</td>
+       <td>
+         <span data-lang="eng">Which airport will you arrive at?</span>
+         <span data-lang="arabic">Which airport will you arrive at?</span>
+        </td>
        <td><span class="playback-cell" data-playback="ArrivalLocation"></span></td>
       </tr>
       <tr>
-       <td>Are you travelling to the UK with anyone else?</td>
+       <td>
+         <span data-lang="eng">Are you travelling to the UK with anyone else?</span>
+         <span data-lang="arabic">هل تسافر الى المملكة المتحدة مع أي شخص آخر؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="TravelWithOthers"></span></td>
       </tr>
       <tr class="hide-by-default show-if-others">
-       <td>Please give the names of others travelling with you</td>
+       <td>
+         <span data-lang="eng">Please give the names of others travelling with you</span>
+         <span data-lang="arabic">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</span>
+        </td>
        <td><span class="playback-cell" data-playback="OtherTravellers"></span></td>
       </tr>
       <tr>
-       <td>What is the reason for your visit to the UK?</td>
+       <td>
+         <span data-lang="eng">What is the reason for your visit to the UK?</span>
+         <span data-lang="arabic">ما هو سبب زيارتك إلى المملكة المتحدة؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="ReasonForVisit"></span></td>
       </tr>
     </tbody>
@@ -135,13 +214,19 @@
   <table class="playback-container" name="visit">
     <thead>
       <tr>
-        <th scope="col" width="60%">Your visit to the UK</th>
+        <th scope="col" width="60%">
+          <span data-lang="eng">Your visit to the UK</span>
+          <span data-lang="arabic">زيارتكم إلى المملكة المتحدة</span>
+        </th>
         <th scope="col" width="40%" class="numeric"><a href="your-visit">Edit</a></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-       <td>Where will you stay in the UK?</td>
+       <td>
+         <span data-lang="eng">Where will you stay in the UK?</span>
+         <span data-lang="arabic">المتحدة؟ اعطي العنوان الكامل الذي سوف تقيم فيه عند وصولك في المملكة</span>
+        </td>
        <td>
          <span class="playback-cell" data-playback="UKaddress1"></span><br>
          <span class="playback-cell" data-playback="UKaddress2"></span><br>
@@ -151,15 +236,24 @@
         </td>
       </tr>
       <tr>
-       <td>On which date will you be leaving the UK</td>
+       <td>
+         <span data-lang="eng">On which date will you be leaving the UK</span>
+         <span data-lang="arabic">متى تغادرون المملكة المتحدة؟</span>
+        </td>
        <td><span class="playback-cell" data-playback="LeavingDateDay"></span> <span class="playback-cell" data-playback="LeavingDateMonth"></span> <span class="playback-cell" data-playback="LeavingDateYear"></span> </td>
       </tr>
       <tr>
-       <td>Which airport will you leave the UK from?</td>
+       <td>
+         <span data-lang="eng">Which airport will you leave the UK from?</span>
+         <span data-lang="arabic">من اى مطار سوف تغادر المملكة المتحدة ؟</span>
+       </td>
        <td><span class="playback-cell" data-playback="DepartureAirport"></span></td>
       </tr>
       <tr>
-       <td>Flight number</td>
+       <td>
+         <span data-lang="eng">Flight number</span>
+         <span data-lang="arabic">رقم الرحلة</span>
+        </td>
        <td><span class="playback-cell" data-playback="FlightNumber"></span></td>
       </tr>
 
@@ -171,13 +265,19 @@
   <table class="playback-container" name="contact-details">
     <thead>
       <tr>
-        <th scope="col" width="60%">Your personal details</th>
+        <th scope="col" width="60%">
+          <span data-lang="eng">Your personal details</span>
+          <span data-lang="arabic">التفاصيل الشخصية الخاصة بك</span>
+        </th>
         <th scope="col" width="40%" class="numeric"><a href="contact-details">Edit</a></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-       <td>Home address</td>
+       <td>
+         <span data-lang="eng">Home address</span>
+         <span data-lang="arabic">عنوان البيت</span>
+      </td>
        <td>
          <span class="playback-cell" data-playback="HomeAddress1"></span><br>
          <span class="playback-cell" data-playback="HomeAddress2"></span><br>
@@ -187,19 +287,31 @@
        </td>
       </tr>
       <tr>
-       <td>Phone number</td>
+       <td>
+         <span data-lang="eng">Phone number</span>
+         <span data-lang="arabic">رقم الهاتف</span>
+       </td>
        <td><span class="playback-cell" data-playback="PhoneNumber"></span></td>
       </tr>
       <tr>
-       <td>Email address</td>
+       <td>
+         <span data-lang="eng">Email address</span>
+         <span data-lang="arabic">عنوان البريد الإلكتروني</span>
+      </td>
        <td><span class="playback-cell" data-playback="Email"></span></td>
       </tr>
       <tr>
-       <td>Your occupation</td>
+       <td>
+         <span data-lang="eng">Your occupation</span>
+         <span data-lang="arabic">وظيفتك</span>
+        </td>
        <td><span class="playback-cell" data-playback="Occupation"></span></td>
       </tr>
       <tr>
-       <td>Company name</td>
+       <td>
+         <span data-lang="eng">Company name</span>
+         <span data-lang="arabic">اسم الشركة</span>
+        </td>
        <td><span class="playback-cell" data-playback="CompanyName"></span></td>
       </tr>
     </tbody>
@@ -210,7 +322,10 @@
 	</form>
 
 	<p>&nbsp;</p>
-	<p><a href="declaration" class="button">Continue</a></p>
+	<p><a href="declaration" class="button">
+    <span data-lang="eng">Continue</span>
+    <span data-lang="arabic">استمر</span>
+  </a></p>
 
 </main>
 {{/content}}

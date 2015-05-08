@@ -47,11 +47,21 @@ html[dir="rtl"] {
     padding: 10px 15px 10px 0;
     margin: 30px 0 45px 15px;
   }
+  table td, table th {
+    text-align: right;
+    &.numeric {
+      text-align: left;
+    }
+  }
 }
 .rtl-both {
   text-indent:30%;
   display:block;
 }
-span.rtl-both {
+p.rtl-both, h1.rtl-both{
+  text-indent:0;
+}
+
+span.rtl-both, legend.lang-boths {
   width:100%;
 }

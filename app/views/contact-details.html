@@ -5,13 +5,14 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large">Your personal details</h1>
-  <p>We may need to contact you about the information you have provided.</p>
+  <h1 class="heading-large" data-lang="eng">Your personal details</h1>
+  <p data-lang="eng">We may need to contact you about the information you have provided.</p>
 
 	<form name="contact-details">
 
 	<div class="form-group hide-if-minimal">
-		<label class="form-label-bold label" for="HomeAddress">Home address <span class="form-hint">Give the full address of your main residence </span></label>
+    <label class="form-label-bold label" for="HomeAddress" data-lang="eng">Home address <span class="form-hint">Give the full address of your main residence </span></label>
+    <label class="form-label-bold label" for="HomeAddress" data-lang="arabic">عنوان البيت <span class="form-hint">أعطي العنوان الكامل للمقر الرئيسي الخاص بك </span></label>
 		<input type="text" name="HomeAddress1" class="form-control"><br />
 		<input type="text" name="HomeAddress2" class="form-control"><br />
 		<input type="text" name="HomeAddress3" class="form-control"><br />
@@ -22,12 +23,14 @@
 	<!-- check GDS guidance on international phone numbers, add help text -->
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="PhoneNumber">Phone number</label>
+    <label class="form-label-bold label" for="PhoneNumber" data-lang="eng">Phone number</label>
+    <label class="form-label-bold label" for="PhoneNumber" data-lang="arabic">رقم الهاتف</label>
 		<input type="text" name="PhoneNumber" class="form-control">
 	</div>
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="Email">Email address <span class="form-hint">We will send your electronic visa waiver to this address.</span></label>
+    <label class="form-label-bold label" for="Email" data-lang="eng">Email address <span class="form-hint">We will send your electronic visa waiver to this address.</span></label>
+    <label class="form-label-bold label" for="Email" data-lang="arabic">عنوان البريد الإلكتروني <span class="form-hint">.سوف نرسل  الإعفاء الإلكتروني من التأشيرة إلى هذا العنوان</span></label>
 		<input type="text" name="Email" class="form-control">
 	</div>
 
@@ -36,18 +39,23 @@
 
 
 	<div class="form-group hide-if-minimal">
-		<label class="form-label-bold label" for="Occupation">Your occupation</label>
+    <label class="form-label-bold label" for="Occupation" data-lang="eng">Your occupation</label>
+    <label class="form-label-bold label" for="Occupation" data-lang="arabic">وظيفتك</label>
 		<input type="text" name="Occupation" class="form-control">
 	</div>
 
 	<div class="form-group hide-if-minimal">
-		<label class="form-label-bold label" for="CompanyName">Company name</label>
+    <label class="form-label-bold label" for="CompanyName" data-lang="eng">Company name</label>
+    <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة</label>
 		<input type="text" name="CompanyName" class="form-control">
 	</div>
 
 	</form>
 
-	<a href="review-answers" class="button">Continue</a>
+	<a href="review-answers" class="button">
+    <span data-lang="eng">Continue</span>
+    <span data-lang="arabic">استمر</span>
+  </a>
 
 </main>
 {{/content}}
