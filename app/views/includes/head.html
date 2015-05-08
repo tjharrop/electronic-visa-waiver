@@ -81,6 +81,20 @@ if (localStorage['passport-details']) {
   }
 }
 
+if (localStorage.getItem('lang') == "arabic") {
+  $('*[data-lang="arabic"]').show();
+  $('*[data-lang="eng"]').hide();
+  $("html").attr("dir", "rtl")
+  $("header, .banner-block, input[type='text']").attr("dir", "ltr")
+  console.log('Hiding english content')
+} else if (localStorage.getItem('lang') == "both") {
+  $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
+} else {
+  $('*[data-lang="arabic"]').hide();
+  $('*[data-lang="eng"]').show();
+  console.log('Hiding arabic content')
+}
+
 if (localStorage.getItem('dynamic') == "hide") {
   $('.hide-if-dynamic').show();
   $('.show-if-dynamic').hide();

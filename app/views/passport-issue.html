@@ -5,15 +5,19 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large">Your passport details</h1>
-  <h2>You will need to copy these details from your passport.</h2>
+  <h1 class="heading-large" data-lang="eng">Your passport details</h1>
+  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
+  <p data-lang="eng">You will need to copy these details from your passport.</p>
+  <p data-lang="arabic">سوف تحتاج إلى نسخ هذه التفاصيل من جواز سفرك.</p>
   <p>&nbsp;</p>
 
 <form name="passport-details">
 
   {{>includes/partials/country-of-issue}}
 
-  <a href="passport-details" class="button">Continue</a>
+  <a href="passport-details" class="button" data-lang="eng">Continue</a>
+  <a href="passport-details" class="button" data-lang="arabic">استمر</a>
+
 
 	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
 

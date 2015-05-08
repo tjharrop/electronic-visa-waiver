@@ -5,15 +5,19 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large">Your passport details</h1>
-  <h2>You will need to copy these details from your passport.</h2>
+  <h1 class="heading-large" data-lang="eng">Your passport details</h1>
+  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
+  <p data-lang="eng">You will need to copy these details from your passport.</p>
+  <p data-lang="arabic">سوف تحتاج إلى نسخ هذه التفاصيل من جواز سفرك.</p>
   <p>&nbsp;</p>
 
 <form name="passport-details">
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="PassportNumber">Passport number</label>
-		<p class="form-hint">Give the passport number you will use when travelling to the UK</p>
+		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Passport number</label>
+    <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
+    <p class="form-hint" data-lang="eng">Give the passport number you will use when travelling to the UK</p>
+    <p class="form-hint" data-lang="arabic">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
 		<input type="text" name="PassportNumber" class="form-control">
 	</div>
 
@@ -48,8 +52,12 @@
 
 	<div id="OmanName" class="hide-by-default optional-section-CountryOfIssue show-if-oman" data-toggle-value="Oman">
 		<div class="form-group">
-			<label class="form-label-bold label" for="OmanSurname">Surname</label>
-			<p class="form-hint">Enter your surname exactly as it appears on the passport</p>
+			<label class="form-label-bold label" for="OmanSurname">
+        <span data-lang="eng">Surname</span>
+        <span data-lang="arabic">لقب</span>
+      </label>
+      <p class="form-hint" data-lang="eng">Enter your surname exactly as it appears on the passport</p>
+      <p class="form-hint" data-lang="arabic">أدخل اللقب الخاص بك تماما كما يظهر في جواز السفر</p>
 			<input type="text" name="OmanSurname" class="form-control">
 		</div>
 		<div class="form-group">
@@ -68,28 +76,42 @@
 
 	<div id="UAEName" class="hide-by-default optional-section-CountryOfIssue show-if-uae" data-toggle-value="United Arab Emirates">
 		<div class="form-group">
-			<label class="form-label-bold label" for="UAESurnames">Surname</label>
-			<p class="form-hint">Enter your surname exactly as it appears on the passport</p>
+			<label class="form-label-bold label" for="UAESurnames">
+        <span data-lang="eng">Surname</span>
+        <span data-lang="arabic">لقب</span>
+      </label>
+			<p class="form-hint" data-lang="eng">Enter your surname exactly as it appears on the passport</p>
+      <p class="form-hint" data-lang="arabic">أدخل اللقب الخاص بك تماما كما يظهر في جواز السفر</p>
 			<input type="text" name="UAESurnames" class="form-control">
 		</div>
 		<div class="form-group">
-			<label class="form-label-bold label" for="UAEFirstNames">First names</label>
-			<p class="form-hint">Enter your first names exactly as it appears on the passport</p>
+			<label class="form-label-bold label" for="UAEFirstNames">
+        <span data-lang="eng">First names</span>
+        <span data-lang="arabic">الأسماء الأولى</span>
+      </label>
+      <p class="form-hint" data-lang="eng">Enter your first names exactly as it appears on the passport</p>
+      <p class="form-hint" data-lang="arabic">الأولى تماما كما يظهر في جواز السفر الاسماء  إدخال</p>
+
 			<input type="text" name="UAEFirstNames" class="form-control">
 		</div>
 	</div>
 
      <fieldset class="inline">
 
-	    <legend class="form-label-bold">Sex</legend>
+	    <legend class="form-label-bold" data-lang="eng">Sex</legend>
+      <legend class="form-label-bold" data-lang="arabic">جنس</legend>
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="radio-sex-M">
-	        <input id="radio-sex-M" name="Sex" value="Male" type="radio" data-storage="Male"> Male
+	        <input id="radio-sex-M" name="Sex" value="Male" type="radio" data-storage="Male">
+          <span data-lang="eng">Male</span>
+          <span data-lang="arabic">ذكر</span>
 	      </label>
 
 	      <label class="block-label" for="radio-sex-F">
-	        <input id="radio-sex-F" name="Sex" value="Female" type="radio" data-storage="Female"> Female
+	        <input id="radio-sex-F" name="Sex" value="Female" type="radio" data-storage="Female">
+          <span data-lang="eng">Female</span>
+          <span data-lang="arabic">أنثى</span>
 	      </label>
 
 	    </div>
@@ -98,21 +120,23 @@
 
 	<div class="form-group">
 	<fieldset>
-	    <legend class="form-label-bold date-field label">Date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+    <legend class="form-label-bold date-field label" data-lang="eng">Date of birth <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+    <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الميلاد</legend>
 
 	    <div class="form-date" id="dateOfBirth">
-	        <p class="form-hint">For example, 22 03 1979</p>
+        <p class="form-hint" data-lang="eng">For example, 22 03 1979</p>
+        <p class="form-hint" data-lang="arabic">:علي سبيل المثال</p>
 
 	        <div class="form-group form-group-day">
-	            <label for="dobDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+	            <label for="dobDay"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span> <span class="visuallyhidden">expected format DD. Required</span></label>
 	            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-month">
-	            <label for="dobMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+	            <label for="dobMonth"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span> <span class="visuallyhidden">expected format MM. Required</span></label>
 	            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-year">
-	            <label for="dobYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+	            <label for="dobYear"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Year</span><span data-lang="arabic">السنة</span> <span class="visuallyhidden">expected format YYYY. Required</span></label>
 	            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
 	        </div>
 	    </div>
@@ -122,28 +146,33 @@
 
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="PlaceOfBirth">Place of birth</label>
+		<label class="form-label-bold label" for="PlaceOfBirth" data-lang="eng">Place of birth</label>
+    <label class="form-label-bold label" for="PlaceOfBirth" data-lang="arabic">محل الميلاد</label>
 		<input type="text" name="PlaceOfBirth" class="form-control">
 	</div>
 
 
     <div class="form-group hide-if-minimal">
     	<fieldset>
-	    <legend class="form-label-bold date-field label">Date of issue <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+	    <legend class="form-label-bold date-field label">
+        <span data-lang="eng">Date of issue</span>
+        <span data-lang="arabic">تاريخ الإصدار</span>
+        <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
 	    <div class="form-date" id="dateOfIssue">
-	        <p class="form-hint">For example, 30 09 2010</p>
+	        <p class="form-hint" data-lang="eng">For example, 30 09 2010</p>
+          <p class="form-hint" data-lang="arabic">:علي سبيل المثال</span>
 
 	        <div class="form-group form-group-day">
-	            <label for="doiDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
+	            <label for="doiDay"><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span>  </label>
 	            <input type="text" class="form-control" id="doiDay" name="doiDay" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-month">
-	            <label for="doiMonth"><span class="visuallyhidden">Date of birth </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
+	            <label for="doiMonth"><span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span> </label>
 	            <input type="text" class="form-control" id="doiMonth" name="doiMonth" aria-required="true" value="" maxlength="2">
 	        </div>
 	        <div class="form-group form-group-year">
-	            <label for="doiYear"><span class="visuallyhidden">Date of birth </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
+	            <label for="doiYear"><span data-lang="eng">Year</span><span data-lang="arabic">السنة</span> </label>
 	            <input type="text" class="form-control" id="doiYear" name="doiYear" aria-required="true" value="" maxlength="4">
 	        </div>
 	    </div>
@@ -153,10 +182,14 @@
 
     <div class="form-group">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">Date of expiry <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+		    <legend class="form-label-bold date-field label">
+          <span data-lang="eng">Date of expiry</span>
+          <span data-lang="arabic">تاريخ الانتهاء</span>
+        </legend>
 
 		    <div class="form-date" id="dateOfExpiry">
-		        <p class="form-hint">For example, 25 03 2017</p>
+		        <p class="form-hint" data-lang="eng">For example, 25 03 2017</p>
+            <p class="form-hint" data-lang="arabic">:علي سبيل المثال</p>
 
 		        <div class="form-group form-group-day">
 		            <label for="doeDay"><span class="visuallyhidden">Date of birth </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
@@ -177,23 +210,28 @@
 
 	<fieldset class="inline">
 
-	    <legend class="form-label-bold">Do you hold any other nationalities?</legend>
-
+      <legend class="form-label-bold" data-lang="eng">Do you hold any other nationalities?</legend>
+      <legend class="form-label-bold" data-lang="arabic">هل لديك أي جنسيات أخرى؟</legend>
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="OtherNationalities-1">
-	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" data-storage="yes"> Yes
+	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" data-storage="yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
 	      </label>
 
 	      <label class="block-label" for="OtherNationalities-2">
-	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" data-storage="no"> No
+	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" data-storage="no">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
 	      </label>
 
 	    </div>
 
 	    <div class="panel-indent hide-by-default show-if-OtherNationalities optional-section-OtherNationalities" data-toggle-value="Yes" id="conditionalOtherNationalities">
 	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you hold</label>
-	    	<p class="form-hint">For example, "Canadian, Italian"</p>
+        <p class="form-hint" data-lang="eng">For example, "Canadian, Italian"</p>
+        <p class="form-hint" data-lang="arabic">في سبيل المثال :الكندية</p>
 			<input type="text" name="EnterOtherNationalities" class="form-control">
 	    </div>
 
@@ -202,31 +240,44 @@
 
 	<fieldset class="inline hide-if-minimal">
 
-	    <legend class="form-label-bold">Have you previously held a different nationality?</legend>
+    <legend class="form-label-bold" data-lang="eng">Have you previously held a different nationality?</legend>
+    <legend class="form-label-bold" data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</legend>
 
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="PreviousNationalities-1">
-	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" data-storage="yes"> Yes
+	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" data-storage="yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
 	      </label>
 
 	      <label class="block-label" for="PreviousNationalities-2">
-	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" data-storage="no"> No
+	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" data-storage="no">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
 	      </label>
 
 	    </div>
 
 	    <div class="panel-indent js-hidden hide-by-default show-if-PreviousNationalities optional-section-PreviousNationalities" data-toggle-value="Yes" id="conditionalPreviousNationalities">
-	    	<label class="form-label-bold label" for="EnterPreviousNationalities">Enter the nationality that you previously held</label>
-	    	<p class="form-hint">For example, "British"</p>
+	    	<label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="eng">Enter the nationality that you previously held</label>
+        <label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="arabic">أدخل الجنسية التي كنت تحملها سابقا؟</label>
+        <p class="form-hint" data-lang="eng">For example, "British"</p>
+        <p class="form-hint" data-lang="arabic">في سبيل المثال : بريطانية</p>
 			<input type="text" name="EnterPreviousNationalities" class="form-control">
 	    </div>
 
   	</fieldset>
 
 
-    <a href="your-journey" class="button hide-if-travel">Continue</a>
-    <a href="your-visit" class="button hide-by-default show-if-travel">Continue</a>
+    <a href="your-journey" class="button hide-if-travel">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
+    <a href="your-visit" class="button hide-by-default show-if-travel">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
 
 	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
 

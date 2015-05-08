@@ -26,3 +26,32 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
+
+@media (min-width: 641px){
+  html[dir="rtl"] .block-label {
+    float: right;
+    clear:right;
+    margin-right:0;
+  }
+}
+html[dir="rtl"] {
+  .form-date .form-group {
+    float:right;
+  }
+  .button {
+    margin-right:0;
+  }
+  .panel-indent {
+    border-right: 4px solid #bfc1c3;
+    border-left:none;
+    padding: 10px 15px 10px 0;
+    margin: 30px 0 45px 15px;
+  }
+}
+.rtl-both {
+  text-indent:30%;
+  display:block;
+}
+span.rtl-both {
+  width:100%;
+}
