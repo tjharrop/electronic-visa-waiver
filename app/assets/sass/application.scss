@@ -65,3 +65,12 @@ p.no-margin, h1.no-margin{
 span.rtl-both, legend.lang-boths {
   width:100%;
 }
+
+.panel-success {
+  clear: both;
+  padding: 30px 0 30px 15px;
+  margin: 30px 15px 45px 0;
+  background: #28a197;
+  color: #fff;
+  text-align: center;
+}
