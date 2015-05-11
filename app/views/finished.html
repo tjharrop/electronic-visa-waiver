@@ -22,7 +22,7 @@
 
         <h2 class="heading-medium">Your details</h2>
 
-        <table class="playback-container" name="passport-details">
+        <table>
           <thead>
             <tr>
               <th scope="col" width="60%">
@@ -32,7 +32,7 @@
               <th scope="col" width="40%" class="numeric"></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="playback-container" name="passport-details">
             <tr>
               <td>
                 <span data-lang="eng">Passport number</span>
@@ -98,58 +98,37 @@
             </tr>
             <tr>
              <td>
-               <span data-lang="eng">Sex</span>
-               <span data-lang="arabic">جنس</span>
-              </td>
-             <td><span class="playback-cell" data-playback="Sex"></span></td>
-            </tr>
-            <tr>
-             <td>
                <span data-lang="eng">Date of birth</span>
                <span data-lang="arabic">تاريخ الميلاد</span>
               </td>
              <td><span class="playback-cell" data-playback="dobDay"></span>/<span class="playback-cell" data-playback="dobMonth"></span>/<span class="playback-cell" data-playback="dobYear"></span></td>
+           </tr>
+          </tbody>
+          <tbody class="playback-container" name="journey-details">
+            <tr>
+             <td>
+               <span data-lang="eng">Which airport will you arrive at?</span>
+               <span data-lang="arabic">Which airport will you arrive at?</span>
+              </td>
+             <td><span class="playback-cell" data-playback="ArrivalLocation"></span></td>
             </tr>
             <tr>
              <td>
-               <span data-lang="eng">Place of birth</span>
-               <span data-lang="arabic">محل الميلاد</span>
+               <span data-lang="">Date of arrival</span>
               </td>
-             <td><span class="playback-cell" data-playback="PlaceOfBirth"></span></td>
+             <td><span class="playback-cell" data-playback="DateOfArrivalDay"></span> <span class="playback-cell" data-playback="DateOfArrivalMonth"></span> <span class="playback-cell" data-playback="DateOfArrivalYear"></span></td>
             </tr>
             <tr>
              <td>
-               <span data-lang="eng">Date of expiry</span>
-               <span data-lang="arabic">تاريخ الانتهاء</span>
+               <span data-lang="eng!">Time of arrival</span>
               </td>
-             <td><span class="playback-cell" data-playback="doeDay"></span>/<span class="playback-cell" data-playback="doeMonth"></span>/<span class="playback-cell" data-playback="doeYear"></span></td>
-            </tr>
-            <tr>
-             <td>
-               <span data-lang="eng">Date of issue</span>
-               <span data-lang="arabic">تاريخ الإصدار</span>
-              </td>
-             <td><span class="playback-cell" data-playback="doiDay"></span>/<span class="playback-cell" data-playback="doiMonth"></span>/<span class="playback-cell" data-playback="doiYear"></span></td>
-            </tr>
-            <tr>
-             <td>
-               <span data-lang="eng">Other nationalities</span>
-               <span data-lang="arabic">هل لديك أي جنسيات أخرى؟</span>
-              </td>
-             <td><span class="playback-cell" data-playback="EnterOtherNationalities">None</span></td>
-            </tr>
-            <tr>
-             <td>
-               <span data-lang="eng">Previous nationalities</span>
-               <span data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</span>
-              </td>
-             <td><span class="playback-cell" data-playback="EnterPreviousNationalities">None</span></td>
+             <td><span class="playback-cell" data-playback="arrTimeHour"></span>:<span class="playback-cell" data-playback="arrTimeMins"></span></td>
             </tr>
           </tbody>
         </table>
 
         <div class="panel-indent">
-          If these details are incorrect please call UK Visas and Immigration on +44 (0) 20 7484 8759 
+          If these details are incorrect please call UK Visas and Immigration on +44 (0) 20 7484 8759
         </div>
 
   </article>
