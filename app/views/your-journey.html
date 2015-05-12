@@ -69,7 +69,7 @@
   		<input type="text" name="FlightNumber" />
   	</div>
 
-
+<!--
     	<div class="form-group hide-if-minimal">
     		<label class="form-label-bold label" for="FlightNumber" data-lang="eng!">Departing from</label>
     		<input type="text" name="DepartureLocation" class="form-control">
@@ -80,7 +80,7 @@
       		<label class="form-label-bold label" for="FlightNumber" data-lang="eng!">Arrival airport</label>
       		<input type="text" name="ArrivalLocation" class="form-control">
       	</div>
-
+      -->
 	<div class="form-group">
 		<fieldset>
       <legend class="form-label-bold date-field label" data-lang="eng">Departure date</legend>
@@ -137,7 +137,7 @@
 
 	<div class="form-group">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">Arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+		    <legend class="form-label-bold date-field label">UK local arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
 		    <div class="form-date" id="arrivalDate">
 		        <p class="form-hint">For example, 18 09 2015</p>
@@ -161,7 +161,7 @@
 
     	<div class="form-group">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">Arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
+		    <legend class="form-label-bold date-field label">UK local arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
 
 		    <div class="form-date" id="departureTime">
 		        <p class="form-hint">For example, 21:45</p>
@@ -207,7 +207,7 @@
 	<div id="TravellingWithOthers" class="form-group panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="Yes">
     <label class="form-label-bold label" for="OtherTravellers" data-lang="eng">Please give the names of others travelling with you</label>
     <label class="form-label-bold label" for="OtherTravellers" data-lang="arabic">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>
-		<input type="text" name="OtherTravellers" class="form-control">
+		<textarea name="OtherTravellers" class="form-control"></textarea>
 	</div>
 
 
