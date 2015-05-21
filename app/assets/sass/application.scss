@@ -74,3 +74,19 @@ span.rtl-both, legend.lang-boths {
   color: #fff;
   text-align: center;
 }
+
+.button.secondary {
+  background: #eee;
+  color: #000;
+  -webkit-box-shadow: 0 2px 0 #ccc;
+  -moz-box-shadow: 0 2px 0 #ccc;
+  box-shadow: 0 2px 0 #ccc;
+}
+.button.red {
+  background: #eee;
+  color: $red;
+  font-weight:bold;
+  -webkit-box-shadow: 0 2px 0 #ccc;
+  -moz-box-shadow: 0 2px 0 #ccc;
+  box-shadow: 0 2px 0 #ccc;
+}

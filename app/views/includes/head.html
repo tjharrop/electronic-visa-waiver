@@ -113,6 +113,16 @@ if (localStorage.getItem('dynamic') == "hide") {
   console.log('Showing dynamic content')
 }
 
+if (localStorage.getItem('upload') == "yes") {
+  $('.hide-if-upload').hide();
+  $('.show-if-upload').show();
+  console.log('Hiding dynamic content')
+} else {
+  $('.show-if-upload').hide();
+  $('.hide-if-upload').show();
+  console.log('Showing dynamic content')
+}
+
 if (localStorage.getItem('minimal') == "true") {
   $('.hide-if-minimal').hide();
   $('.show-if-minimal').show();
@@ -139,16 +149,29 @@ $('.minimalData').click(function(){
   $(this).html('&#10003; Switched to minimal data');
 });
 
+$('.manualNames').click(function(){
+  localStorage.setItem('dynamic','hide');
+  $(this).html('&#10003; Cabin crew names to manual');
+});
+
+$('.uploadPassport').click(function(){
+  localStorage.setItem('upload','yes');
+  $(this).html('&#10003; Passport upload gadget thingy turned on. Or something. Maybe.');
+});
+
 $(".arabicLink").click(function(){
   localStorage.setItem('lang','arabic');
+  $(this).html('&#10003; All in Arabic');
 })
 
 $(".mixedLink").click(function(){
   localStorage.setItem('lang','both');
+  $(this).html('&#10003; Arabic and English');
 })
 
 $(".rightLink").click(function(){
   localStorage.setItem('lang','right');
+  $(this).html('&#10003; A&amp;En right aligned');
 })
 
 });
