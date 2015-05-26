@@ -1,0 +1,39 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+	<script type="text/javascript">
+	if (JSON.parse(localStorage['upload'])){
+    var passportData = JSON.parse(localStorage['upload']);
+    if (passportData == "yes"){
+		} else {
+      window.location.replace("passport-details");
+    }
+	}
+  </script>
+
+
+	<h1 class="heading-xlarge">Send us a scan or photo of your passport</h1>
+
+	<div class="form-group">
+		<input type="file" class="">
+	</div>
+
+	<a href="passport-details" class="button">
+		<span data-lang="eng">Continue</span>
+		<span data-lang="arabic">استمر</span>
+	</a>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
