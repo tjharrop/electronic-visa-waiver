@@ -12,14 +12,16 @@
 
 	<script type="text/javascript">
 	if (localStorage['upload']){
-    var passportData = JSON.parse(localStorage['upload']);
+    var passportData = localStorage['upload'];
     if (passportData == "yes"){
+			//alert(passportData);
+			localStorage.setItem('passport-details','{"PassportNumber":"UAE100200","CountryOfIssue":"United Arab Emirates","UAESurnames":"Al-Shamim","UAEFirstNames":"Zain M.Sulaiman","Sex":"Male","dobDay":"01","dobMonth":"07","dobYear":"1984","PlaceOfBirth":"Dubai","doiDay":"13","doiMonth":"07","doiYear":"2011","doeDay":"13","doeMonth":"07","doeYear":"2016"}');
 		} else {
       window.location.replace("passport-details");
     }
+	} else {
+		window.location.replace("passport-details");
 	}
-
-	localStorage.setItem('passport-details','{"PassportNumber":"UAE100200","CountryOfIssue":"United Arab Emirates","UAESurnames":"Al-Shamim","UAEFirstNames":"Zain M.Sulaiman","Sex":"Male","dobDay":"01","dobMonth":"07","dobYear":"1984","PlaceOfBirth":"Dubai","doiDay":"13","doiMonth":"07","doiYear":"2011","doeDay":"13","doeMonth":"07","doeYear":"2016"}');
 
 
   </script>

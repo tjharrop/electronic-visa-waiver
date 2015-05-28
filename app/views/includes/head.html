@@ -103,7 +103,7 @@ if (localStorage.getItem('lang') == "arabic") {
   console.log('Hiding arabic content')
 }
 
-if (localStorage.getItem('dynamic') == "hide") {
+if (localStorage.getItem('dynamic') != "show") {
   $('.hide-if-dynamic').show();
   $('.show-if-dynamic').hide();
   console.log('Hiding dynamic content')
@@ -116,11 +116,11 @@ if (localStorage.getItem('dynamic') == "hide") {
 if (localStorage.getItem('upload') == "yes") {
   $('.hide-if-upload').hide();
   $('.show-if-upload').show();
-  console.log('Hiding dynamic content')
+  console.log('Showing upload content')
 } else {
   $('.show-if-upload').hide();
   $('.hide-if-upload').show();
-  console.log('Showing dynamic content')
+  console.log('Hiding upload content')
 }
 
 if (localStorage.getItem('minimal') == "true") {
@@ -150,13 +150,18 @@ $('.minimalData').click(function(){
 });
 
 $('.manualNames').click(function(){
-  localStorage.setItem('dynamic','hide');
-  $(this).html('&#10003; Cabin crew names to manual');
+  localStorage.setItem('dynamic','show');
+  $(this).html('&#10003; Why?! (names to dynamic)');
 });
 
 $('.uploadPassport').click(function(){
   localStorage.setItem('upload','yes');
   $(this).html('&#10003; Passport upload gadget thingy turned on. Or something. Maybe.');
+});
+
+$('.cwPassport').click(function(){
+  localStorage.setItem('casework','yes');
+  $(this).html('&#10003; Casework upload');
 });
 
 $(".arabicLink").click(function(){
