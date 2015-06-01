@@ -10,6 +10,11 @@
 
 			if(input.attr('type') == 'radio' || input.attr('type') == 'checkbox') {
 				data[input.attr('name')] = input.attr("data-storage");
+			}else if(input.attr('type') == 'file') {
+				var value = input.val();
+				//alert(value);
+				var arr = value.split('\\').pop();
+				data[input.attr('name')] = arr;
 			}else {
 				data[input.attr('name')] = input.val();
 			}
@@ -48,6 +53,8 @@
 								input.removeAttr('checked');
 								console.log('uncheck #' + inputid);
 							}
+						} else if(input.attr('type') == 'file') {
+							//you cant set a file field value
 						} else {
 							input.val(value);
 						}

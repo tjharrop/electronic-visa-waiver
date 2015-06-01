@@ -123,6 +123,16 @@ if (localStorage.getItem('upload') == "yes") {
   console.log('Hiding upload content')
 }
 
+if (localStorage.getItem('casework') == "yes") {
+  $('.hide-if-casework').hide();
+  $('.show-if-casework').show();
+  console.log('Showing casework content')
+} else {
+  $('.show-if-casework').hide();
+  $('.hide-if-casework').show();
+  console.log('Hiding casework content')
+}
+
 if (localStorage.getItem('minimal') == "true") {
   $('.hide-if-minimal').hide();
   $('.show-if-minimal').show();
