@@ -1,0 +1,89 @@
+{{<layout}}
+
+{{$pageTitle}}Passport details{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <h1 class="heading-large" data-lang="eng">Your passport details</h1>
+  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
+  <p data-lang="eng" class="hide-if-upload">You will need to copy these details from your passport.</p>
+  <p data-lang="eng" class="hide-by-default show-if-upload">We have tried to read the details from your passport. Please check these are correct.</p>
+  <p data-lang="arabic">سوف تحتاج إلى نسخ هذه التفاصيل من جواز سفرك.</p>
+  <p>&nbsp;</p>
+
+<form name="passport-details">
+
+  <div class="form-group">
+     <fieldset class="inline">
+       <legend class="form-label-bold label" data-lang="eng">
+         Sex as on passport
+       </legend>
+       <legend class="form-label-bold label" data-lang="arabic">
+         جنس
+       </legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="radio-sex-M">
+	        <input id="radio-sex-M" name="Sex" value="Male" type="radio" data-storage="Male">
+          <span data-lang="eng">Male</span>
+          <span data-lang="arabic">ذكر</span>
+	      </label>
+
+	      <label class="block-label" for="radio-sex-F">
+	        <input id="radio-sex-F" name="Sex" value="Female" type="radio" data-storage="Female">
+          <span data-lang="eng">Female</span>
+          <span data-lang="arabic">أنثى</span>
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+  </div>
+	<div class="form-group">
+	<fieldset>
+    <legend class="form-label-bold date-field label" data-lang="eng">Date of birth as on passport</legend>
+    <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الميلاد</legend>
+
+	    <div class="form-date" id="dateOfBirth">
+        <p class="form-hint" data-lang="eng">For example, 22 3 1979</p>
+        <p class="form-hint" data-lang="arabic">:علي سبيل المثال</p>
+
+	        <div class="form-group form-group-day">
+	            <label for="dobDay"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span> <span class="visuallyhidden">expected format DD. Required</span></label>
+	            <input type="text" class="form-control" id="dobDay" name="dobDay" aria-required="true" value="" maxlength="2">
+	        </div>
+	        <div class="form-group form-group-month">
+	            <label for="dobMonth"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span> <span class="visuallyhidden">expected format MM. Required</span></label>
+	            <input type="text" class="form-control" id="dobMonth" name="dobMonth" aria-required="true" value="" maxlength="2">
+	        </div>
+	        <div class="form-group form-group-year">
+	            <label for="dobYear"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Year</span><span data-lang="arabic">السنة</span> <span class="visuallyhidden">expected format YYYY. Required</span></label>
+	            <input type="text" class="form-control" id="dobYear" name="dobYear" aria-required="true" value="" maxlength="4">
+	        </div>
+	    </div>
+
+    </fieldset>
+    </div>
+
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="PlaceOfBirth" data-lang="eng">Place of birth as on passport</label>
+    <label class="form-label-bold label" for="PlaceOfBirth" data-lang="arabic">محل الميلاد</label>
+		<input type="text" name="PlaceOfBirth" class="form-control">
+	</div>
+
+    <a href="nationalities" class="button">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
+
+	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,95 @@
+{{<layout}}
+
+{{$pageTitle}}Passport details{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <h1 class="heading-large" data-lang="eng">Your passport details</h1>
+  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
+  <p data-lang="eng" class="hide-if-upload">You will need to copy these details from your passport.</p>
+  <p data-lang="eng" class="hide-by-default show-if-upload">We have tried to read the details from your passport. Please check these are correct.</p>
+  <p data-lang="arabic">سوف تحتاج إلى نسخ هذه التفاصيل من جواز سفرك.</p>
+  <p>&nbsp;</p>
+
+<form name="passport-details">
+
+	<fieldset class="inline hide-if-uae">
+
+      <legend class="form-label-bold" data-lang="eng">Do you hold any other nationalities?</legend>
+      <legend class="form-label-bold" data-lang="arabic">هل لديك أي جنسيات أخرى؟</legend>
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="OtherNationalities-1">
+	        <input id="OtherNationalities-1" name="OtherNationalities" value="Yes" type="radio" data-storage="yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
+	      </label>
+
+	      <label class="block-label" for="OtherNationalities-2">
+	        <input id="OtherNationalities-2" name="OtherNationalities" value="No" type="radio" data-storage="no">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
+	      </label>
+
+	    </div>
+
+	    <div class="panel-indent hide-by-default show-if-OtherNationalities optional-section-OtherNationalities" data-toggle-value="Yes" id="conditionalOtherNationalities">
+	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you hold</label>
+        <p class="form-hint" data-lang="eng">For example, "Canadian, Italian"</p>
+        <p class="form-hint" data-lang="arabic">في سبيل المثال :الكندية</p>
+			<input type="text" name="EnterOtherNationalities" class="form-control">
+	    </div>
+
+  	</fieldset>
+
+
+	<fieldset class="inline hide-if-minimal">
+
+    <legend class="form-label-bold" data-lang="eng">Have you previously held a different nationality?</legend>
+    <legend class="form-label-bold" data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="PreviousNationalities-1">
+	        <input id="PreviousNationalities-1" name="PreviousNationalities" value="Yes" type="radio" data-storage="yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
+	      </label>
+
+	      <label class="block-label" for="PreviousNationalities-2">
+	        <input id="PreviousNationalities-2" name="PreviousNationalities" value="No" type="radio" data-storage="no">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
+	      </label>
+
+	    </div>
+
+	    <div class="panel-indent js-hidden hide-by-default show-if-PreviousNationalities optional-section-PreviousNationalities" data-toggle-value="Yes" id="conditionalPreviousNationalities">
+	    	<label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="eng">Enter the nationality that you previously held</label>
+        <label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="arabic">أدخل الجنسية التي كنت تحملها سابقا؟</label>
+        <p class="form-hint" data-lang="eng">For example, "British"</p>
+        <p class="form-hint" data-lang="arabic">في سبيل المثال : بريطانية</p>
+			<input type="text" name="EnterPreviousNationalities" class="form-control">
+	    </div>
+
+  	</fieldset>
+
+
+    <a href="your-journey" class="button hide-if-travel">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
+    <a href="your-visit" class="button hide-by-default show-if-travel">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
+
+	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}

@@ -41,6 +41,7 @@ if (localStorage['passport-details']) {
   }
   if (leadNationality == 'United Arab Emirates'){
     $(".show-if-uae").show();
+    $(".hide-if-uae").hide();
     console.log('Showing UAE')
   }
   if (leadNationality == 'State of Kuwait'){
@@ -182,6 +183,11 @@ $(".arabicLink").click(function(){
 $(".mixedLink").click(function(){
   localStorage.setItem('lang','both');
   $(this).html('&#10003; Arabic and English');
+})
+
+$(".multiple").click(function(){
+  localStorage.setItem('multiple','yes');
+  $(this).html('&#10003; Multiple EVW');
 })
 
 $(".rightLink").click(function(){
