@@ -24,27 +24,20 @@
 
 	<div class="form-group">
 
-    <legend class="form-label-bold" data-lang="eng">How will you be travelling to the UK?</legend>
-    <legend class="form-label-bold" data-lang="arabic">كيف ستقوم بلسفر إلى المملكة المتحدة؟</legend>
-    <p class="form-hint" data-lang="eng">This is the journey you will make to arrive in the UK</p>
+    <legend class="form-label-bold playback-container" name="passport-details" data-lang="11eng">Will you be flying direct from <span class="playback-cell" data-playback="CountryOfIssue"></span> to the UK?</legend>
+    <!--<p class="form-hint" data-lang="eng">This is the journey you will make to arrive in the UK</p>
     <p class="form-hint" data-lang="arabic">هذه هي الرحلة التي سوف توصلك إلى المملكة المتحدة</p>
-
+-->
 		<label class="block-label" for="DepartureMode-1">
-	    	<input id="DepartureMode-1" name="DepartureMode" value="Air" type="radio" data-storage="Air">
-        <span data-lang="eng">By air</span>
+	    	<input id="DepartureMode-1" name="DepartureMode" value="Yes" type="radio" data-storage="Yes">
+        <span data-lang="eng">Yes</span>
         <span data-lang="arabic">بالطائرة</span>
 		</label>
 
 		<label class="block-label" for="DepartureMode-2">
-	    	<input id="DepartureMode-2" name="DepartureMode" value="Train" type="radio" data-storage="Train">
-        <span data-lang="eng">By train</span>
+	    	<input id="DepartureMode-2" name="DepartureMode" value="No" type="radio" data-storage="No">
+        <span data-lang="eng">No</span>
         <span data-lang="arabic">بالقطار</span>
-	  	</label>
-
-	  	<label class="block-label" for="DepartureMode-3">
-	    	<input id="DepartureMode-3" name="DepartureMode" value="Sea" type="radio" data-storage="Sea">
-        <span data-lang="eng">By sea</span>
-        <span data-lang="arabic">عن طريق البحر</span>
 	  	</label>
 
   	</div>
@@ -135,7 +128,7 @@
    	-->
 
 
-	<div class="form-group">
+	<div class="form-group hide-if-flightsapi">
 		<fieldset>
 		    <legend class="form-label-bold date-field label">UK local arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
 
@@ -159,7 +152,7 @@
 	    </fieldset>
     </div>
 
-    	<div class="form-group">
+    	<div class="form-group hide-if-flightsapi">
 		<fieldset>
 		    <legend class="form-label-bold date-field label">UK local arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
 
@@ -178,46 +171,6 @@
 
 	    </fieldset>
     </div>
-
-
-    <!-- Additional travel information -->
-
-     <fieldset class="inline">
-
-       <legend class="form-label-bold" data-lang="eng">Are you travelling to the UK with anyone else?</legend>
-       <legend class="form-label-bold" data-lang="arabic">هل تسافر الى المملكة المتحدة مع أي شخص آخر؟</legend>
-
-	    <div class="form-group form-group-compound">
-
-	      <label class="block-label" for="TravelWithOthers-1">
-	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();" data-storage="Yes">
-          <span data-lang="eng">Yes</span>
-          <span data-lang="arabic">نعم</span>
-	      </label>
-	      <label class="block-label" for="TravelWithOthers-2">
-	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();" data-storage="No">
-          <span data-lang="eng">No</span>
-          <span data-lang="arabic">لا</span>
-	      </label>
-
-	    </div>
-
-  	</fieldset>
-
-	<div id="TravellingWithOthers" class="form-group panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="Yes">
-    <label class="form-label-bold label" for="OtherTravellers" data-lang="eng">Please give the names of others travelling with you</label>
-    <label class="form-label-bold label" for="OtherTravellers" data-lang="arabic">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>
-		<textarea name="OtherTravellers" class="form-control"></textarea>
-	</div>
-
-
-	<!-- To change: turn into radio bttns, use the options from the start page, hint text on 6m stay -->
-
-	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="ReasonForVisit" data-lang="eng">What is the reason for your visit to the UK?</label>
-    <label class="form-label-bold label" for="ReasonForVisit" data-lang="arabic">ما هو سبب زيارتك إلى المملكة المتحدة؟</label>
-		<input type="text" name="ReasonForVisit" class="form-control">
-	</div>
 
 	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK
 
@@ -240,16 +193,7 @@
   	</fieldset>
   	-->
 
-    	<div class=" hide-by-default show-if-travel">
-    		<p class="hide-by-default show-if-dynamic"><a href="passport-details" class="button " role="button">
-          Continue
-        </a></p>
-    		<p class="hide-if-dynamic"><a href="passport-issue" class="button " role="button">
-          Continue
-        </a></p>
-    	</div>
-
-	<a href="your-visit" class="button hide-if-travel">
+	<a href="your-journey-2" class="button">
     <span data-lang="eng">Continue</span>
     <span data-lang="arabic">استمر</span>
   </a>

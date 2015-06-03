@@ -114,6 +114,16 @@ if (localStorage.getItem('dynamic') != "show") {
   console.log('Showing dynamic content')
 }
 
+if (localStorage.getItem('flightsapi') == "yes") {
+  $('.hide-if-flightsapi').hide();
+  $('.show-if-flightsapi').show();
+  console.log('Showing flights-API content')
+} else {
+  $('.show-if-flightsapi').hide();
+  $('.hide-if-flightsapi').show();
+  console.log('Hiding flights-API content')
+}
+
 if (localStorage.getItem('upload') == "yes") {
   $('.hide-if-upload').hide();
   $('.show-if-upload').show();
@@ -156,7 +166,17 @@ $('.clearStorage').click(function(){
 });
 
 $('.minimalData').click(function(){
-  localStorage.clear();
+  //localStorage.setItem('dynamic','show');
+  $(this).html('&#10003; Switched to minimal data');
+});
+
+$('.flightsApi').click(function(){
+  localStorage.setItem('flightsapi','yes');
+  $(this).html('&#10003; Only collect basic flight details');
+});
+
+$('.travelFirst').click(function(){
+  localStorage.setItem('travel','first');
   $(this).html('&#10003; Switched to minimal data');
 });
 

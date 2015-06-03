@@ -1,0 +1,106 @@
+{{<layout}}
+
+{{$pageTitle}}Your journey to the UK{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <h1 class="heading-large" data-lang="eng">Your journey to the UK</h1>
+  <h1 class="heading-large" data-lang="arabic">رحلتك إلى المملكة المتحدة</h1>
+
+<form name="journey-details">
+
+	<!-- We may be able to drop this question if we can infer it from the port of departure Q
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="DepartureCountry">Which country will you be travelling to the UK from?</label>
+		<p class="form-hint">This is the country you will leave to travel to the UK</p>
+		<input type="text" name="DepartureCountry" />
+	</div>
+
+	-->
+
+
+
+    <!-- Additional travel information -->
+
+     <fieldset class="inline">
+
+       <legend class="form-label-bold" data-lang="eng">Are you travelling to the UK with anyone else?</legend>
+       <legend class="form-label-bold" data-lang="arabic">هل تسافر الى المملكة المتحدة مع أي شخص آخر؟</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="TravelWithOthers-1">
+	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();" data-storage="Yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
+	      </label>
+	      <label class="block-label" for="TravelWithOthers-2">
+	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();" data-storage="No">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+
+	<div id="TravellingWithOthers" class="form-group panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="Yes">
+    <label class="form-label-bold label" for="OtherTravellers" data-lang="eng">Please give the names of others travelling with you</label>
+    <label class="form-label-bold label" for="OtherTravellers" data-lang="arabic">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>
+		<textarea name="OtherTravellers" class="form-control"></textarea>
+	</div>
+
+
+	<!-- To change: turn into radio bttns, use the options from the start page, hint text on 6m stay -->
+
+	<div class="form-group hide-if-minimal">
+    <label class="form-label-bold label" for="ReasonForVisit" data-lang="eng">What is the reason for your visit to the UK?</label>
+    <label class="form-label-bold label" for="ReasonForVisit" data-lang="arabic">ما هو سبب زيارتك إلى المملكة المتحدة؟</label>
+		<input type="text" name="ReasonForVisit" class="form-control">
+	</div>
+
+	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK
+
+    <fieldset class="inline">
+
+	    <legend class="form-label-bold">Do you plan to travel to the UK again within three months of this visit?</legend>
+
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="TravelPlans-1">
+	        <input id="TravelPlans-1" name="TravelPlans" value="Yes" type="radio"> Yes
+	      </label>
+
+	      <label class="block-label" for="TravelPlans-2">
+	        <input id="TravelPlans-2" name="TravelPlans" value="No" type="radio"> No
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+  	-->
+
+    	<div class=" hide-by-default show-if-travel">
+    		<p class="hide-by-default show-if-dynamic"><a href="passport-details" class="button " role="button">
+          Continue
+        </a></p>
+    		<p class="hide-if-dynamic"><a href="passport-issue" class="button " role="button">
+          Continue
+        </a></p>
+    	</div>
+
+	<a href="your-visit" class="button hide-if-travel">
+    <span data-lang="eng">Continue</span>
+    <span data-lang="arabic">استمر</span>
+  </a>
+
+	<!-- <input type="submit" id="updateContinue" class="button next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}
