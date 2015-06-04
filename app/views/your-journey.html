@@ -21,27 +21,32 @@
 	-->
 
 
+  <div class="form-group">
 
-	<div class="form-group">
-
-    <legend class="form-label-bold playback-container" name="passport-details" data-lang="11eng">Will you be flying direct from <span class="playback-cell" data-playback="CountryOfIssue"></span> to the UK?</legend>
-    <!--<p class="form-hint" data-lang="eng">This is the journey you will make to arrive in the UK</p>
+    <legend class="form-label-bold" data-lang="eng">How will you be travelling to the UK?</legend>
+    <legend class="form-label-bold" data-lang="arabic">كيف ستقوم بلسفر إلى المملكة المتحدة؟</legend>
+    <p class="form-hint" data-lang="eng">This is the journey you will make to arrive in the UK</p>
     <p class="form-hint" data-lang="arabic">هذه هي الرحلة التي سوف توصلك إلى المملكة المتحدة</p>
--->
+
 		<label class="block-label" for="DepartureMode-1">
-	    	<input id="DepartureMode-1" name="DepartureMode" value="Yes" type="radio" data-storage="Yes">
-        <span data-lang="eng">Yes</span>
+	    	<input id="DepartureMode-1" name="DepartureMode" value="Air" type="radio" data-storage="Air">
+        <span data-lang="eng">By air</span>
         <span data-lang="arabic">بالطائرة</span>
 		</label>
 
 		<label class="block-label" for="DepartureMode-2">
-	    	<input id="DepartureMode-2" name="DepartureMode" value="No" type="radio" data-storage="No">
-        <span data-lang="eng">No</span>
+	    	<input id="DepartureMode-2" name="DepartureMode" value="Train" type="radio" data-storage="Train">
+        <span data-lang="eng">By train</span>
         <span data-lang="arabic">بالقطار</span>
 	  	</label>
 
-  	</div>
+	  	<label class="block-label" for="DepartureMode-3">
+	    	<input id="DepartureMode-3" name="DepartureMode" value="Sea" type="radio" data-storage="Sea">
+        <span data-lang="eng">By sea</span>
+        <span data-lang="arabic">عن طريق البحر</span>
+	  	</label>
 
+  	</div>
 
 	<!-- Departure details
 		For flights, port of departure can be inferred from flight no
@@ -53,124 +58,6 @@
 	</div>
 
 	-->
-
-  	<div class="form-group">
-      <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Flight number</label>
-      <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
-      <p class="form-hint" data-lang="eng">For example, BA1234</p>
-      <p class="form-hint" data-lang="arabic">For example, BA1234</p>
-  		<input type="text" name="FlightNumber" />
-  	</div>
-
-<!--
-    	<div class="form-group hide-if-minimal">
-    		<label class="form-label-bold label" for="FlightNumber" data-lang="eng!">Departing from</label>
-    		<input type="text" name="DepartureLocation" class="form-control">
-    	</div>
-
-
-      	<div class="form-group hide-if-minimal">
-      		<label class="form-label-bold label" for="FlightNumber" data-lang="eng!">Arrival airport</label>
-      		<input type="text" name="ArrivalLocation" class="form-control">
-      	</div>
-      -->
-	<div class="form-group">
-		<fieldset>
-      <legend class="form-label-bold date-field label" data-lang="eng">Departure date</legend>
-      <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ المغادرة </legend>
-		    <div class="form-date" id="departureDate">
-		        <p class="form-hint" data-lang="eng">For example, 18 9 2015</p>
-
-		        <div class="form-group form-group-day">
-		            <label for="departureDay">
-                  <span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span>
-                </label>
-		            <input type="text" class="form-control" id="departureDay" name="departureDay" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-month">
-		            <label for="departureMonth">
-                  <span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span>
-                </label>
-		            <input type="text" class="form-control" id="departureMonth" name="departureMonth" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-year">
-		            <label for="departureYear">
-                  <span data-lang="eng">Year</span><span data-lang="arabic">السنة</span>
-                </label>
-		            <input type="text" class="form-control" id="departureYear" name="departureYear" aria-required="true" value="" maxlength="4">
-		        </div>
-		    </div>
-
-	    </fieldset>
-    </div>
-
-    <!-- Inferred from flight no and departure date
-    	<div class="form-group">
-		<fieldset>
-		    <legend class="form-label-bold date-field label">Departure time <span class="visuallyhidden">expected format is HH/MM</span></legend>
-
-		    <div class="form-date" id="departureTime">
-		        <p class="form-hint">For example, 21:45</p>
-
-		        <div class="form-group form-group-day">
-		            <label for="departureHour"><span class="visuallyhidden">Departure time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
-		            <input type="text" class="form-control" id="departureHour" name="departureHour" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-month">
-		            <label for="departureMins"><span class="visuallyhidden">Departure time </span>Minutes <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="departureMins" name="departureMins" aria-required="true" value="" maxlength="2">
-		        </div>
-		    </div>
-
-	    </fieldset>
-    </div>
-
-   	-->
-
-
-	<div class="form-group hide-if-flightsapi">
-		<fieldset>
-		    <legend class="form-label-bold date-field label">UK local arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
-
-		    <div class="form-date" id="arrivalDate">
-		        <p class="form-hint">For example, 18 9 2015</p>
-
-		        <div class="form-group form-group-day">
-		            <label for="DateOfArrivalDay"><span class="visuallyhidden">Arrival date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
-		            <input type="text" class="form-control" id="DateOfArrivalDay" name="DateOfArrivalDay" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-month">
-		            <label for="DateOfArrivalMonth"><span class="visuallyhidden">Arrival date </span>Month <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="DateOfArrivalMonth" name="DateOfArrivalMonth" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-year">
-		            <label for="DateOfArrivalYear"><span class="visuallyhidden">Arrival date </span>Year <span class="visuallyhidden">expected format YYYY. Required</span></label>
-		            <input type="text" class="form-control" id="DateOfArrivalYear" name="DateOfArrivalYear" aria-required="true" value="" maxlength="4">
-		        </div>
-		    </div>
-
-	    </fieldset>
-    </div>
-
-    	<div class="form-group hide-if-flightsapi">
-		<fieldset>
-		    <legend class="form-label-bold date-field label">UK local arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
-
-		    <div class="form-date" id="departureTime">
-		        <p class="form-hint">For example, 21:45</p>
-
-		        <div class="form-group form-group-day">
-		            <label><span class="visuallyhidden">Arrival time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
-		            <input type="text" class="form-control" id="arrTimeHour" name="arrTimeHour" aria-required="true" value="" maxlength="2">
-		        </div>
-		        <div class="form-group form-group-month">
-		            <label><span class="visuallyhidden">Arrival time </span>Minutes <span class="visuallyhidden">expected format MM. Required</span></label>
-		            <input type="text" class="form-control" id="arrTimeMins" name="arrTimeMins" aria-required="true" value="" maxlength="2">
-		        </div>
-		    </div>
-
-	    </fieldset>
-    </div>
 
 	<!-- Hiding this so we can validate where best to communicate the rules around re-entry and requirement for additional EVW for subsequent entry into the UK
 
