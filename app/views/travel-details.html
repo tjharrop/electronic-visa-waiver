@@ -10,6 +10,26 @@
 
 <form name="journey-details">
 
+
+        <div class="form-group hide-by-default show-if-mode-Sea">
+          <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Boat Name</label>
+          <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
+          <p class="form-hint" data-lang="eng">For example, "Spirit of Britain"</p>
+          <p class="form-hint" data-lang="arabic">For example, "Spirit of Britain"</p>
+          <input type="text" name="FlightNumber" />
+
+        </div>
+
+          <div class="form-group hide-by-default show-if-mode-Train">
+            <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Train number</label>
+            <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
+            <p class="form-hint" data-lang="eng">For example, Eurostar 9140</p>
+            <p class="form-hint" data-lang="arabic">For example, Eurostar 9140</p>
+            <input type="text" name="FlightNumber" />
+
+          </div>
+
+
 	<!-- We may be able to drop this question if we can infer it from the port of departure Q
 
 	<div class="form-group">
@@ -65,7 +85,7 @@
       		<input type="text" name="ArrivalLocation" class="form-control">
       	</div>
       -->
-	<div class="form-group">
+	<div class="form-group hide-by-default show-if-mode-Air">
 		<fieldset>
       <legend class="form-label-bold date-field label" data-lang="eng">Departure date</legend>
       <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ المغادرة </legend>
@@ -95,11 +115,11 @@
 	    </fieldset>
     </div>
 
-      	<div class="form-group">
+      	<div class="form-group hide-by-default show-if-mode-Air">
           <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Flight number</label>
           <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
-          <p class="form-hint" data-lang="eng">For example, BA1234</p>
-          <p class="form-hint" data-lang="arabic">For example, BA1234</p>
+          <p class="form-hint" data-lang="eng">For example, EK009</p>
+          <p class="form-hint" data-lang="arabic">For example, EK009</p>
       		<input type="text" name="FlightNumber" />
       	</div>
 
@@ -130,7 +150,9 @@
 
 	<div class="form-group hide-if-flightsapi">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">UK local arrival date <span class="visuallyhidden">expected format is DD/MM/YYY</span></legend>
+		    <legend class="form-label-bold date-field label">UK  arrival date</legend>
+         <p>What date will you be arriving in the UK?
+<span class="visuallyhidden">expected format is DD/MM/YYY</span></p>
 
 		    <div class="form-date" id="arrivalDate">
 		        <p class="form-hint">For example, 18 9 2015</p>
@@ -154,7 +176,9 @@
 
     	<div class="form-group hide-if-flightsapi">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">UK local arrival time <span class="visuallyhidden">expected format is HH/MM</span></legend>
+		    <legend class="form-label-bold date-field label">UK  arrival time</legend>
+          <p>What time will you be arriving in the UK?
+<span class="visuallyhidden">expected format is HH/MM</span></p>
 
 		    <div class="form-date" id="departureTime">
 		        <p class="form-hint">For example, 21:45</p>

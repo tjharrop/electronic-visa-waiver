@@ -7,9 +7,9 @@
   {{>includes/banner}}
   <h1 class="heading-large" data-lang="eng">Your passport details</h1>
   <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
-  <p data-lang="eng" class="hide-if-upload">You must copy these details from your passport. They need to exactly match the information in your passport.</p>
+  <p data-lang="eng" class="hide-if-upload">You must copy these details from your passport. They need to match the information in your passport exactly.</p>
   <p data-lang="eng" class="hide-by-default show-if-upload">We have tried to read the details from your passport. Please check these are correct.</p>
-  <p data-lang="arabic">You must copy these details from your passport. They need to exactly match the information in your passport. </p>
+  <p data-lang="arabic">يجب نسخ هذه التفاصيل من جواز سفرك . التي يحتاجونها ل تتطابق تماما مع المعلومات في جواز سفرك .</p>
   <p>&nbsp;</p>
 
 <form name="passport-details">
@@ -17,7 +17,7 @@
 	<div class="form-group">
 		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Passport number</label>
     <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
-    <p class="form-hint" data-lang="eng">Please add the number of the passport you will use when travelling to the UK. </p>
+    <p class="form-hint" data-lang="eng">This is the number of the passport you will use when travelling to the UK. </p>
     <p class="form-hint" data-lang="arabic">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
 		<input type="text" name="PassportNumber" class="form-control">
 	</div>
@@ -30,7 +30,6 @@
     	<fieldset>
 
         <legend class="form-label-bold date-field label" data-lang="eng">Your passport issue date</legend>
-        <p>Please add the date of issue as in your passport.</p>
         <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الإصدار</legend>
         <span class="visuallyhidden">expected format is DD/MM/YYY</span>
 
@@ -60,7 +59,6 @@
 
           <legend class="form-label-bold date-field label" data-lang="eng">Your passport expiry date</legend>
           <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الانتهاء</legend>
-          <p>Please add the date of expiry as in your passport.</p>
 
 		    <div class="form-date" id="dateOfExpiry">
 		        <p class="form-hint" data-lang="eng">For example, 25 3 2017</p>
@@ -82,6 +80,14 @@
 
 	    </fieldset>
     </div>
+
+    	<div class="form-group">
+    		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Place of issue</label>
+        <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
+        <p class="form-hint" data-lang="eng">This is the name of the place of issue in your passport.  </p>
+        <p class="form-hint" data-lang="arabic">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
+    		<input type="text" name="PlaceOfIssue" class="form-control">
+    	</div>
 
     <a href="name" class="button">
       <span data-lang="eng">Continue</span>

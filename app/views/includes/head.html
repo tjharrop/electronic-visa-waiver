@@ -83,6 +83,25 @@ if (localStorage['passport-details']) {
   }
 }
 
+if (localStorage['journey-details']) {
+  var leadApplicant = JSON.parse(localStorage['journey-details']);
+  var hasPrev = leadApplicant['DepartureMode'];
+    $(".show-if-mode-"+hasPrev).show();
+    console.log("showing .show-if-mode-"+hasPrev)
+}
+
+if (localStorage['passport-details']) {
+  var leadApplicant = JSON.parse(localStorage['passport-details']);
+  if(leadApplicant['doiYear']>2011){
+    $(".hide-if-old-uae").hide();
+    console.log("New style UAE")
+  } else {
+    $(".hide-if-new-uae").hide();
+    console.log("Old style UAE")
+  }
+
+}
+
 if (localStorage.getItem('lang') == "arabic") {
   $('*[data-lang="arabic"]').show();
   $('*[data-lang="eng"]').hide();
@@ -117,11 +136,11 @@ if (localStorage.getItem('dynamic') != "show") {
 
 if (localStorage.getItem('flightsapi') == "yes") {
   $('.hide-if-flightsapi').hide();
-  $('.show-if-flightsapi').show();
+  //$('.show-if-flightsapi').show();
   console.log('Showing flights-API content')
 } else {
-  $('.show-if-flightsapi').hide();
-  $('.hide-if-flightsapi').show();
+  //$('.show-if-flightsapi').hide();
+  //$('.hide-if-flightsapi').show();
   console.log('Hiding flights-API content')
 }
 
