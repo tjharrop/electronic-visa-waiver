@@ -15,7 +15,7 @@
           <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Boat Name</label>
           <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
           <p class="form-hint" data-lang="eng">For example, "Spirit of Britain"</p>
-          <p class="form-hint" data-lang="arabic">For example, "Spirit of Britain"</p>
+          <p class="form-hint" data-lang="arabic"> "Spirit of Britain" مثلا</p>
           <input type="text" name="FlightNumber" />
 
         </div>
@@ -24,7 +24,7 @@
             <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Train number</label>
             <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
             <p class="form-hint" data-lang="eng">For example, Eurostar 9140</p>
-            <p class="form-hint" data-lang="arabic">For example, Eurostar 9140</p>
+            <p class="form-hint" data-lang="arabic">Eurostar 9140 مثلا</p>
             <input type="text" name="FlightNumber" />
 
           </div>
@@ -150,12 +150,20 @@
 
 	<div class="form-group hide-if-flightsapi">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">UK  arrival date</legend>
-         <p>What date will you be arriving in the UK?
-<span class="visuallyhidden">expected format is DD/MM/YYY</span></p>
+		    <legend class="form-label-bold date-field label" data-lang="eng">
+          <span >UK  arrival date</span>
+        </legend>
+        <legend class="form-label-bold date-field label" data-lang="arabic">
+          <span >تاريخ وصوله المملكة المتحدة</span>
+        </legend>
+         <p>
+           <span data-lang="eng">What date will you be arriving in the UK?</span>
+           <span data-lang="arabic">ما تاريخ و صولك في المملكة المتحدة ؟</span>
+         </p>
 
 		    <div class="form-date" id="arrivalDate">
-		        <p class="form-hint">For example, 18 9 2015</p>
+          <p class="form-hint" data-lang="eng">For example, 18 9 2015</p>
+          <p class="form-hint" data-lang="arabic">18 9 2015 مثلا</p>
 
 		        <div class="form-group form-group-day">
 		            <label for="DateOfArrivalDay"><span class="visuallyhidden">Arrival date </span>Day <span class="visuallyhidden">expected format DD. Required</span></label>
@@ -176,12 +184,15 @@
 
     	<div class="form-group hide-if-flightsapi">
 		<fieldset>
-		    <legend class="form-label-bold date-field label">UK  arrival time</legend>
-          <p>What time will you be arriving in the UK?
-<span class="visuallyhidden">expected format is HH/MM</span></p>
+		    <legend class="form-label-bold date-field label" data-lang="eng">UK  arrival time</legend>
+        <legend class="form-label-bold date-field label" data-lang="arabic">وقت وصول المملكة المتحدة</legend>
+
+        <p data-lang="eng">What time will you be arriving in the UK?</p>
+        <p data-lang="arabic">وقت ما سوف يكون وصوله في المملكة المتحدة؟</p>
 
 		    <div class="form-date" id="departureTime">
-		        <p class="form-hint">For example, 21:45</p>
+          <p class="form-hint" data-lang="eng">For example, 21:45</p>
+          <p class="form-hint" data-lang="arabic">21:45 مثل</p>
 
 		        <div class="form-group form-group-day">
 		            <label><span class="visuallyhidden">Arrival time </span>Hours <span class="visuallyhidden">expected format HH. Required</span></label>
