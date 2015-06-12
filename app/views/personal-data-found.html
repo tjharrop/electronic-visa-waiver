@@ -1,0 +1,149 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Start page | Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<h1 class="heading-large">Personal data found</h1>
+	<p>Our records show the following personal data which will be used for this electronic visa waiver. If any of the details below have changed you will need to <a href="#">use the normal evw form</a></p>
+	<table class="playback-container" name="passport-details">
+		<thead>
+			<tr>
+				<th scope="col" width="60%">
+					<span data-lang="eng">Your passport details</span>
+					<span data-lang="arabic">تفاصيل جواز سفرك</span>
+				</th>
+				<th scope="col" width="40%" class="numeric"><a href="passport-details"></a></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<span data-lang="eng">Passport number</span>
+					<span data-lang="arabic">رقم جواز السفر	</span>
+				</td>
+				<td><span class="playback-cell" data-playback="PassportNumber"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-uae">
+				<td>
+					<span data-lang="eng">First Names</span>
+					<span data-lang="arabic">الأسماء الأولى</span>
+				</td>
+				<td><span class="playback-cell" data-playback="UAEFirstNames"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-uae">
+				<td>
+					<span data-lang="eng">Surname</span>
+					<span data-lang="arabic">لقب</span>
+				</td>
+				<td><span class="playback-cell" data-playback="UAESurnames"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-oman">
+				<td>
+					<span data-lang="eng">Surname</span>
+					<span data-lang="arabic">لقب</span>
+				</td>
+				<td><span class="playback-cell" data-playback="OmanSurname"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-oman">
+				<td>
+					<span data-lang="eng">Family Name</span>
+					<span data-lang="arabic">Family Name</span>
+				</td>
+				<td><span class="playback-cell" data-playback="OmanFamilyName"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-oman">
+				<td>
+					<span data-lang="eng">Given Name</span>
+					<span data-lang="arabic">Given Name</span>
+				</td>
+				<td><span class="playback-cell" data-playback="OmanGivenNames"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-qatar">
+				<td>
+					<span data-lang="eng">Name</span>
+					<span data-lang="arabic">Name</span>
+				</td>
+				<td><span class="playback-cell" data-playback="QatarNameOnPassport"></span></td>
+			</tr>
+			<tr class="hide-by-default show-if-kuwait">
+				<td>
+					<span data-lang="eng">Name</span>
+					<span data-lang="arabic">Name</span>
+				</td>
+				<td><span class="playback-cell" data-playback="KuwaitNameOnPassport"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<span data-lang="eng">Country of issue</span>
+					<span data-lang="arabic">بلد الإصدار</span>
+				</td>
+				<td><span class="playback-cell" data-playback="CountryOfIssue"></span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Sex</span>
+				<span data-lang="arabic">جنس</span>
+				</td>
+			<td><span class="playback-cell" data-playback="Sex"></span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Date of birth</span>
+				<span data-lang="arabic">تاريخ الميلاد</span>
+				</td>
+			<td><span class="playback-cell" data-playback="dobDay"></span>/<span class="playback-cell" data-playback="dobMonth"></span>/<span class="playback-cell" data-playback="dobYear"></span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Place of birth</span>
+				<span data-lang="arabic">محل الميلاد</span>
+				</td>
+			<td><span class="playback-cell" data-playback="PlaceOfBirth"></span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Date of expiry</span>
+				<span data-lang="arabic">تاريخ الانتهاء</span>
+				</td>
+			<td><span class="playback-cell" data-playback="doeDay"></span>/<span class="playback-cell" data-playback="doeMonth"></span>/<span class="playback-cell" data-playback="doeYear"></span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Date of issue</span>
+				<span data-lang="arabic">تاريخ الإصدار</span>
+				</td>
+			<td><span class="playback-cell" data-playback="doiDay"></span>/<span class="playback-cell" data-playback="doiMonth"></span>/<span class="playback-cell" data-playback="doiYear"></span></td>
+			</tr>
+			<tr class="hide-if-uae">
+			<td>
+				<span data-lang="eng">Other nationalities</span>
+				<span data-lang="arabic">هل لديك أي جنسيات أخرى؟</span>
+				</td>
+			<td><span class="playback-cell" data-playback="EnterOtherNationalities">None</span></td>
+			</tr>
+			<tr>
+			<td>
+				<span data-lang="eng">Previous nationalities</span>
+				<span data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</span>
+				</td>
+			<td><span class="playback-cell" data-playback="EnterPreviousNationalities">None</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+<p>
+		<a class="button" href="your-journey">Continue with this data</a>
+</p>
+</main>
+
+{{/content}}
+
+{{/layout}}

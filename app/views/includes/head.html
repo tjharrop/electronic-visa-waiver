@@ -101,27 +101,31 @@ if (localStorage['passport-details']) {
   }
 
 }
-
-if (localStorage.getItem('lang') == "arabic") {
-  $('*[data-lang="arabic"]').show();
-  $('*[data-lang="eng"]').hide();
-  $("html").attr("dir", "rtl")
-  $("header, .banner-block, input[type='text'], footer").attr("dir", "ltr")
-  console.log('Hiding english content')
-} else if (localStorage.getItem('lang') == "both") {
-  $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
-  $("legend[data-lang='arabic']").css('width','100%');
-} else if (localStorage.getItem('lang') == "right") {
-  $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
-  $("*[data-lang='eng']").attr("dir", "ltr").addClass('rtl-both');
-  $("html").attr("dir", "rtl")
-  $("*[data-lang='eng']").css('text-align','right');
-  $("*[data-lang='arabic']").css('text-indent','0');
-  $("header, .banner-block, input[type='text'], footer").attr("dir", "ltr")
-} else {
+if (window.location.href.indexOf("finished") > -1) {
   $('*[data-lang="arabic"]').hide();
-  $('*[data-lang="eng"]').show();
-  console.log('Hiding arabic content')
+} else{
+  if (localStorage.getItem('lang') == "arabic") {
+    $('*[data-lang="arabic"]').show();
+    $('*[data-lang="eng"]').hide();
+    $("html").attr("dir", "rtl")
+    $("header, .banner-block, input[type='text'], footer").attr("dir", "ltr")
+    console.log('Hiding english content')
+  } else if (localStorage.getItem('lang') == "both") {
+    $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
+    $("legend[data-lang='arabic']").css('width','100%');
+  } else if (localStorage.getItem('lang') == "right") {
+    $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
+    $("*[data-lang='eng']").attr("dir", "ltr").addClass('rtl-both');
+    $("html").attr("dir", "rtl")
+    $("*[data-lang='eng']").css('text-align','right');
+    $("*[data-lang='arabic']").css('text-indent','0');
+    $("header, .banner-block, input[type='text'], footer").attr("dir", "ltr")
+  } else {
+    $('*[data-lang="arabic"]').hide();
+    $('*[data-lang="eng"]').show();
+    console.log('Hiding arabic content')
+  }
+
 }
 
 if (localStorage.getItem('dynamic') != "show") {
