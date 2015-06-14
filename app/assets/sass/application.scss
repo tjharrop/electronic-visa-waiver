@@ -55,9 +55,11 @@ html[dir="rtl"] {
   }
 }
 .rtl-both {
-  text-indent:30%;
+  padding-right:50%;
   display:block;
 }
+body.body-rtl-both #content p[data-lang='eng'], body.body-rtl-both #content label:not(.rtl-both) {max-width:50%;}
+
 p.no-margin, h1.no-margin{
   text-indent:0;
 }

@@ -112,7 +112,9 @@ if (window.location.href.indexOf("finished") > -1) {
     console.log('Hiding english content')
   } else if (localStorage.getItem('lang') == "both") {
     $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
-    $("legend[data-lang='arabic']").css('width','100%');
+    //$("legend[data-lang='arabic']").css('width','100%');
+    $("legend[data-lang='arabic']").css('min-width','50%');
+    $("body").addClass('body-rtl-both');
   } else if (localStorage.getItem('lang') == "right") {
     $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
     $("*[data-lang='eng']").attr("dir", "ltr").addClass('rtl-both');
