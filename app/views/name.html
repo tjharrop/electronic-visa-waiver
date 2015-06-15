@@ -91,6 +91,42 @@
 			<input type="text" name="UAEFirstNames" class="form-control">
 		</div>
 	</div>
+  <p>&nbsp;</p>
+
+      <legend class="form-label-bold" data-lang="eng">Would you like to include a passport picture?</legend>
+      <legend class="form-label-bold" data-lang="arabic">تريد أن تشمل صورة جواز السفر؟</legend>
+  <p data-lang="eng">If you have a picture of your passport, you can send it with your application so we can check everything has been entered correctly.</p>
+  <p data-lang="arabic">إذا كان لديك صورة من جواز السفر الخاص بك، يمكنك إرسالها مع طلبك حتى نتمكن من التحقق تم إدخال كل شيء بشكل صحيح .</p>
+
+  <fieldset class="inline">
+
+   <div class="form-group form-group-compound">
+
+     <label class="block-label" for="uploadPassport-1">
+       <input id="uploadPassport-1" name="uploadPassport" value="Yes" type="radio" data-storage="Yes">
+       <span data-lang="eng">Yes</span>
+       <span data-lang="arabic">نعم</span>
+     </label>
+     <label class="block-label" for="uploadPassport-2">
+       <input id="uploadPassport-2" name="uploadPassport" value="No" type="radio" data-storage="No">
+       <span data-lang="eng">No</span>
+       <span data-lang="arabic">لا</span>
+     </label>
+
+   </div>
+
+ </fieldset>
+
+  	<div class="form-group panel-indent hide-by-default optional-section-uploadPassport" data-toggle-value="Yes">
+      <label class="form-label-bold label" for="passportFile" data-lang="eng2">Upload a passport picture</label>
+      <!--<label class="form-label-bold label" for="OtherTravellers" data-lang="arabic2">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>-->
+  		<input name="passportFile" class="form-control" type="file">
+      <!--<p data-lang="eng">An EVW needs to be completed for each of these passengers.</p>
+      <p data-lang="arabic">يحتاج إلى الإعفاء من تأشيرة الدخول الإلكترونية إلى أن تكتمل لكل من هؤلاء الركاب .</p>-->
+  	</div>
+
+
+
 
     <a href="personal-details" class="button">
       <span data-lang="eng">Continue</span>
