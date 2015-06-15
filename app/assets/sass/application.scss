@@ -54,11 +54,18 @@ html[dir="rtl"] {
     }
   }
 }
-.rtl-both {
-  padding-right:50%;
-  display:block;
+@media (max-width: 640px) {
+  .rtl-both {width:100%;}
 }
-body.body-rtl-both #content p[data-lang='eng'], body.body-rtl-both #content label:not(.rtl-both) {max-width:50%;}
+@media (min-width: 641px) {
+  .rtl-both {
+    padding-right:50%;
+    display:block;
+  }
+  legend.rtl-label {min-width:50%;}
+  body.body-rtl-both #content p[data-lang='eng'], body.body-rtl-both #content label:not(.rtl-both) {max-width:50%;}
+
+}
 
 p.no-margin, h1.no-margin{
   text-indent:0;
