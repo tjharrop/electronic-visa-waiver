@@ -37,7 +37,7 @@
 					localStorage[key] = JSON.stringify({});
 					data = JSON.parse(localStorage[key]);
 				}
-				element.find('input, select').change(on_change);
+				element.find('input, select, textarea').change(on_change);
 
 				element.find('input, select').each(function(){
 					if($(this).attr('type') != 'submit') {
