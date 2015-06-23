@@ -15,7 +15,7 @@
   <p>&nbsp;</p>
 
 <form name="passport-details">
-
+<div class="hide-by-default show-if-scan">
 	<div id="QatarName" class="form-group hide-by-default optional-section-CountryOfIssue show-if-qatar" data-toggle-value="Qatar">
 		<label class="form-label-bold label" for="QatarNameOnPassport">Name</label>
 		<p class="form-hint" data-lang="eng">
@@ -93,38 +93,36 @@
 	</div>
   <p>&nbsp;</p>
 
-      <legend class="form-label-bold" data-lang="eng">Help us to check this is correct</legend>
-      <legend class="form-label-bold" data-lang="arabic">تريد أن تشمل صورة جواز السفر؟</legend>
-  <p data-lang="eng">If you have a photo or scan of your passport you can send it with your application. We can then check your details and process your application more quickly.</p>
-  <p data-lang="arabic">إذا كان لديك صورة من جواز السفر الخاص بك، يمكنك إرسالها مع طلبك حتى نتمكن من التحقق تم إدخال كل شيء بشكل صحيح .</p>
+</div>
+<div class="hide-by-default show-if-no-scan">
+  <div class="form-group hide-if-old-uae">
+    <label class="form-label-bold label" for="NOSCANSurnames">
+      <span data-lang="eng">Family name</span>
+      <span data-lang="arabic">لقب</span>
+    </label>
+    <p class="form-hint" data-lang="eng">If this not completed in your passport leave this blank.</p>
+    <p class="form-hint" data-lang="arabic">أدخل اللقب الخاص بك تماما كما يظهر في جواز السفر</p>
+    <p class="form-hint" data-lang="eng">Enter your name in English.</p>
+    <p class="form-hint" data-lang="arabic">أدخل اسمك في اللغة الإنجليزية</p>
+    <input type="text" name="NOSCANSurnames" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label-bold label" for="NOSCANFirstNames">
+      <span data-lang="eng">Names as on passport</span>
+      <span data-lang="arabic">الأسماء الأولى</span>
+    </label>
+    <p class="form-hint" data-lang="eng">
+      This is one long field. If this not completed in your passport leave this blank.
+    </p>
+    <p data-lang="arabic">
+      هذا هو حقل واحد طويل . إذا كان هذا لم يكتمل في جواز سفرك ترك هذا فارغا
+    </p>
+    <p class="form-hint" data-lang="eng">Enter your name in English.</p>
+    <p class="form-hint" data-lang="arabic">أدخل اسمك في اللغة الإنجليزية</p>
+    <input type="text" name="NOSCANFirstNames" class="form-control">
+  </div>
 
-  <fieldset class="inline">
-
-   <div class="form-group form-group-compound">
-
-     <label class="block-label" for="uploadPassport-1">
-       <input id="uploadPassport-1" name="uploadPassport" value="Yes" type="radio" data-storage="Yes">
-       <span data-lang="eng">Yes</span>
-       <span data-lang="arabic">نعم</span>
-     </label>
-     <label class="block-label" for="uploadPassport-2">
-       <input id="uploadPassport-2" name="uploadPassport" value="No" type="radio" data-storage="No">
-       <span data-lang="eng">No</span>
-       <span data-lang="arabic">لا</span>
-     </label>
-
-   </div>
-
- </fieldset>
-
-  	<div class="form-group panel-indent hide-by-default optional-section-uploadPassport" data-toggle-value="Yes">
-      <label class="form-label-bold label" for="passportFile" data-lang="eng2">Upload a passport picture</label>
-      <!--<label class="form-label-bold label" for="OtherTravellers" data-lang="arabic2">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>-->
-  		<input name="passportFile" class="form-control" type="file">
-      <!--<p data-lang="eng">An EVW needs to be completed for each of these passengers.</p>
-      <p data-lang="arabic">يحتاج إلى الإعفاء من تأشيرة الدخول الإلكترونية إلى أن تكتمل لكل من هؤلاء الركاب .</p>-->
-  	</div>
-
+</div>
 
 
 

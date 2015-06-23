@@ -63,6 +63,20 @@ if (localStorage['journey-details']) {
 
 }
 
+
+if (localStorage['passport-details']) {
+  var journey = JSON.parse(localStorage['passport-details']);
+  var journeyDetail = journey['uploadPassport'];
+  if (journeyDetail == 'Yes'){
+    $(".show-if-scan").show();
+    console.log('Has scan upload')
+  } else {
+    $(".show-if-no-scan").show();
+    console.log('No scan upload')
+  }
+
+}
+
 //show if the user has other nationalities
 if (localStorage['passport-details']) {
   var leadApplicant = JSON.parse(localStorage['passport-details']);
