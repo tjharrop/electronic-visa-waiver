@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Dashboard</title>
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/style.css" rel="stylesheet" media="screen" />
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/html5shiv.js"></script>
+      <script src="dist/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    select{
+      font-size:30px;
+      margin-right:10px;
+    }
+    .flagged{
+      color: red;
+    }
+    .namep {font-size: 1.3em; border: 2px solid black; padding: 5px; margin-bottom: 1em;}
+
+    .infoText {font-size: 0.6em; color: grey; display:block;}
+
+    </style>
+  </head>
+
+  <body class="caseworker">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav navbar-right">
+            <li>Welcome, Manager</li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        <div class="navbar-header"><img src="public/img/Border-Force-logo-white.png" alt="" border="0" width="180" height="40" /></div>
+        <div class="navbar-product"><h1>Electronic Visa Waiver Admin</h1></div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-inbox"></span>Cases<span class="subicon glyphicon glyphicon-chevron-right"></span></a>
+              <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>All<span id="allCount" class="label label-default pull-right">13</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Biographic<span id="biographicCount" class="label label-default pull-right">3</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-plane"></span>Immigration<span id="immigrationCount" class="label label-default pull-right">10</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span>Centaur<span id="centaurCount" class="label label-default pull-right">12</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-globe"></span>Travel History<span id="travelHistoryCount" class="label label-default pull-right">0</span></a></li>
+                <li ><a href="#"><span class="glyphicon glyphicon-hdd"></span>PNC<span id="pncCount" class="label label-default pull-right">0</span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span>Renewals</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Users<span class="subicon glyphicon glyphicon-chevron-right"></span></a>
+              <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>View users<span id="allCount" class="label label-default pull-right">13</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Add users<span id="biographicCount" class="label label-default pull-right">3</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+        <h1>Traveller contact</h1>
+            <p>Compose an email to the traveller telling them about the errors in their EVW.</p>
+            <div class="row">
+              <div class="col-md-10">
+                Content
+              </div>
+              <div class="col-md-2">
+                Include
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-10">
+                <p>Dear Sir/Madam</p>
+              </div>
+              <div class="col-md-2">
+                <label for="my-checkbox-1-pass">
+                <input class="checkbox-pass" type="checkbox" id="my-checkbox-1-pass" name="my-checkbox-1" value="Pass" checked="checked">
+
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-10">
+                <p>I am emailing about missing information in your EVW. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus ligula in elementum accumsan. Mauris faucibus dictum velit a accumsan. Mauris sed nulla mollis, bibendum metus malesuada, sodales lorem. Nam eu accumsan elit, id lobortis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec ullamcorper urna. Pellentesque aliquam laoreet efficitur.</p>
+              </div>
+              <div class="col-md-2">
+                <label for="my-checkbox-1-pass">
+                <input class="checkbox-pass" type="checkbox" id="my-checkbox-1-pass" name="my-checkbox-1" value="Pass" checked="checked">
+
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-10">
+                <p>Please correct your flight details. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus ligula in elementum accumsan. Mauris faucibus dictum velit a accumsan. Mauris sed nulla mollis, bibendum metus malesuada, sodales lorem. Nam eu accumsan elit, id lobortis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec ullamcorper urna. Pellentesque aliquam laoreet efficitur.</p>
+              </div>
+              <div class="col-md-2">
+                <label for="my-checkbox-1-pass">
+                <input class="checkbox-pass" type="checkbox" id="my-checkbox-1-pass" name="my-checkbox-1" value="Pass">
+
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-10">
+                <p>Please correct your name. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus ligula in elementum accumsan. Mauris faucibus dictum velit a accumsan. Mauris sed nulla mollis, bibendum metus malesuada, sodales lorem. Nam eu accumsan elit, id lobortis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec ullamcorper urna. Pellentesque aliquam laoreet efficitur.</p>
+              </div>
+              <div class="col-md-2">
+                <label for="my-checkbox-1-pass">
+                <input class="checkbox-pass" type="checkbox" id="my-checkbox-1-pass" name="my-checkbox-1" value="Pass" checked="checked">
+
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-10">
+                <p>Best Regards</p>
+                <p>{User's name}</p>
+              </div>
+              <div class="col-md-2">
+                <label for="my-checkbox-1-pass">
+                <input class="checkbox-pass" type="checkbox" id="my-checkbox-1-pass" name="my-checkbox-1" value="Pass" checked="checked">
+
+                </label>
+              </div>
+            </div>
+
+
+            <p>&nbsp;</p>
+            <p><a href="evw-complete.html" class="button">Send Email &amp; Finish</a></p>
+            <p><a href="evw-complete.html" class="button-secondary ">Finish without emailing</a></p>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/js/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/jquery.tablesorter.min.js"></script>
+    <script src="dist/js/jquery.tablesorter.widgets.js"></script>
+    <script src="dist/js/jquery.tablesorter.pager.js"></script>
+    <script src="dist/js/tablesort-custom.js"></script>
+       <script>
+      $(document).ready(function(){
+
+
+        $(".nav-sidebar ul ").hide();
+
+        $(".nav-sidebar li").click(function(){
+            $(this).children('ul').slideToggle('fast');
+            $('span.subicon', this).toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
+            return false;
+        });
+
+       });
+
+    </script>
+  </body>
+</html>

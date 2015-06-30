@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Dashboard</title>
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/style.css" rel="stylesheet" media="screen" />
+    <link href="public/css/ui.datepicker.css" rel="stylesheet" media="screen" />
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/html5shiv.js"></script>
+      <script src="dist/js/respond.min.js"></script>
+    <![endif]-->
+<style>
+.caseworker .action-button span {
+font-size: 12px;
+}
+.caseworker .action-button button.button,
+button.button.apply {
+margin: 0 6px 2px 0;
+padding: 4px 9px;
+}
+.table input{
+  font-size: 14px;
+}
+.dateFrom{
+  float:left
+}
+.dateFrom,
+.dateTo{
+  border: solid 1px #dee0e2;
+  width:90px;
+}
+</style>
+
+  </head>
+
+  <body class="caseworker">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav navbar-right">
+            <li>Welcome, Manager</li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        <div class="navbar-header"><img src="public/img/Border-Force-logo-white.png" alt="" border="0" width="180" height="40" /></div>
+        <div class="navbar-product"><h1>Electronic Visa Waiver Admin</h1></div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-inbox"></span>Cases<span class="subicon glyphicon glyphicon-chevron-right"></span></a>
+              <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>All<span id="allCount" class="label label-default pull-right">13</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Biographic<span id="biographicCount" class="label label-default pull-right">3</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-plane"></span>Immigration<span id="immigrationCount" class="label label-default pull-right">10</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span>Centaur<span id="centaurCount" class="label label-default pull-right">12</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-globe"></span>Travel History<span id="travelHistoryCount" class="label label-default pull-right">0</span></a></li>
+                <li ><a href="#"><span class="glyphicon glyphicon-hdd"></span>PNC<span id="pncCount" class="label label-default pull-right">0</span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-star-empty"></span>Renewals</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Users<span class="subicon glyphicon glyphicon-chevron-right"></span></a>
+              <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>View users<span id="allCount" class="label label-default pull-right">13</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Add users<span id="biographicCount" class="label label-default pull-right">3</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<h2><i class="glyphicon glyphicon-search" style="font-size: .8em;margin-right: .3em;margin-bottom: 1em"></i>Search cases</h2>
+
+<!-- <input class="search" type="search" data-column="all" placeholder="Search..."> -->
+
+<button type="button" class="button-secondary reset">Clear Search</button>
+<br /><br />
+
+          <div class="table-responsive">
+        <table id="dataTable" class="table table-striped tablesorter">
+
+           <colgroup>
+                <col style="width:110px">
+                <col style="width:110px">
+                <col style="">
+                <col style="">
+                <col style="">
+                <col style="">
+                <col style="width:200px">
+            </colgroup>
+              <thead>
+                <tr>
+                  <th class="sorter-false">EVW number</th>
+                  <th class="sorter-false">Passport Number</th>
+                  <th class="sorter-false">Name</th>
+                  <th class="col-nationality filter-select sorter-false" data-placeholder="All">Nationality</th>
+                  <th class="col-type filter-select sorter-false" data-placeholder="All">Type</th>
+                  <th class="sorter-false">Status</th>
+                  <th class="col-date">Arrival</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="evw-name.html">RTxb79sy3</a></td>
+                  <td><a href="evw-name.html">9ym9DR1U</a></td>
+                  <td>Signfield</td>
+                  <td>UAE</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>27/05/2014</td>
+                </tr>
+                <tr>
+                  <td><a href="evw-name.html">RTcs7dIy3</a></td>
+                  <td><a href="evw-name.html">9ym9jsu1U</a></td>
+                  <td>Costanza</td>
+                  <td>UAE</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>27/01/2014</td>
+                </tr>
+                  <tr>
+                  <td><a href="evw-name.html">RTcb79Iy3</a></td>
+                  <td><a href="evw-name.html">koi9DR1U</a></td>
+                  <td>Benes</td>
+                  <td>UAE</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>27/03/2014</td>
+                </tr>
+                <tr>
+                  <td><a href="evw-name.html">RTcb7lsy3</a></td>
+                  <td><a href="evw-name.html">9ympo01U</a></td>
+                  <td>Targaryen</td>
+                  <td>Kuwait</td>
+          <td>Update</td>
+          <td>Open</td>
+                  <td>20/01/2014</td>
+                </tr>
+                 <tr>
+                  <td><a href="evw-name.html">RTcen9Iy3</a></td>
+                  <td><a href="evw-name.html">pl09DR1U</a></td>
+                  <td>Baratheon</td>
+                  <td>Oman</td>
+          <td>Update</td>
+          <td>Completed</td>
+                  <td>30/18/2014</td>
+                </tr>
+                 <tr>
+                  <td><a href="evw-name.html">RTcb799h3</a></td>
+                  <td><a href="evw-name.html">9ym9Dnhy</a></td>
+                  <td>Lannister</td>
+                  <td>Kuwait</td>
+          <td>Update</td>
+          <td>Completed</td>
+                  <td>10/05/2014</td>
+                </tr>
+                 <tr>
+                  <td><a href="evw-name.html">RTcbowIy3</a></td>
+                  <td><a href="evw-name.html">9y678R1U</a></td>
+                  <td>Stark</td>
+                  <td>Kuwait</td>
+          <td>Application</td>
+          <td>Completed</td>
+                  <td>09/05/2014</td>
+                </tr>
+
+                 <tr>
+                  <td><a href="evw-name.html">RTcb79Iy3</a></td>
+                  <td><a href="evw-name.html">9ym909sU</a></td>
+                  <td>Lannister</td>
+                  <td>Kuwait</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>04/07/2014</td>
+                </tr>
+                 <tr>
+                  <td><a href="#">RTcbmhIy3</a></td>
+                  <td><a href="#">9y765R1U</a></td>
+                  <td>Baratheon</td>
+                  <td>UAE</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>01/03/2014</td>
+                </tr>
+                 <tr>
+                  <td><a href="#">RTcbrtIy3</a></td>
+          <td><a href="#">lom9DR1U</a></td>
+                  <td>Snow</td>
+                  <td>UAE</td>
+          <td>Application</td>
+          <td>Open</td>
+                  <td>12/08/2014</td>
+                </tr>
+
+              </tbody>
+<tfoot>
+  <tr>
+
+
+  </tr>
+</tfoot>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/js/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/jquery.ui.js"></script>
+    <script src="dist/js/jquery.tablesorter.js"></script>
+    <script src="dist/js/tablesort-custom.js"></script>
+
+
+
+  </body>
+</html>
