@@ -1,0 +1,67 @@
+{{<layout}}
+
+{{$pageTitle}}Passport details{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <h1 class="heading-large" data-lang="eng">Use your saved details</h1>
+  <p data-lang="eng" class="hide-if-upload">If you have saved our details with us, you can get a new EVW without repeating your personal information.</p>
+  <p>&nbsp;</p>
+
+<form name="passport-details">
+
+	<div class="form-group">
+		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Passport number</label>
+    <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
+    <p class="form-hint" data-lang="eng">This is the number of the passport you will use when travelling to the UK. </p>
+    <p class="form-hint" data-lang="arabic">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
+		<input type="text" name="PassportNumber" class="form-control">
+	</div>
+
+  <div class="form-group">
+		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Which country issued your passport?</label>
+  {{>includes/partials/country-of-issue}}
+</div>
+
+    <div class="form-group hide-if-minimal">
+    	<fieldset>
+
+        <legend class="form-label-bold date-field label" data-lang="eng">Your passport issue date</legend>
+        <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الإصدار</legend>
+        <span class="visuallyhidden">expected format is DD/MM/YYY</span>
+
+	    <div class="form-date" id="dateOfIssue">
+	        <p class="form-hint" data-lang="eng">For example, 30 9 2010</p>
+          <p class="form-hint" data-lang="arabic">:علي سبيل المثال</span>
+
+	        <div class="form-group form-group-day">
+	            <label for="doiDay"><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span>  </label>
+	            <input type="text" class="form-control" id="doiDay" name="doiDay" aria-required="true" value="" maxlength="2">
+	        </div>
+	        <div class="form-group form-group-month">
+	            <label for="doiMonth"><span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span> </label>
+	            <input type="text" class="form-control" id="doiMonth" name="doiMonth" aria-required="true" value="" maxlength="2">
+	        </div>
+	        <div class="form-group form-group-year">
+	            <label for="doiYear"><span data-lang="eng">Year</span><span data-lang="arabic">السنة</span> </label>
+	            <input type="text" class="form-control" id="doiYear" name="doiYear" aria-required="true" value="" maxlength="4">
+	        </div>
+	    </div>
+
+    	</fieldset>
+    </div>
+
+    <a href="go-edit" class="button">
+      <span data-lang="eng">Continue</span>
+      <span data-lang="arabic">استمر</span>
+    </a>
+
+	<!-- <input type="submit" id="updateContinue" class="button js-hidden next" value="Continue" style="display: inline-block;"> -->
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}
