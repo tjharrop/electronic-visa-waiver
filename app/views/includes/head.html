@@ -173,6 +173,15 @@ if (localStorage.getItem('upload') == "yes") {
   $('.hide-if-upload').show();
   console.log('Hiding upload content')
 }
+if (localStorage.getItem('uploadpage') == "yes") {
+  $('.hide-if-uploadpage').hide();
+  $('.show-if-uploadpage').show();
+  console.log('Showing uploadpage content')
+} else {
+  $('.show-if-uploadpage').hide();
+  $('.hide-if-uploadpage').show();
+  console.log('Hiding uploadpage content')
+}
 
 if (localStorage.getItem('casework') == "yes") {
   $('.hide-if-casework').hide();
@@ -248,6 +257,11 @@ $(".mixedLink").click(function(){
 $(".multiple").click(function(){
   localStorage.setItem('multiple','yes');
   $(this).html('&#10003; Multiple EVW');
+})
+
+$(".uploadPage").click(function(){
+  localStorage.setItem('uploadpage','yes');
+  $(this).html('&#10003; Upload on page');
 })
 
 $(".rightLink").click(function(){
