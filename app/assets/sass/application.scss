@@ -107,3 +107,19 @@ strong {
   display:none;
 }
 label .rtl-both {text-indent:0;}
+
+.uploadbox {
+  background: #005ea5;
+  padding: 1em;
+  h1,p,h2, li {color:#fff;}
+  .button {
+    background: #fff;
+    color: #005ea5;
+    box-shadow: 0 2px 0 #003A66;
+  }
+  h1 {margin-bottom: 1em;}
+  hr {
+    margin: 2em 0;
+    border: 1px solid white;
+  }
+}
