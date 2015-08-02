@@ -246,7 +246,16 @@ $('.cwPassport').click(function(){
 
 $(".arabicLink").click(function(){
   localStorage.setItem('lang','arabic');
-  $(this).html('&#10003; All in Arabic');
+  //$(this).html('&#10003; All in Arabic');
+})
+
+$(".engLink").click(function(){
+  localStorage.setItem('lang','english');
+  //$(this).html('&#10003; All in Arabic');
+})
+
+$(".refreshLink").click(function(){
+  location.reload();
 })
 
 $(".mixedLink").click(function(){
