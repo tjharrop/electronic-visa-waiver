@@ -173,6 +173,7 @@ if (localStorage.getItem('upload') == "yes") {
   $('.hide-if-upload').show();
   console.log('Hiding upload content')
 }
+localStorage.setItem('uploadpage','yes');
 if (localStorage.getItem('uploadpage') == "yes") {
   $('.hide-if-uploadpage').hide();
   $('.show-if-uploadpage').show();
@@ -268,10 +269,10 @@ $(".multiple").click(function(){
   $(this).html('&#10003; Multiple EVW');
 })
 
-$(".uploadPage").click(function(){
-  localStorage.setItem('uploadpage','yes');
-  $(this).html('&#10003; Upload on page');
-})
+//$(".uploadPage").click(function(){
+//  localStorage.setItem('uploadpage','yes');
+//  $(this).html('&#10003; Upload on page');
+//})
 
 $(".rightLink").click(function(){
   localStorage.setItem('lang','right');
