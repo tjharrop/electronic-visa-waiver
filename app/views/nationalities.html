@@ -6,12 +6,7 @@
 <main id="content" role="main">
   {{>includes/banner}}
   <h1 class="heading-large" data-lang="eng">Your nationality</h1>
-  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
-  <div class="hide-if-upload">
-    <p data-lang="eng">You will need to copy these details from your passport.</p>
-    <p data-lang="arabic">سوف تحتاج إلى نسخ هذه التفاصيل من جواز سفرك.</p>
-  </div>
-  <p data-lang="eng" class="hide-by-default show-if-upload">We have tried to read the details from your passport. Please check these are correct.</p>
+  <h1 class="heading-large" data-lang="arabic">الجنسية</h1>
   <p>&nbsp;</p>
 
 <form name="passport-details">
@@ -19,7 +14,7 @@
 	<fieldset class="inline hide-if-uae">
 
       <legend class="form-label-bold" data-lang="eng">Do you currently have any other nationalities?</legend>
-      <legend class="form-label-bold" data-lang="arabic">هل لديك أي جنسيات أخرى؟</legend>
+      <legend class="form-label-bold" data-lang="arabic">هل تحمل جنسيات أخرى؟</legend>
 	    <div class="form-group form-group-compound">
 
 	      <label class="block-label" for="OtherNationalities-1">
@@ -37,7 +32,7 @@
 	    </div>
 
 	    <div class="panel-indent hide-by-default show-if-OtherNationalities optional-section-OtherNationalities" data-toggle-value="Yes" id="conditionalOtherNationalities">
-	    	<label class="form-label-bold label" for="EnterOtherNationalities">Enter the other nationalities that you have</label>
+	    	<label class="form-label-bold label" for="EnterOtherNationalities">أدخل أي جنسية أخرى تحملها.</label>
         <p class="form-hint" data-lang="eng">For example, "Canadian, Italian"</p>
         <p class="form-hint" data-lang="arabic">في سبيل المثال :الكندية</p>
 			<input type="text" name="EnterOtherNationalities" class="form-control">
@@ -49,7 +44,7 @@
 	<fieldset class="inline hide-if-minimal">
 
     <legend class="form-label-bold" data-lang="eng">Have you had any other nationalities in the past?</legend>
-    <legend class="form-label-bold" data-lang="arabic">هل كان تحمل جنسية مختلفة سابقا؟</legend>
+    <legend class="form-label-bold" data-lang="arabic">هل حملت جنسيات أخرى سابقا؟</legend>
 
 	    <div class="form-group form-group-compound">
 
@@ -69,7 +64,7 @@
 
 	    <div class="panel-indent js-hidden hide-by-default show-if-PreviousNationalities optional-section-PreviousNationalities" data-toggle-value="Yes" id="conditionalPreviousNationalities">
 	    	<label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="eng">Enter all the nationalities you had previously.</label>
-        <label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="arabic">أدخل الجنسية التي كنت تحملها سابقا؟</label>
+        <label class="form-label-bold label" for="EnterPreviousNationalities" data-lang="arabic">أدخل كل الجنسيات التي حملتها سابقا.</label>
         <p class="form-hint" data-lang="eng">For example, "British"</p>
         <p class="form-hint" data-lang="arabic">في سبيل المثال : بريطانية</p>
 			<input type="text" name="EnterPreviousNationalities" class="form-control">

@@ -6,13 +6,15 @@
 <main id="content" role="main">
   {{>includes/banner}}
   <h1 class="heading-large" data-lang="eng">Your contact details</h1>
+  <h1 class="heading-large" data-lang="arabic">معلومات التواصل معك</h1>
   <p data-lang="eng">These details will be used to contact you with any queries, and to send you your electronic visa waiver.</p>
+  <p data-lang="arabic">ستستخدم هذه المعلومات للتواصل معك عن أي استفسار ولإرسال التأشيرة الإلكترونية لك.</p>
 
 	<form name="contact-details">
 
 	<div class="form-group hide-if-minimal">
     <label class="form-label-bold label" for="HomeAddress" data-lang="eng">Your home address <span class="form-hint">This is your main place of residence</span></label>
-    <label class="form-label-bold label" for="HomeAddress" data-lang="arabic">عنوان البيت <span class="form-hint">أعطي العنوان الكامل للمقر الرئيسي الخاص بك </span></label>
+    <label class="form-label-bold label" for="HomeAddress" data-lang="arabic">عنوانك<span class="form-hint"> هذا عنوانك الرئيسي </span></label>
 		<input type="text" name="HomeAddress1" class="form-control"><br />
 		<input type="text" name="HomeAddress2" class="form-control"><br />
 		<input type="text" name="HomeAddress3" class="form-control"><br />
@@ -30,15 +32,20 @@
 
 	<div class="form-group">
     <label class="form-label-bold label" for="Email" data-lang="eng">Email address <span class="form-hint">You will receive your electronic visa waiver at this address.</span></label>
-    <label class="form-label-bold label" for="Email" data-lang="arabic">عنوان البريد الإلكتروني <span class="form-hint">.سوف نرسل  الإعفاء الإلكتروني من التأشيرة إلى هذا العنوان</span></label>
+    <label class="form-label-bold label" for="Email" data-lang="arabic">البريد الإلكتروني <span class="form-hint">ستستلم التأشيرة الإلكترونية في هذا العنوان</span></label>
 		<input type="text" name="Email" class="form-control">
 
     <details data-lang="eng">
-                <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false"><span class="summary">Send a copy to another email address</span></summary>
+                <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false">
+                  <span class="summary" data-lang="eng">Send a copy to another email address</span>
+                  <span class="summary" data-lang="arabic">أرسل نسخة لبريد إلكتروني آخر</span>
+                </summary>
                 <div class="panel-indent" id="details-content-0" aria-hidden="true" style="display: none;">
                   <p>
-                    Enter the email address where you would like to receive a copy of your electronic visa waiver
-                    <label class="form-label" for="second-email">Email</label>
+                    <span data-lang="eng">Enter the email address where you would like to receive a copy of your electronic visa waiver</span>
+                    <span data-lang="arabic">أدخل عنوان البريد الإلكتروني الذي تريد أن تستلم فيه نسخة من التأشيرة الإلكترونية.</span>
+                    <label class="form-label" for="second-email" data-lang="eng">Email</label>
+                    <label class="form-label" for="second-email" data-lang="arabic">البريد الإلكتروني</label>
                     <input type="text" class="form-control" id="second-email" name="second-email">
                   </p>
                 </div>
@@ -52,13 +59,13 @@
 
   	<div class="form-group hide-if-minimal">
       <label class="form-label-bold label" for="CompanyName" data-lang="eng">Name of the company that employs you</label>
-      <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة</label>
+      <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة التي تعمل بها</label>
   		<input type="text" name="CompanyName" class="form-control">
   	</div>
 
 	<div class="form-group hide-if-minimal">
     <label class="form-label-bold label" for="Occupation" data-lang="eng">Your job title</label>
-    <label class="form-label-bold label" for="Occupation" data-lang="arabic">وظيفتك</label>
+    <label class="form-label-bold label" for="Occupation" data-lang="arabic">منصبك</label>
 		<input type="text" name="Occupation" class="form-control">
 	</div>
 

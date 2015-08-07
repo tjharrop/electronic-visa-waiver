@@ -6,7 +6,7 @@
 <main id="content" role="main">
   {{>includes/banner}}
   <h1 class="heading-large" data-lang="eng">Your personal details</h1>
-  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
+  <h1 class="heading-large" data-lang="arabic">معلوماتك الشخصية</h1>
   <p>&nbsp;</p>
 
 <form name="passport-details">
@@ -17,7 +17,7 @@
          What is your gender, as shown in your passport?
        </legend>
        <legend class="form-label-bold label" data-lang="arabic">
-         جنس
+         الجنس
        </legend>       <p data-lang="eng">This is your sex as written in your passport.</p>
        <p data-lang="arabic">هذا هو جنسك كما هو مكتوب في جواز السفر.</p>
 
@@ -44,12 +44,10 @@
 	<fieldset>
     <legend class="form-label-bold date-field label" data-lang="eng">Date of birth</legend>
     <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الميلاد</legend>
-    <p data-lang="eng">Date of birth as in your passport</p>
-    <p data-lang="arabic">تاريخ الميلاد كما في جواز السفر</p>
 
 	    <div class="form-date" id="dateOfBirth">
         <p class="form-hint" data-lang="eng">For example, 22 3 1979</p>
-        <p class="form-hint" data-lang="arabic">:علي سبيل المثال</p>
+        <p class="form-hint" data-lang="arabic">مثال: 22 3 1979</p>
 
 	        <div class="form-group form-group-day">
 	            <label for="dobDay"><span class="visuallyhidden">Date of birth </span><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span> <span class="visuallyhidden">expected format DD. Required</span></label>
@@ -71,8 +69,9 @@
 
 	<div class="form-group">
 		<label class="form-label-bold label" for="PlaceOfBirth" data-lang="eng">Place of birth</label>
-    <label class="form-label-bold label" for="PlaceOfBirth" data-lang="arabic">محل الميلاد</label>
-    <p class="hinttext">This will be a town, city or province, shown on your passport.</p>
+    <label class="form-label-bold label" for="PlaceOfBirth" data-lang="arabic">مكان الولادة</label>
+    <p data-lang="eng">This will be a town, city or province, shown on your passport.</p>
+    <p data-lang="arabic">هذا سيكون المدينة أو البلدة أو المحافظة المذكورة بجواز السفر</p>
 		<input type="text" name="PlaceOfBirth" class="form-control">
 	</div>
 
