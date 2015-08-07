@@ -5,13 +5,13 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large" data-lang="eng">Your personal details</h1>
-  <p data-lang="eng">We may need to contact you about the information you have provided, and to send you your EVW.</p>
+  <h1 class="heading-large" data-lang="eng">Your contact details</h1>
+  <p data-lang="eng">These details will be used to contact you with any queries, and to send you your electronic visa waiver.</p>
 
 	<form name="contact-details">
 
 	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="HomeAddress" data-lang="eng">Home address <span class="form-hint">What is the full address of your main residence</span></label>
+    <label class="form-label-bold label" for="HomeAddress" data-lang="eng">Your home address <span class="form-hint">This is your main place of residence</span></label>
     <label class="form-label-bold label" for="HomeAddress" data-lang="arabic">عنوان البيت <span class="form-hint">أعطي العنوان الكامل للمقر الرئيسي الخاص بك </span></label>
 		<input type="text" name="HomeAddress1" class="form-control"><br />
 		<input type="text" name="HomeAddress2" class="form-control"><br />
@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="form-group">
-    <label class="form-label-bold label" for="Email" data-lang="eng">Email address <span class="form-hint">We will send your electronic visa waiver to this address.</span></label>
+    <label class="form-label-bold label" for="Email" data-lang="eng">Email address <span class="form-hint">You will receive your electronic visa waiver at this address.</span></label>
     <label class="form-label-bold label" for="Email" data-lang="arabic">عنوان البريد الإلكتروني <span class="form-hint">.سوف نرسل  الإعفاء الإلكتروني من التأشيرة إلى هذا العنوان</span></label>
 		<input type="text" name="Email" class="form-control">
 
@@ -37,7 +37,7 @@
                 <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="false"><span class="summary">Send a copy to another email address</span></summary>
                 <div class="panel-indent" id="details-content-0" aria-hidden="true" style="display: none;">
                   <p>
-                    Which email address should we send a copy of your EVW to?
+                    Enter the email address where you would like to receive a copy of your electronic visa waiver
                     <label class="form-label" for="second-email">Email</label>
                     <input type="text" class="form-control" id="second-email" name="second-email">
                   </p>
@@ -50,16 +50,16 @@
 	<!-- Confirmation pattern: inset statement "We will use this address if we need to email you: [email address]" -->
 
 
-	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="Occupation" data-lang="eng">Your occupation</label>
-    <label class="form-label-bold label" for="Occupation" data-lang="arabic">وظيفتك</label>
-		<input type="text" name="Occupation" class="form-control">
-	</div>
+  	<div class="form-group hide-if-minimal">
+      <label class="form-label-bold label" for="CompanyName" data-lang="eng">Name of the company that employs you</label>
+      <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة</label>
+  		<input type="text" name="CompanyName" class="form-control">
+  	</div>
 
 	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="CompanyName" data-lang="eng">Company name</label>
-    <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة</label>
-		<input type="text" name="CompanyName" class="form-control">
+    <label class="form-label-bold label" for="Occupation" data-lang="eng">Your job title</label>
+    <label class="form-label-bold label" for="Occupation" data-lang="arabic">وظيفتك</label>
+		<input type="text" name="Occupation" class="form-control">
 	</div>
 
 	</form>

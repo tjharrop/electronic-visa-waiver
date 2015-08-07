@@ -5,38 +5,70 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/banner}}
-  <h1 class="heading-large" data-lang="eng">Your passport details</h1>
-  <h1 class="heading-large" data-lang="arabic">تفاصيل جواز سفرك</h1>
-  <div class="hide-if-upload">
-    <p data-lang="eng">You must use your passport to complete this section. Your details need to match the information in your passport.</p>
-    <p data-lang="arabic">يجب نسخ هذه التفاصيل من جواز سفرك . التي يحتاجونها ل تتطابق تماما مع المعلومات في جواز سفرك .</p>
+  <div class="grid-row">
+    <div class="column-half">
+      <h1 class="heading-large" data-lang="">Your passport details</h1>
+    </div>
+    <div class="column-half" dir="rtl">
+      <h1 class="heading-large" data-lang="">تفاصيل جواز سفرك</h1>
+    </div>
   </div>
-  <p data-lang="eng" class="hide-by-default show-if-upload">We have tried to read the details from your passport. Please check these are correct.</p>
 
-  <p>&nbsp;</p>
+  <div class="grid-row">
+    <div class="column-half">
+      <p data-lang="eng">You must copy these details from your passport. They need to match the information in your passport exactly.</p>
+    </div>
+    <div class="column-half" dir="rtl">
+      <p data-lang="">يجب نسخ هذه التفاصيل من جواز سفرك . التي يحتاجونها ل تتطابق تماما مع المعلومات في جواز سفرك .</p>
+    </div>
+  </div>
 
 <form name="passport-details">
 
 	<div class="form-group">
-		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Passport number</label>
-    <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
-		<input type="text" name="PassportNumber" class="form-control">
+
+      <div class="grid-row">
+        <div class="column-half">
+          <label class="form-label-bold label" for="PassportNumber" data-lang="">Passport number</label>
+          <p class="form-hint" data-lang="">This is the number of the passport you will use when travelling to the UK. </p>
+        </div>
+        <div class="column-half" dir="rtl">
+          <label class="form-label-bold label" for="PassportNumber" data-lang="">رقم جواز السفر</label>
+          <p class="form-hint" data-lang="">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
+        </div>
+      </div>
+
+		<p align="center"><input type="text" name="PassportNumber" class="form-control"></p>
 	</div>
 
-<div class="hide-by-default show-if-dynamic">
-  {{>includes/partials/country-of-issue}}
-</div>
+    <div class="grid-row">
+      <div class="column-half">
+      </div>
+      <div class="column-half" dir="rtl">
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-half">
+        <legend class="form-label-bold date-field label" data-lang="">Your passport issue date</legend>
+        <p class="form-hint" data-lang="">For example, 30 9 2010</p>
+      </div>
+      <div class="column-half" dir="rtl">
+        <legend class="form-label-bold date-field label" data-lang="">تاريخ الإصدار</legend>
+        <p class="form-hint" data-lang="">:علي سبيل المثال</p>
+      </div>
+    </div>
 
     <div class="form-group hide-if-minimal">
     	<fieldset>
 
-        <legend class="form-label-bold date-field label" data-lang="eng">Passport issue date</legend>
-        <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الإصدار</legend>
+
+
         <span class="visuallyhidden">expected format is DD/MM/YYY</span>
 
 	    <div class="form-date" id="dateOfIssue">
-	        <p class="form-hint" data-lang="eng">For example, 30 9 2010</p>
-          <p class="form-hint" data-lang="arabic">:علي سبيل المثال</span>
+
+
 
 	        <div class="form-group form-group-day">
 	            <label for="doiDay"><span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span>  </label>
@@ -58,7 +90,7 @@
     <div class="form-group">
 		<fieldset>
 
-          <legend class="form-label-bold date-field label" data-lang="eng">Passport expiry date</legend>
+          <legend class="form-label-bold date-field label" data-lang="eng">Your passport expiry date</legend>
           <legend class="form-label-bold date-field label" data-lang="arabic">تاريخ الانتهاء</legend>
 
 		    <div class="form-date" id="dateOfExpiry">
@@ -85,7 +117,7 @@
     	<div class="form-group">
     		<label class="form-label-bold label" for="PassportNumber" data-lang="eng">Place of issue</label>
         <label class="form-label-bold label" for="PassportNumber" data-lang="arabic">رقم جواز السفر</label>
-        <p class="form-hint" data-lang="eng">This will be a town, city or province.  </p>
+        <p class="form-hint" data-lang="eng">This is the name of the place of issue in your passport.  </p>
         <p class="form-hint" data-lang="arabic">أعطي رقم جواز السفر الذي ستستخدمه عند السفر إلى المملكة المتحدة</p>
     		<input type="text" name="PlaceOfIssue" class="form-control">
     	</div>
