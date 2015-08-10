@@ -53,6 +53,9 @@ html[dir="rtl"] {
       text-align: left;
     }
   }
+  p, label, legend {
+    font-size: 22px;
+  }
 }
 @media (max-width: 640px) {
   .rtl-both {width:100%;}
