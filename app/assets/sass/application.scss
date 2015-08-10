@@ -136,4 +136,7 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
   .form-control[name="PassportNumber"] {
     width: 25%;
   }
+  .form-control[name*="names"],.form-control[name*="Names"]{
+    width:50%;
+  }
 }
