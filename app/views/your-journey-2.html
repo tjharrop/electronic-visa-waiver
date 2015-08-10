@@ -26,7 +26,7 @@
       <label class="form-label-bold label" for="ReasonForVisit" data-lang="arabic">ما سبب مجيئك للمملكة المتحدة؟</label>
 
 
-      	    <div class="form-group form-group-compound hide-by-default">
+      	    <div class="form-group form-group-compound">
 
       	      <label class="block-label" for="ReasonForVisit-1">
       	        <input id="ReasonForVisit-1" name="ReasonForVisit" value="Yes" type="radio" data-storage="Business">
@@ -48,11 +48,22 @@
                 <span data-lang="eng">Medical care</span>
                 <span data-lang="arabic">رعاية طبية</span>
       	      </label>
+              <label class="block-label" for="ReasonForVisit-5">
+      	        <input id="ReasonForVisit-5" name="ReasonForVisit" value="Other" type="radio" data-storage="Other">
+                <span data-lang="eng">Other</span>
+                <span data-lang="arabic">رعاية طبية</span>
+      	      </label>
 
       	    </div>
-            <div class="form-group form-group-compound">
-              <input type="text" name="ReasonForVisit" class="form-control">
+
+            <div id="otherReasonForTravel" class="form-group panel-indent hide-by-default show-if-others optional-section-ReasonForVisit" data-toggle-value="Other">
+              <label class="form-label-bold label" for="OtherTravellers" data-lang="eng">Please enter your reason for travel</label>
+              <label class="form-label-bold label" for="OtherTravellers" data-lang="arabic">الرجاء إدخال السبب الخاص بك للسفر</label>
+              <input type="text" name="ReasonForVisitOther" class="form-control">
+          </p>
             </div>
+
+
 
 
   	</div>
