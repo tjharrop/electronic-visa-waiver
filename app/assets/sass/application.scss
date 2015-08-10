@@ -128,3 +128,12 @@ label .rtl-both {text-indent:0;}
 }
 
 label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 19px;}
+
+@media (min-width: 641px){
+  .form-control {
+    width: 33%;
+  }
+  .form-control[name="PassportNumber"] {
+    width: 25%;
+  }
+}
