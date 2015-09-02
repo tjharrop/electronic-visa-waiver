@@ -3,11 +3,18 @@ var path = require('path'),
     routes = require(__dirname + '/app/routes.js'),
     app = express(),
     port = (process.env.PORT || 3000),
+    WebSocketServer = require("ws").Server,
 
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
     password = process.env.PASSWORD,
     env = process.env.NODE_ENV || 'development';
+
+
+
+
+
+
 
 // Authenticate against the environment-provided credentials, if running
 // the app in production (Heroku, effectively)
@@ -63,7 +70,37 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 
 // start the app
 
-app.listen(port);
+var server = app.listen(port);
+
+
+var wss = new WebSocketServer({ server: server });
+
+
+
+    wss.on("connection", function(ws) {
+
+      ws.on("message", function incoming(message) {
+        console.log('received: %s', message);
+        wss.clients.forEach(function each(client) {
+          client.send(message);
+        });
+      });
+
+
+
+      //var id = ws.send(JSON.stringify(new Date()), function() {  })
+
+
+      console.log("websocket connection open")
+
+      ws.on("close", function() {
+        console.log("websocket connection close")
+        //clearInterval(id)
+      })
+    });
+
+
+
 console.log('');
 console.log('Listening on port ' + port);
 console.log('');

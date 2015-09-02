@@ -21,18 +21,26 @@
 
 		<p class="bold-medium">Step 1</p>
 		<p>Hold your passport information page in front of the camera so that all of your information is visible.</p>
+		<p class="bold-medium">Step 2</p>
+		<p>Press return/enter or click the button to take a snapshot</p>
+		<p class="bold-medium">Step 3</p>
+		<p>Check your image and continue or take another</p>
+
 <div id="my_camera" style="width:800px; height:450px;">
 </div>
-<div id="my_result"></div>
+<div id="my_result">
+IS IT OK THEN?
+</div>
 
 <script language="JavaScript">
 		Webcam.attach( '#my_camera' );
 
 		function take_snapshot() {
 				Webcam.snap( function(data_uri) {
-						document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+						$('#my_result').append('<img src="'+data_uri+'"/>');
 				} );
-				$("#my_camera").hide();
+				$("#my_camera, #take_snapshot").hide();
+
 		}
 
 		$('body').bind('keypress', function(e) {
@@ -43,11 +51,9 @@
 });
 </script>
 
-<p class="bold-medium">Step 2</p>
-<p>Press return/enter or click the button to take a snapshot</p>
 
 <p data-lang="eng">
-<a href="javascript:void(take_snapshot())" class="button">Take Snapshot</a>
+<a href="javascript:void(take_snapshot())" class="button" id="take_snapshot">Take Snapshot</a>
 	</p>
 <fieldset class="inline">
 
