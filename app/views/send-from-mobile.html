@@ -1,0 +1,40 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<form name="passport-details">
+		<p>&nbsp;</p>
+		<script>
+			var host = location.origin.replace(/^http/, 'ws')
+			var ws = new WebSocket(host);
+			ws.onmessage = function (event) {
+				var li = document.createElement('li');
+				li.innerHTML = event.data;
+				document.querySelector('#pings').appendChild(li);
+			};
+
+			//setTimeout(function(){ ws.send('SOMETHING'); }, 3000);
+		</script>
+
+		<ul id='pings'></ul>
+
+</form>
+<script type="text/javascript">
+$("input[type=file]").on('change',function(){
+    //window.location.href = "name";
+});
+</script>
+</main>
+
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,37 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<form name="passport-details">
+		<p>&nbsp;</p>
+		<script>
+			var host = location.origin.replace(/^http/, 'ws')
+			var ws = new WebSocket(host);
+			$("a.button").click(function(){
+
+				ws.send('UPLOADED'); return false;
+			});
+		</script>
+
+		<a class="button" href="#" onclick="ws.send('UPLOADED'); return false;">Send file</a>
+
+</form>
+<script type="text/javascript">
+$("input[type=file]").on('change',function(){
+    //window.location.href = "name";
+});
+</script>
+</main>
+
+{{/content}}
+
+{{/layout}}
