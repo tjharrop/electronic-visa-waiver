@@ -1,0 +1,97 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<form name="passport-details">
+		<p>&nbsp;</p>
+<div style="" class="uploadbox">
+	<h1 class="bold-large" data-lang="eng">Take a picture of your passport information page using your webcam</h1>
+	<h1 class="bold-large" data-lang="arabic">حمل صورة عن صفحة المعلومات الشخصية من جواز السفر</h1>
+
+		<script src="/public/javascripts/webcam.min.js"></script>
+
+		<p class="bold-medium">Step 1</p>
+		<p>Hold your passport information page in front of the camera so that all of your information is visible.</p>
+<div id="my_camera" style="width:800px; height:450px;">
+</div>
+<div id="my_result"></div>
+
+<script language="JavaScript">
+		Webcam.attach( '#my_camera' );
+
+		function take_snapshot() {
+				Webcam.snap( function(data_uri) {
+						document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+				} );
+				$("#my_camera").hide();
+		}
+
+		$('body').bind('keypress', function(e) {
+	if(e.keyCode==13){
+		// Enter pressed... do anything here...
+		take_snapshot();
+	}
+});
+</script>
+
+<p class="bold-medium">Step 2</p>
+<p>Press return/enter or click the button to take a snapshot</p>
+
+<p data-lang="eng">
+<a href="javascript:void(take_snapshot())" class="button">Take Snapshot</a>
+	</p>
+<fieldset class="inline">
+
+<div class="form-group form-group-compound">
+
+ <!--<label class="block-label" for="uploadPassport-1">
+	 <input id="uploadPassport-1" name="uploadPassport" value="Yes" type="radio" data-storage="Yes">
+	 <span data-lang="eng">Yes</span>
+	 <span data-lang="arabic">نعم</span>
+ </label>
+ <label class="block-label" for="uploadPassport-2">
+	 <input id="uploadPassport-2" name="uploadPassport" value="No" type="radio" data-storage="No">
+	 <span data-lang="eng">No</span>
+	 <span data-lang="arabic">لا</span>
+ </label>
+-->
+</div>
+
+</fieldset>
+<p>&nbsp;</p>
+
+<div style='clear:both;'><a href="name" style="color:#efefef;">Skip</a></div>
+</div>
+<div class="form-group hide-by-default">
+          <details>
+            <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true"><span class="summary">I don't have an image of my passport...</span></summary>
+            <div class="panel-indent" id="details-content-0" aria-hidden="false" style="display: block;">
+              <p>
+                If you do not have an image of your passport picture page you can still use this service.
+              </p>
+							<p>It is important that you enter the information requested exactly as written on your passport. </p>
+							<p>If you do not, you may not be allowed to board the flight to the UK.</p>
+							<p><a href="name">Continue, I don't have an image of my passport</a></p>
+            </div>
+          </details>
+        </div>
+</form>
+<script type="text/javascript">
+$("input[type=file]").on('change',function(){
+    window.location.href = "name";
+});
+</script>
+</main>
+
+{{/content}}
+
+{{/layout}}
