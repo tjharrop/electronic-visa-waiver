@@ -214,3 +214,24 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
     }
   }
 }
+
+.uploadMethods {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  .heading-medium {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  .column-third:nth-child(3) {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+  img {
+    padding-right: 10px;
+  }
+  .uploadCol .button, .webcamCol .button {
+    margin-top:7px;
+    margin-left: 10px;
+  }
+}

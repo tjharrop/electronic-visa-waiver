@@ -15,17 +15,17 @@
 		<p>&nbsp;</p>
 <div style="" class="uploadbox">
 	<h1 class="bold-large" data-lang="eng">Upload a picture of your passport information page</h1>
-	<h1 class="bold-large" data-lang="arabic"><img src="https://dl.dropboxusercontent.com/u/18077450/hand-icon.png" height="220" style="float:right;">حمل صورة عن صفحة المعلومات الشخصية من جواز السفر</h1>
+	<!--<h1 class="bold-large" data-lang="arabic"><img src="https://dl.dropboxusercontent.com/u/18077450/hand-icon.png" height="220" style="float:right;">حمل صورة عن صفحة المعلومات الشخصية من جواز السفر</h1>-->
 	<p data-lang="eng">
-		<img src="https://dl.dropboxusercontent.com/u/18077450/hand-icon.png" height="220" style="float:left;">
+		<img src="/public/img/passport-photo.png" style="float:left; padding-right:20px;">
 		You need to upload a picture of the photo page of your passport so that the information in your application can be matched to your passport. The picture must be of the page containing your photo, name, date of birth and other information.
 	</p>
-	<p data-lang="arabic">
+	<!--<p data-lang="arabic">
 
 		يجب عليك أن تحمل صورة عن صفحة المعلومات الشخصية في جواز السفر حتى نستطيع أن نطابق المعلومات المدخلة في نموذج الطلب مع جواز السفر. يجب أن تكون هذه الصورة عن صفحة المعلومات الشخصية والتي تحتوي على صورتك واسمك وتاريخ الميلاد ومعلومات شخصية أخرى.
  </p><p data-lang="arabic">
  يمكنك أن تستخدم هاتفك الجوال لأخذ صورة عن صفحة المعلومات الشخصية او يمكنك ان تستخدم ماسحة.
-	</p>
+	</p>-->
 	<p data-lang="eng">You can take a picture of the photo page with a smartphone, or you can use an image of the page from a scanner.</p>
 		<!--<ul>
 			<li>&#10004; use it to check the information you have provided matches the information on your passport</li>
@@ -45,46 +45,55 @@
 -->
 <fieldset class="inline">
 
-<div class="form-group form-group-compound">
-
- <!--<label class="block-label" for="uploadPassport-1">
-	 <input id="uploadPassport-1" name="uploadPassport" value="Yes" type="radio" data-storage="Yes">
-	 <span data-lang="eng">Yes</span>
-	 <span data-lang="arabic">نعم</span>
- </label>
- <label class="block-label" for="uploadPassport-2">
-	 <input id="uploadPassport-2" name="uploadPassport" value="No" type="radio" data-storage="No">
-	 <span data-lang="eng">No</span>
-	 <span data-lang="arabic">لا</span>
- </label>
--->
+<div class="form-group grid-row uploadMethods">
+	<p class="heading-medium">Different ways of sending a picture of your passport information page</p>
+	<div class="column-third uploadCol">
+		<p class="bold-small">
+			Use a file from this computer
+		</p>
+		<img src="/public/img/upload-file-icon.png" style="float:left;">
+		<div class=" button secondary">
+			<span data-lang="eng">Upload picture</span>
+			<span data-lang="arabic">تحميل الصورة</span>
+			<input name="passportFile" class="form-control upload" type="file" style="position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			width: 100%;
+			height: 100%;">
+		</div>
+	</div>
+	<div class="column-third">
+		<p class="bold-small">Using your mobile</p>
+		<p>
+			<img src="/public/img/phone-icon.png" style="float:left;">
+			Enter your number and we will send you a link
+		</p>
+		<p>
+			<input class="form-control" type="text" style="width: 150px; height: 40px;" placeholder="Your number">
+			<a class="button secondary" href="send-from-mobile">Send</a>
+		</p>
+	</div>
+	<div class="column-third webcamCol">
+		<p class="bold-small">Using your webcam</p>
+		<p>
+			<img src="/public/img/upload-file-icon.png" style="float:left;">
+			<a class="button secondary" href="campage">Use your webcam</a>
+		</p>
+	</div>
 </div>
 
 </fieldset>
 <p>&nbsp;</p>
 <div class=" hides-by-default optional-section-uploadPassport" data-toggle-value="Yes">
 	<!--<label class="form-label-bold label" for="OtherTravellers" data-lang="arabic2">يرجى إعطاء أسماء آلاخرين الذين يسافرون معك</label>-->
-	<div class=" button">
-    <span data-lang="eng">Upload picture</span>
-		<span data-lang="arabic">تحميل الصورة</span>
-    <input name="passportFile" class="form-control upload" type="file" style="position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-		width: 100%;
-		height: 100%;">
-	</div>
-	<p>
-		<a class="button" href="campage">Use your webcam</a>
-	</p>
-	<p>
-		<a class="button" href="send-from-mobile">Use your mobile</a>
-	</p>
+
+
 	<!--<p data-lang="eng">An EVW needs to be completed for each of these passengers.</p>
 	<p data-lang="arabic">يحتاج إلى الإعفاء من تأشيرة الدخول الإلكترونية إلى أن تكتمل لكل من هؤلاء الركاب .</p>-->
 </div>
