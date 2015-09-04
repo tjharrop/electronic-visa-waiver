@@ -52,6 +52,7 @@
 <div id="my_camera" style="width:800px; height:450px;">
 </div>
 <div id="my_result">
+	<div class="img"></div>
 	<div class="acceptReject">
 		<a class="reject" href="campage">
 			<span></span>
@@ -69,7 +70,7 @@
 
 		function take_snapshot() {
 				Webcam.snap( function(data_uri) {
-						$('#my_result').prepend('<img src="'+data_uri+'"/>');
+						$('#my_result .img').html('<img src="'+data_uri+'"/>');
 				} );
 				$("#my_camera, #take_snapshot").hide();
 				$("#my_result").show();
