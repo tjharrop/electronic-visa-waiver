@@ -129,6 +129,8 @@ if (window.location.href.indexOf("finishedNO") > -1) {
     //$("legend[data-lang='arabic']").css('width','100%');
     $("legend[data-lang='arabic']").addClass('rtl-label');
     $("body").addClass('body-rtl-both');
+    $(".hide-if-both").hide();
+    $(".show-if-both").show();
   } else if (localStorage.getItem('lang') == "right") {
     $("*[data-lang='arabic']").attr("dir", "rtl").addClass('rtl-both');
     $("*[data-lang='eng']").attr("dir", "ltr").addClass('rtl-both');
