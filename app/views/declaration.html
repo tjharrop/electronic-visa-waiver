@@ -3,14 +3,14 @@
 {{$pageTitle}}Declaration and consent{{/pageTitle}}
 
 {{$content}}
-<main id="content" role="main" dir="rtl">
+<main id="content" role="main">
   <div data-lang="eng">
     <h1 class="heading-large">Declaration</h1>
     <p>By sending this application, you confirm to the best of your knowledge and belief that the information in the application is correct.</p>
     <p>If you completed this application on the behalf of someone else, by sending this application you confirm that you have their agreement.</p>
     <p>Your application will be processed according to the privacy policy and terms and conditions.</p>
   </div>
-  <div data-lang="arabic">
+  <div data-lang="arabic"  dir="rtl" style="width:100%;">
     <h1 class="heading-large">الإقرار</h1>
     <p>بتقديم هذا الطلب تؤكد أن المعلومات المذكورة بنموذج الطلب صحيحة حسب حسن معرفتك واعتقادك.</p>
     <p>إذا أكملت هذا الطلب نيابة عن شخص آخر، فبتقديم الطلب هذا، تؤكد أنك حصلت على موافقة المتقدم</p>
@@ -76,8 +76,13 @@
 	  </fieldset>
 -->
 	  <div class="form-group">
-      <p data-lang="eng"><a href="finished" class="button">Send application</a></p>
-      <p data-lang="arabic"><a href="finished" class="button">قدم الطلب</a></p>
+      <p >
+        <a href="finished" class="button">
+          <span data-lang="eng">Send application</span>
+          <span data-lang="arabic">قدم الطلب</</span>
+
+        </a>
+      </p>
 	  </div>
 
 	</form>

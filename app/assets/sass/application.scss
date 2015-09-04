@@ -217,7 +217,7 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
 
 .uploadMethods {
   border: 1px solid grey;
-  margin-top: 20px;
+  margin-top: 30px;
   padding-bottom: 15px;
   .heading-medium {
     padding: 15px;
@@ -233,5 +233,17 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
   .uploadCol .button, .webcamCol .button {
     margin-top:7px;
     margin-left: 10px;
+  }
+}
+
+
+body.body-rtl-both {
+  .form-group {
+    border-bottom: 20px solid #fff;
+    box-shadow: 0 1px 0 #ccc;
+  }
+  .form-group-day, .form-group-month, .form-group-year, .form-group-compound {
+    border-bottom: none;
+    box-shadow: none ;
   }
 }
