@@ -53,7 +53,7 @@
 </div>
 <div id="my_result">
 	<div class="acceptReject">
-		<a class="reject" href="sendfile">
+		<a class="reject" href="campage">
 			<span></span>
 			Take again
 		</a>
@@ -80,6 +80,13 @@
 		// Enter pressed... do anything here...
 		take_snapshot();
 	}
+});
+
+
+$("a.reject").click(function(){
+	$("#my_camera, #take_snapshot").show();
+	$("#my_result").hide();
+	return false;
 });
 </script>
 
