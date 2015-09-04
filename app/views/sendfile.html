@@ -12,24 +12,36 @@
 
 
 	<form name="passport-details">
-		<p>&nbsp;</p>
+		<h1 class="heading-large">Upload a photo</h1>
+		<p>Please upload a photo off your passport from your phone and continue the application on your computer.</p>
+		<div class=" button">
+	    <span data-lang="eng">Upload picture</span>
+			<span data-lang="arabic">تحميل الصورة</span>
+	    <input name="passportFile" class="form-control upload" type="file" style="position: absolute;
+	    top: 0;
+	    right: 0;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 20px;
+	    cursor: pointer;
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+			width: 100%;
+			height: 100%;">
+		</div>
 		<script>
 			var host = location.origin.replace(/^http/, 'ws')
 			var ws = new WebSocket(host);
-			$("a.button").click(function(){
-
-				ws.send('UPLOADED'); return false;
+			$("input[type=file]").on('change',function(){
+			    ws.send('UPLOADED');
+					window.location.href="sendfile-sent";
 			});
 		</script>
 
-		<a class="button" href="#" onclick="ws.send('UPLOADED'); return false;">Send file</a>
+
+		<!-- <a class="button" href="#" onclick="ws.send('UPLOADED'); return false;">Send file</a> -->
 
 </form>
-<script type="text/javascript">
-$("input[type=file]").on('change',function(){
-    //window.location.href = "name";
-});
-</script>
 </main>
 
 {{/content}}

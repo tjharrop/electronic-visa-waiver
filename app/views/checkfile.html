@@ -1,0 +1,36 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<form name="passport-details">
+		<h1 class="heading-large">We have received your image</h1>
+		<p>Is all your information clearly visible?</p>
+		<div style="width:80%;">
+			<img src="/public/img/IMG_6841.jpg" style="width:100%;">
+			<div class="acceptReject">
+				<a class="reject" href="sendfile">
+					<span></span>
+					Take again
+				</a>
+				<a class="accept" href="name">
+					Continue
+					<span></span>
+				</a>
+			</div>
+		</div>
+</form>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

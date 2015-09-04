@@ -12,14 +12,24 @@
 
 
 	<form name="passport-details">
-		<p>&nbsp;</p>
+		<h1 class="heading-large">Check your mobile</h1>
+		<p>We have sent a link to your mobile device. Click on te link to add a photo, this page will refresh when you're done.</p>
+		<div class="waiting">
+			<p class="bold-small">Waiting for your device...</p>
+		</div>
+		<div class="got">
+			<p class="bold-small">Picture uploaded</p>
+		</div>
 		<script>
 			var host = location.origin.replace(/^http/, 'ws')
 			var ws = new WebSocket(host);
 			ws.onmessage = function (event) {
-				var li = document.createElement('li');
-				li.innerHTML = event.data;
-				document.querySelector('#pings').appendChild(li);
+				// var li = document.createElement('li');
+				// li.innerHTML = event.data;
+				// document.querySelector('#pings').appendChild(li);
+				$(".waiting").hide();
+				$(".got").show();
+				setTimeout(function(){window.location.href="checkfile";}, 3000);
 			};
 
 			//setTimeout(function(){ ws.send('SOMETHING'); }, 3000);

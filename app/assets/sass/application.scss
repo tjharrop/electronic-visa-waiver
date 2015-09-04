@@ -57,6 +57,14 @@ html[dir="rtl"] {
     font-size: 22px;
   }
 }
+
+p, label, legend, table, tr, td {
+  &[dir="rtl"], [dir="rtl"] {
+    font-size: 22px;
+  }
+}
+
+
 @media (max-width: 640px) {
   .rtl-both {width:100%;}
 }
@@ -147,4 +155,62 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
     text-align: right;
     padding-left: 2em;
     padding-right: 0.5em;
+}
+
+.waiting, .got {
+  background-image: url('/public/img/spinner.gif');
+  background-repeat: no-repeat;
+  background-position: 30px 30px;
+  margin: 30px 0;
+  line-height: 32px;
+  padding: 30px;
+  text-indent: 50px;
+
+  border: 2px dashed rgb(111, 119, 123);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+  p {
+    margin: 0;
+  }
+}
+.got {
+  background-image: url('/public/img/323_checkmark_40.png');
+  background-position: 30px 20px;
+  border-color: #347B3E;
+  display: none;
+}
+
+.acceptReject a {
+  line-height:40px;
+  height: 40px;
+  display: inline-block;
+  span {
+    background-color: black;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    color: white;
+    line-height: 40px;
+    background-image: url('/public/images/icon-pointer.png');
+    background-repeat: no-repeat;
+    background-position: 14px 10px;
+    float:left;
+    margin: 0 15px;
+  }
+  &.accept {
+    float:right;
+    span {
+      float:right;
+    }
+  }
+  &.reject {
+    span {
+      background-image: url('/public/img/icon-pointer-reverse.png');
+      background-position: -4px 10px;
+    }
+  }
 }

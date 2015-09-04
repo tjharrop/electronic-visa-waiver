@@ -11,6 +11,29 @@
 	{{>includes/banner}}
 
 
+<style type="text/css">
+#my_camera {
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-ms-filter: fliph; /*IE*/
+	filter: fliph; /*IE*/
+}
+#my_camera div {
+    box-sizing: border-box;  border: 20px solid rgba(0, 0, 0, 0.4);
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    border-left-width: 100px;
+    border-right-width: 100px;
+}
+#my_result {
+	display:none;
+	width: 800px;
+}
+</style>
+
 	<form name="passport-details">
 		<p>&nbsp;</p>
 <div style="" class="uploadbox">
@@ -29,7 +52,16 @@
 <div id="my_camera" style="width:800px; height:450px;">
 </div>
 <div id="my_result">
-IS IT OK THEN?
+	<div class="acceptReject">
+		<a class="reject" href="sendfile">
+			<span></span>
+			Take again
+		</a>
+		<a class="accept" href="name">
+			Continue
+			<span></span>
+		</a>
+	</div>
 </div>
 
 <script language="JavaScript">
@@ -37,10 +69,10 @@ IS IT OK THEN?
 
 		function take_snapshot() {
 				Webcam.snap( function(data_uri) {
-						$('#my_result').append('<img src="'+data_uri+'"/>');
+						$('#my_result').prepend('<img src="'+data_uri+'"/>');
 				} );
 				$("#my_camera, #take_snapshot").hide();
-
+				$("#my_result").show();
 		}
 
 		$('body').bind('keypress', function(e) {
