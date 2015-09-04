@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>phone-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="UploadAPicture7" sketch:type="MSArtboardGroup" transform="translate(-181.000000, -554.000000)">
+            <g id="phone" sketch:type="MSLayerGroup" transform="translate(195.000000, 554.000000)">
+                <rect id="Path" fill="#000000" sketch:type="MSShapeGroup" x="0" y="0" width="32" height="54" rx="4"></rect>
+                <rect id="Rectangle-116" fill="#FFFFFF" sketch:type="MSShapeGroup" x="5" y="6" width="22" height="34"></rect>
+                <path d="M12.4987013,46.9508599 C12.4987013,45.3877919 13.8417834,44.1207836 15.4987013,44.1207836 C17.1556192,44.1207836 18.4987013,45.3877919 18.4987013,46.9508599 C18.4987013,48.513928 17.1556192,49.7809363 15.4987013,49.7809363 C13.8417834,49.7809363 12.4987013,48.513928 12.4987013,46.9508599" id="Fill-6" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+            <rect id="Rectangle-116" stroke="#CCCCCC" sketch:type="MSShapeGroup" x="142" y="425" width="851" height="425"></rect>
+        </g>
+    </g>
+</svg>

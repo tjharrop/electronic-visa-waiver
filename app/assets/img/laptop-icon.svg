@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="77px" height="56px" viewBox="0 0 77 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>laptop-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="UploadAPicture7" sketch:type="MSArtboardGroup" transform="translate(-172.000000, -661.000000)">
+            <g id="laptop" sketch:type="MSLayerGroup" transform="translate(172.000000, 663.000000)">
+                <rect id="Rectangle-130" fill="#000000" sketch:type="MSShapeGroup" x="7" y="0" width="63" height="49" rx="6"></rect>
+                <rect id="Rectangle-130-Copy" fill="#FFFFFF" sketch:type="MSShapeGroup" x="12" y="8" width="54" height="49" rx="2"></rect>
+                <path d="M75.8681916,42 L1.13180844,42 C0.507107054,42 0,42.6614575 0,43.4780288 L0,47.6823457 C0,50.0635928 1.48340662,52 3.30656311,52 L73.6928445,52 C75.5168896,52 77,50.0635928 77,47.6823457 L77,43.4780288 C77,42.6614575 76.4928929,42 75.8681916,42" id="Path" fill="#000000" sketch:type="MSShapeGroup"></path>
+                <path d="M45.4422254,48 L32.557367,48 C31.6973711,48 31,47.3291901 31,46.5005888 C31,45.6715949 31.6973711,45 32.557367,45 L45.4422254,45 C46.3022213,45 47,45.6715949 47,46.5005888 C47,47.3291901 46.3022213,48 45.4422254,48" id="Fill-4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <circle id="Oval-22" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="38" cy="4" r="2"></circle>
+            </g>
+            <rect id="Rectangle-116" stroke="#CCCCCC" sketch:type="MSShapeGroup" x="142" y="425" width="851" height="425"></rect>
+        </g>
+    </g>
+</svg>
