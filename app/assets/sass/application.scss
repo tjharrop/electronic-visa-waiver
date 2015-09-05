@@ -217,6 +217,7 @@ label.form-label-bold, legend.form-label-bold {font-weight: normal; font-size: 1
 
 .uploadMethods {
   border: 1px solid grey;
+  border-bottom: 1px solid grey;
   margin-top: 30px;
   padding-bottom: 15px;
   .heading-medium {
@@ -242,7 +243,7 @@ body.body-rtl-both {
     border-bottom: 20px solid #fff;
     box-shadow: 0 1px 0 #ccc;
   }
-  .form-group-day, .form-group-month, .form-group-year, .form-group-compound {
+  .form-group-day, .form-group-month, .form-group-year, .form-group-compound, .form-group.grid-row {
     border-bottom: none;
     box-shadow: none ;
   }
