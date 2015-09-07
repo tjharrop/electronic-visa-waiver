@@ -1,0 +1,8 @@
+{
+  "serverAddress": false,
+  "twilioAcountDetails": {
+    "accountSid": "ACa56d1db3956884520b52f55eaf790309",
+    "authToken": "d14c65da3453b5c4ed044e3481ffe6ff",
+    "accountNumber": "+447903530252"
+  }
+}

@@ -1,6 +1,7 @@
 var path = require('path'),
     express = require('express'),
-    routes = require(__dirname + '/app/routes.js'),
+    routes = require(__dirname + '/app/routes'),
+    upload = require(__dirname + '/app/upload'),
     app = express(),
     port = (process.env.PORT || 3000),
     WebSocketServer = require("ws").Server,
@@ -11,6 +12,7 @@ var path = require('path'),
     env = process.env.NODE_ENV || 'development';
 
 
+var favicon = require('serve-favicon');
 
 
 
@@ -37,12 +39,12 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
 
-app.use(express.favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico')));
+app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico')));
 
 
 // send assetPath to all views
 app.use(function (req, res, next) {
-  res.locals({'assetPath': '/public/'});
+  res.locals = { 'assetPath': '/public/' };
   next();
 });
 
@@ -50,6 +52,7 @@ app.use(function (req, res, next) {
 // routes (found in app/routes.js)
 
 routes.bind(app);
+app.use('/upload', upload);
 
 // auto render any view that exists
 
@@ -71,36 +74,12 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 // start the app
 
 var server = app.listen(port);
-
-
-var wss = new WebSocketServer({ server: server });
-
-
-
-    wss.on("connection", function(ws) {
-
-      ws.on("message", function incoming(message) {
-        console.log('received: %s', message);
-        wss.clients.forEach(function each(client) {
-          client.send(message);
-        });
-      });
-
-
-
-      //var id = ws.send(JSON.stringify(new Date()), function() {  })
-
-
-      console.log("websocket connection open")
-
-      ws.on("close", function() {
-        console.log("websocket connection close")
-        //clearInterval(id)
-      })
-    });
-
-
+var primus = require('./socket-server')(server);
 
 console.log('');
 console.log('Listening on port ' + port);
 console.log('');
+
+module.exports = {
+    port: port
+};

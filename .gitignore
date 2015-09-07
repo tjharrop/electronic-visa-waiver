@@ -1,6 +1,8 @@
 .sass-cache
 .DS_Store
 .start.pid
+.idea
 public
 govuk_modules
 node_modules/*
+conf/config.json

@@ -10,29 +10,99 @@
 <main id="content" role="main">
 	{{>includes/banner}}
 
-
-	<form name="passport-details">
-		<p>&nbsp;</p>
-		<script>
-			var host = location.origin.replace(/^http/, 'ws')
-			var ws = new WebSocket(host);
-			ws.onmessage = function (event) {
-				var li = document.createElement('li');
-				li.innerHTML = event.data;
-				document.querySelector('#pings').appendChild(li);
+	<script type="text/javascript" src="/public/javascripts/primus.js"></script>
+	<script type="text/javascript" src="/public/javascripts/qrcode.js"></script>
+	<script type="text/javascript">
+		var userData = false;
+		var connection = false;
+		function createSocket() {
+			connection = Primus.connect();
+			connection.on('data', processData);
+			connection.on('error', function error(err) {
+				console.error('Something horrible has happened', err.stack);
+			});
+			connection.on('open', function open() {
+				console.log('Connected');
+			});
+		}
+		function processData(data) {
+			console.log('Message from server', data);
+			if (!!data && (!!data.sessionId || !!data.sessionURL)) { //connected
+				if (!!data.sessionURL) {
+					userData.sessionURL = data.sessionURL;
+					new QRCode($('#image')[0], data.sessionURL);
+				}
+				if (!userData.sessionId) {
+					userData.sessionId = data.sessionId;
+				}
+				else { //reconnected
+					connection.write(userData);
+				}
+			}
+			else if (data && data.imagePath) {
+				$('#passportFileId').val(data.imagePath);
+				$('#image img').hide();
+				$('#image').css('backgroundImage', 'url(\''+data.imagePath+'\')');
+				$('#sumbit').disabled=false;
+			}
+		}
+		function makeRequest(e) {
+			e.preventDefault();
+			var method = this.name;
+			userData = {
+				name: $('#name').val(),
+				number: $('#number').val(),
+				method: method
 			};
+			if (!connection) {
+				createSocket();
+			}
+			connection.write(userData);
+			return false;
+		}
 
-			//setTimeout(function(){ ws.send('SOMETHING'); }, 3000);
-		</script>
+		$(function () {
+			$('#text').click(makeRequest);
+			$('#qrcode').click(makeRequest);
 
-		<ul id='pings'></ul>
+			$('#sumbit').click(function () {
+				var data = new FormData(document.forms[0]);
+				window.alert(data);
+			});
+		});
+	</script>
 
-</form>
-<script type="text/javascript">
-$("input[type=file]").on('change',function(){
-    //window.location.href = "name";
-});
-</script>
+	<div id="form">
+		<p>Please fill in your details below.</p>
+
+		<form method="post">
+
+			<p>
+				<label for="name">Full name</label>
+				<input type="text" name="name" id="name" />
+			</p>
+
+			<p>
+				<label for="number">Mobile phone number</label>
+				<input type="tel" name="number" id="number" />
+			</p>
+
+			<p>
+				<button id="qrcode">Generate QR code</button>
+				<button id="text">Send text message...</button>
+			</p>
+
+			<p>
+				<button id="submit" disabled>Continue</button>
+			</p>
+
+			<input type="hidden" name="passportFileId" id="passportFileId" />
+
+		</form>
+	</div>
+
+	<div id="image"></div>
+
 </main>
 
 {{/content}}

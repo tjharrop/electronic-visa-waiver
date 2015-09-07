@@ -1,3 +1,6 @@
+
+var upload = require('./upload');
+
 module.exports = {
   bind : function (app) {
 
