@@ -1,0 +1,38 @@
+{{<layout}}
+
+{{$pageTitle}}Your journey to the UK{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/banner}}
+  <div class="form-group a">
+    <h1 class="heading-large" data-lang="eng">Your flight details</h1>
+    <h1 class="heading-large" data-lang="arabic">معلومات الرحلة</h1>
+  </div>
+
+<form name="journey-details">
+
+
+      	<div class="form-group">
+          <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Where will your flight land in the UK?</label>
+          <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">رقم الرحلة </label>
+          <p class="form-hint" data-lang="eng">For example, 'London Heathrow'</p>
+          <p class="form-hint" data-lang="arabic">مثال: 'London Heathrow'</p>
+      		<input type="text" name="flightLanded" />
+      	</div>
+
+    	<div class="form-group hide-if-flightsapi">
+      <a href="travel-details-alt-22" class="button">
+        <span data-lang="eng">Continue</span>
+        <span data-lang="arabic">استمر</span>
+      </a>
+    </div>
+
+
+
+</form>
+
+</main>
+{{/content}}
+
+{{/layout}}
