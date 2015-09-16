@@ -248,3 +248,13 @@ body.body-rtl-both {
     box-shadow: none ;
   }
 }
+
+
+.button.secondary.downloadIcon {
+  background-image: url('/public/img/pdficon.png');
+  background-repeat: no-repeat;
+  background-position: 20px 13px;
+  padding-left: 140px;
+  line-height: 100px;
+  font-size: 1.6em;
+}
