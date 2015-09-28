@@ -54,17 +54,33 @@
 	<!-- Confirmation pattern: inset statement "We will use this address if we need to email you: [email address]" -->
 
 
-  	<div class="form-group hide-if-minimal">
-      <label class="form-label-bold label" for="CompanyName" data-lang="eng">Name of the company that employs you</label>
-      <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة التي تعمل بها</label>
-  		<input type="text" name="CompanyName" class="form-control">
-  	</div>
+  <fieldset class="inline form-group">
 
-	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="Occupation" data-lang="eng">Your job title</label>
-    <label class="form-label-bold label" for="Occupation" data-lang="arabic">أدخل لقب منصبك</label>
-		<input type="text" name="Occupation" class="form-control">
-	</div>
+      <legend class="form-label-bold" data-lang="eng">Are you employed?</legend>
+      <legend class="form-label-bold" data-lang="arabic">هل انتي موظفه؟</legend>
+	    <div class="form-group form-group-compound">
+
+	      <label class="block-label" for="employed-1">
+	        <input id="employed-1" name="employed" value="Yes" type="radio" data-storage="yes">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
+	      </label>
+
+	      <label class="block-label" for="employed-2">
+	        <input id="employed-2" name="employed" value="No" type="radio" data-storage="no">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
+	      </label>
+
+	    </div>
+
+	    <div class="panel-indent hide-by-default optional-section-employed" data-toggle-value="Yes" id="conditionalemployed">
+        <label class="form-label-bold label" for="CompanyName" data-lang="eng">Name of the company that employs you</label>
+        <label class="form-label-bold label" for="CompanyName" data-lang="arabic">اسم الشركة التي تعمل بها</label>
+    		<input type="text" name="CompanyName" class="form-control">
+	    </div>
+
+  	</fieldset>
 
 	</form>
 
