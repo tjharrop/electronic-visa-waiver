@@ -30,22 +30,92 @@
 		<input type="text" name="DepartureAirport" class="form-control">
 	</div>
 -->
-	<div class="form-group hide-if-minimal">
-    <label class="form-label-bold label" for="FlightNumber" data-lang="eng">How long are you staying in the UK for?</label>
-    <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">كم أنت البقاء في المملكة المتحدة ل ؟</label>
-    <label class="block-label" for="staying-1">
-      <input id="staying-1" name="staying" value="1 Month" type="radio" data-storage="yes">
-      <span data-lang="">Less than 1 Month</span>
-    </label>
-    <label class="block-label" for="staying-2">
-      <input id="staying-2" name="staying" value="2 Months" type="radio" data-storage="no">
-      <span data-lang="">2-3 Months</span>
-    </label>
-    <label class="block-label" for="staying-3">
-      <input id="staying-3" name="staying" value="3 Months" type="radio" data-storage="no">
-      <span data-lang="">3 to 6 Months</span>
-    </label>
-	</div>
+
+
+
+
+     <fieldset class="inline">
+
+       <legend class="form-label-bold" data-lang="eng">Do you know your return travel details?</legend>
+       <legend class="form-label-bold" data-lang="arabic">!TODO ARABIC</legend>
+
+	    <div class="form-group form-group-compound">
+
+        <label class="block-label" for="TravelWithOthers-2">
+	        <input id="TravelWithOthers-2" name="TravelWithOthers" value="Yes" type="radio" onChange="toggleTravelWithOthers();" data-storage="No">
+          <span data-lang="eng">Yes</span>
+          <span data-lang="arabic">نعم</span>
+	      </label>
+
+	      <label class="block-label" for="TravelWithOthers-1">
+	        <input id="TravelWithOthers-1" name="TravelWithOthers" value="No" type="radio" onChange="toggleTravelWithOthers();" data-storage="Yes">
+          <span data-lang="eng">No</span>
+          <span data-lang="arabic">لا</span>
+	      </label>
+
+	    </div>
+
+  	</fieldset>
+
+
+    <div  id="" class="form-group panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="No">
+      <label class="form-label-bold label" for="FlightNumber" data-lang="eng">How long are you staying in the UK for?</label>
+      <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">كم أنت البقاء في المملكة المتحدة ل ؟</label>
+      <label class="block-label" for="staying-1">
+        <input id="staying-1" name="staying" value="1 Month" type="radio" data-storage="yes">
+        <span data-lang="">Less than 1 Month</span>
+      </label>
+      <label class="block-label" for="staying-2">
+        <input id="staying-2" name="staying" value="2 Months" type="radio" data-storage="no">
+        <span data-lang="">2-3 Months</span>
+      </label>
+      <label class="block-label" for="staying-3">
+        <input id="staying-3" name="staying" value="3 Months" type="radio" data-storage="no">
+        <span data-lang="">3 to 6 Months</span>
+      </label>
+  	</div>
+
+
+    <div  id="" class="panel-indent hide-by-default show-if-others optional-section-TravelWithOthers" data-toggle-value="Yes">
+      <div class="form-group hide-if-minimal">
+    <label class="form-label-bold label" for="FlightNumber" data-lang="eng">Enter the flight number, train number or boat name for your departure from the UK.</label>
+    <label class="form-label-bold label" for="FlightNumber" data-lang="arabic">أدخل رقم رحلة الطيران أو القطار أو السفينة التي ستغادر بها المملكة المتحدة.</label>
+  <input type="text" name="FlightNumber" class="form-control">		
+</div>
+      <div class="form-group hide-if-minimal">
+      <fieldset>
+         <legend class="form-label-bold date-field label" data-lang="eng">When will you be leaving the UK?</legend>
+         <legend class="form-label-bold date-field label" data-lang="arabic">أدخل تاريخ مغادرتك المتوقع من المملكة المتحدة </legend>
+
+          <div class="form-date" id="departureDate">
+              <p class="form-hint" data-lang="eng">For example, 18 9 2015</p>
+               <p class="form-hint" data-lang="arabic">مثال: 18 9 2015</p>
+
+
+              <div class="form-group form-group-day">
+                  <label for="LeavingDateDay">
+                     <span data-lang="eng">Day</span><span data-lang="arabic">اليوم</span>
+                   </label>
+                  <input type="text" class="form-control" id="LeavingDateDay" name="LeavingDateDay" aria-required="true" value="" maxlength="2">
+              </div>
+              <div class="form-group form-group-month">
+                  <label for="LeavingDateMonth">
+                     <span data-lang="eng">Month</span><span data-lang="arabic">الشهر</span>
+                   </label>
+                  <input type="text" class="form-control" id="LeavingDateMonth" name="LeavingDateMonth" aria-required="true" value="" maxlength="2">
+              </div>
+              <div class="form-group form-group-year">
+                  <label for="LeavingDateYear">
+                     <span data-lang="eng">Year</span><span data-lang="arabic">السنة</span>
+                   </label>
+                  <input type="text" class="form-control" id="LeavingDateYear" name="LeavingDateYear" aria-required="true" value="" maxlength="4">
+              </div>
+          </div>
+
+      -	    </fieldset>
+       </div>
+  	</div>
+
 
 
 	<a href="contact-details" class="button">
