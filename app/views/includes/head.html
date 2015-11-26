@@ -281,6 +281,43 @@ $(".rightLink").click(function(){
   $(this).html('&#10003; A&amp;En right aligned');
 })
 
+//$("*[data-lang='arabic']").html('&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;');
+//$("*[data-lang='eng']").html('&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;');
+
+function getPropByString(obj, propString) {
+    if (!propString)
+        return obj;
+
+    var prop, props = propString.split('.');
+
+    for (var i = 0, iLen = props.length - 1; i < iLen; i++) {
+        prop = props[i];
+
+        var candidate = obj[prop];
+        if (candidate !== undefined) {
+            obj = candidate;
+        } else {
+            break;
+        }
+    }
+    return obj[props[i]];
+}
+
+
+  $.getJSON( "/public/en.json", function( data ) {
+    $("*[data-content]").each(function(){
+      var lang = $(this).attr('data-content-lang');
+      var page = $(this).attr('data-content-page');
+      var string = $(this).attr('data-content-string');
+      var bollocks = $(this).attr('data-content');
+      $(this).html(getPropByString(data, bollocks));
+      //alert(bollocks);
+    });
+  });
+
+
+
+
 });
 </script>
 <!-- -->
