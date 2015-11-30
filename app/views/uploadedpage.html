@@ -1,0 +1,31 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Electronic Visa Waiver
+{{/pageTitle}}
+
+{{$content}}
+
+
+<main id="content" role="main">
+	{{>includes/banner}}
+
+
+	<form name="passport-details">
+		<h1 class="heading-large">Please check your passport photo</h1>
+		<p>Please check the photo below to make sure it clearly shows all the information on the page clearly</p>
+		<p><img src="/public/img/ppt.jpg" style="max-width:100%;"></p>
+		<p>
+			<a class="button" href="name">Continue</a>
+		</p>
+</form>
+<script type="text/javascript">
+$("input[type=file]").on('change',function(){
+    window.location.href = "uploadedpage";
+});
+</script>
+</main>
+
+{{/content}}
+
+{{/layout}}
